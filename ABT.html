@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>نبذة عن الكلية</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Tahoma,sans-serif;
+}
+
+body{
+background:#f8f9fb;
+overflow-x:hidden;
+}
+
+.content{
+padding-top:75px;
+text-align:center;
+}
+
+header{
+position:fixed;
+top:0;
+right:0;
+width:100%;
+height:75px;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 12px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.menu-btn{
+display:flex;
+flex-direction:column;
+justify-content:center;
+gap:4px;
+cursor:pointer;
+}
+
+.menu-btn span{
+width:24px;
+height:1px;
+background:#124c7c;
+border-radius:10px;
+}
+
+.logo-section{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.logo-section img{
+width:clamp(35px,4vw,42px);
+height:clamp(35px,4vw,42px);
+object-fit:contain;
+margin-top:4px;
+margin-bottom:2px;
+}
+
+.university{
+font-family:"Times New Roman",serif;
+font-size:clamp(9px,1vw,11px);
+font-weight:700;
+color:#0B5D3B;
+}
+
+.college{
+font-family:"Times New Roman",serif;
+font-size:clamp(7px,0.8vw,9px);
+color:#3D7A5C;
+}
+
+.language-btn{
+font-size:clamp(12px,1.3vw,16px);
+font-weight:bold;
+cursor:pointer;
+color:#1f5f3a;
+}
+
+.sidebar{
+position:fixed;
+top:0;
+right:-320px;
+width:320px;
+max-width:85%;
+height:100%;
+background:white;
+box-shadow:-5px 0 15px rgba(0,0,0,.15);
+transition:.3s;
+padding-top:90px;
+z-index:2000;
+overflow-y:auto;
+}
+
+.sidebar.active{
+right:0;
+}
+
+.close-btn{
+position:absolute;
+top:20px;
+left:20px;
+font-size:28px;
+cursor:pointer;
+}
+
+.sidebar a{
+display:block;
+padding:15px 25px;
+text-decoration:none;
+font-family:"Times New Roman",serif;
+color:#124c7c;
+font-size:14px;
+border-bottom:1px solid #eee;
+transition:.3s;
+}
+
+.sidebar a:hover{
+background:#f3f3f3;
+padding-right:35px;
+}
+
+.sidebar-bottom-links{
+display:grid;
+grid-template-columns:1fr 1px 1fr;
+width:100%;
+}
+
+.sidebar-divider{
+width:1px;
+height:18px;
+background:#d6d6d6;
+position:relative;
+top:12px;
+left:4px;
+}
+
+.sidebar-bottom-links a{
+display:flex;
+justify-content:center;
+align-items:center;
+height:40px;
+margin:0;
+padding:0;
+font-size:14px;
+font-family:"Times New Roman",serif;
+color:#124c7c;
+text-decoration:none;
+}
+
+.sidebar-bottom-links a:hover{
+background:#f3f3f3;
+}
+
+.about-hero{
+position:relative;
+width:100%;
+height:clamp(400px,70vh,650px);
+overflow:hidden;
+}
+
+.about-hero img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.about-hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:55%;
+height:100%;
+
+background:linear-gradient(
+to right,
+#f8f9fb 0%,
+rgba(248,249,251,.98) 18%,
+rgba(248,249,251,.88) 40%,
+rgba(248,249,251,.55) 70%,
+rgba(248,249,251,0) 100%
+);
+
+z-index:1;
+}
+
+.about-hero::after{
+content:"";
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:450px;
+
+background:linear-gradient(
+to bottom,
+rgba(248,249,251,0) 0%,
+rgba(248,249,251,.20) 25%,
+rgba(248,249,251,.55) 55%,
+rgba(248,249,251,.88) 80%,
+#f8f9fb 100%
+);
+
+z-index:1;
+}
+
+.about-hero{
+ position:relative;
+ width:100%; 
+height:clamp(400px,70vh,650px);
+ overflow:hidden; 
+} 
+
+.about-hero img{ 
+width:100%; 
+height:100%; object-fit:cover;
+ display:block; 
+}
+
+.info-card{
+width:clamp(280px,30vw,420px);
+min-height:350px;
+background:rgba(11,93,59,0.12);
+backdrop-filter:blur(8px);
+-webkit-backdrop-filter:blur(8px);
+border:1px solid rgba(11,93,59,0.15);
+border-radius:25px;
+padding:35px;
+position:relative;
+margin-top:clamp(-420px,-25vw,-250px);
+margin-left:clamp(20px,5vw,60px);
+margin-right:auto;
+
+z-index:10;
+
+text-align:right;
+
+box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+.info-card h2{
+font-family:"Times New Roman",serif;
+font-size:clamp(26px,3vw,32px);
+color:#0B5D3B;
+margin-bottom:5px;
+}
+
+.second-title{
+margin-top:40px;
+}
+
+.info-card p{
+font-family:"Arial",serif;
+font-weight:bold;
+font-size:clamp(14px,1.2vw,16px);
+line-height:2;
+color:#2f2f2f;
+}
+
+.about-text{
+width:55%;
+max-width:900px;
+text-align:right;
+padding-right:clamp(15px,4vw,40px);
+position:relative;
+top:clamp(-300px,-19vw,-180px);
+z-index:2;
+}
+
+.about-text h1{
+font-family:"Times New Roman",serif;
+font-size:clamp(32px,5vw,45px);
+color:#0B5D3B;
+margin-bottom:20px;
+font-weight:700;
+}
+
+.about-text p{
+font-size:clamp(15px,1.5vw,18px);
+font-family:"Arial",serif;
+font-weight:bold;
+line-height:2.4;
+color:#3f3f3f;
+font-weight:500;
+}
+
+
+/* FOOTER */
+
+footer{
+width:100%;
+min-height:90px;
+background:rgba(11,93,59,0.88);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+margin-top:clamp(-140px,-12vw,-100px);
+padding:0px;
+}
+
+footer p{
+font-family:"Times New Roman",serif;
+color:rgba(255,255,255,0.85);
+font-size:13px;
+margin:2px 0;
+}
+
+.footer-credit{
+font-size:11px;
+color:rgba(255,255,255,0.55);
+letter-spacing:.5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="menu-btn" onclick="openMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="logo-section">
+
+<img src="KAU.png" alt="logo">
+
+<div class="university">
+جــامــعــة المـــلك عــبدالـــعزيـــز
+</div>
+
+<div class="college">
+كـــليــة عــلوم الأرض
+</div>
+
+</div>
+
+<div class="language-btn">
+ع/A
+</div>
+
+</header>
+
+
+<div class="sidebar" id="sidebar">
+
+<div class="close-btn" onclick="closeMenu()">
+✕
+</div>
+
+<a href="index.html">الرئــيــســة</a>
+<a href="ABT.html">عـن الكــليــة</a>
+<a href="DEP.html">الأقــسام العــلميــة</a>
+<a href="#">الــرحلات الحــقــليــة</a>
+<a href="#">مجــالات الــتوظــيــف</a>
+<a href="#">الــسنة التــحضيــريــية</a>
+<a href="#">مــقررات الــكليــة</a>
+<a href="#">القــبـــول</a>
+<a href="#">التـحويـل</a>
+<a href="#">الأسئلة الأكثر شيوعًا</a>
+
+
+<div class="sidebar-bottom-links">
+
+<a href="#">معرض الصور</a>
+
+<div class="sidebar-divider"></div>
+
+<a href="#">الحساب الرسمي</a>
+
+</div>
+
+</div>
+
+<div class="content">
+
+<section class="about-hero">
+
+<img src="BULLD.JPG" alt="College Building">
+
+</section>
+
+</div>
+
+
+<section class="info-card">
+
+<h2>الرؤية</h2>
+
+<p>
+أن تصبح كلية علوم الأرض مرجعًا إقليميًا وعالميًا في البحوث والدراسات، وأن تسهم في إعداد كفاءات مؤهلة تلبي احتياجات سوق العمل في مجالات علوم الأرض والتعدين.
+</p>
+
+<h2 class="second-title">
+الرسالة
+</h2>
+
+<p>
+إعداد كفاءات علمية ومهنية متميزة في تخصص علوم الأرض لخدمة المجتمع والمملكة من خلال الاستفادة من الموارد الطبيعية للأرض.
+</p>
+
+</section>
+
+
+<section class="about-text">
+
+<h1>
+عن الكلية
+</h1>
+
+<p>
+تُعد كلية علوم الأرض من أقدم المؤسسات التعليمية المتخصصة في علوم الجيولوجيا التطبيقية بالمملكة العربية السعودية، حيث تأسست عام 1390هـ (1970م) كمركز للجيولوجيا التطبيقية بهدف تأهيل الجيولوجيين السعوديين في مجالات الجيولوجيا الحقلية واستكشاف الثروات المعدنية. وانضمت لاحقًا إلى جامعة الملك عبدالعزيز لتصبح كلية علوم الأرض عام 1398هـ (1978م). وتتميز الكلية ببرامجها الأكاديمية المتطورة ومكانتها العلمية المرموقة، إذ كانت من أوائل الكليات في المملكة التي طرحت برامج الماجستير والدكتوراه. كما تنفرد على مستوى المملكة والعالم العربي بتقديم برامج البكالوريوس في عدد من التخصصات التطبيقية في علوم الأرض، مما يسهم في إعداد كوادر وطنية مؤهلة لدعم التنمية المستدامة وتحقيق مستهدفات رؤية المملكة 2030.
+</p>
+
+</section>
+
+
+<footer>
+
+<p>
+Faculty of Earth Sciences Website Project
+</p>
+
+<p class="footer-credit">
+Designed & Developed by Retal Abdulmannan
+</p>
+
+</footer>
+
+
+<script>
+
+function openMenu(){
+document.getElementById("sidebar").classList.add("active");
+}
+
+function closeMenu(){
+document.getElementById("sidebar").classList.remove("active");
+}
+
+/* إغلاق القائمة عند الضغط خارجها */
+
+window.onclick = function(e){
+
+let sidebar = document.getElementById("sidebar");
+
+if(
+!sidebar.contains(e.target) &&
+!e.target.closest(".menu-btn")
+){
+sidebar.classList.remove("active");
+}
+
+}
+
+</script>
+
+</body>
+</html>

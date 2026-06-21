@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>كــليـة عــلوم الأرض</title>
+
+<style>
+
+/* =========================
+   GENERAL
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Tahoma,sans-serif;
+}
+
+.background-design{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+pointer-events:none;
+overflow:hidden;
+}
+
+/* المضلعات */
+
+.polygon{
+position:absolute;
+background:rgba(185,220,198,.25);
+backdrop-filter:blur(2px);
+}
+
+/* أعلى اليمين */
+
+.p1{
+top:-50px;
+right:-70px;
+width:320px;
+height:320px;
+
+clip-path:polygon(
+30% 0%,
+100% 0%,
+100% 100%,
+0% 35%
+);
+
+transform:rotate(8deg);
+}
+
+/* أعلى اليسار */
+
+.p2{
+top:120px;
+left:-90px;
+width:280px;
+height:280px;
+
+clip-path:polygon(
+0 20%,
+100% 0,
+60% 100%
+);
+
+background:rgba(185,220,198,.18);
+}
+
+/* أسفل اليسار */
+
+.p3{
+bottom:-90px;
+left:-60px;
+width:350px;
+height:350px;
+
+clip-path:polygon(
+0 0,
+100% 100%,
+0 100%
+);
+
+background:rgba(185,220,198,.20);
+}
+
+/* أسفل اليمين */
+
+.p4{
+bottom:-120px;
+right:-50px;
+width:340px;
+height:340px;
+
+clip-path:polygon(
+100% 0,
+100% 100%,
+0 60%
+);
+
+background:rgba(185,220,198,.18);
+
+transform:rotate(-10deg);
+}
+
+/* الخطوط الهندسية */
+
+.lines{
+position:absolute;
+border:1px solid rgba(150,190,165,.18);
+border-radius:50%;
+}
+
+.l1{
+width:500px;
+height:500px;
+bottom:-250px;
+right:-180px;
+}
+
+.l2{
+width:420px;
+height:420px;
+top:-210px;
+left:-180px;
+}
+
+.bg-layer2{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:-2;
+overflow:hidden;
+}
+
+.poly{
+position:absolute;
+background:rgba(11,93,59,.035);
+filter:blur(.5px);
+}
+
+/* أعلى اليمين */
+
+.poly1{
+top:-120px;
+right:-160px;
+width:520px;
+height:420px;
+
+clip-path:polygon(
+20% 0%,
+100% 0%,
+80% 80%,
+0% 55%
+);
+
+transform:rotate(18deg);
+}
+
+/* أعلى اليسار */
+
+.poly2{
+top:180px;
+left:-220px;
+width:500px;
+height:500px;
+
+clip-path:polygon(
+0% 15%,
+90% 0%,
+100% 70%,
+35% 100%
+);
+
+transform:rotate(-25deg);
+}
+
+/* أسفل اليسار */
+
+.poly3{
+bottom:-200px;
+left:-130px;
+width:650px;
+height:420px;
+
+clip-path:polygon(
+0% 35%,
+45% 0%,
+100% 45%,
+60% 100%,
+0% 100%
+);
+
+transform:rotate(12deg);
+}
+
+/* أسفل اليمين */
+
+.poly4{
+bottom:-150px;
+right:-180px;
+width:600px;
+height:500px;
+
+clip-path:polygon(
+30% 0%,
+100% 20%,
+100% 100%,
+0% 75%
+);
+
+transform:rotate(-18deg);
+}
+
+.dots-pattern{
+position:fixed;
+top:110px;
+left:30px;
+
+width:180px;
+height:120px;
+
+background-image:
+radial-gradient(circle, rgba(11,93,59,.18) 1px, transparent 1px);
+
+background-size:14px 14px;
+
+opacity:.7;
+
+pointer-events:none;
+z-index:-1;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+right:0;
+width:100%;
+height:75px;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 12px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.menu-btn{
+display:flex;
+flex-direction:column;
+justify-content:center;
+gap:4px;
+cursor:pointer;
+}
+
+.menu-btn span{
+width:24px;
+height:1px;
+background:#124c7c;
+border-radius:10px;
+}
+
+.logo-section{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.logo-section img{
+width:clamp(35px,4vw,42px);
+height:clamp(35px,4vw,42px);
+object-fit:contain;
+margin-top:4px;
+margin-bottom:2px;
+}
+
+.university{
+font-family:"Times New Roman",serif;
+font-size:clamp(9px,1vw,11px);
+font-weight:700;
+color:#0B5D3B;
+}
+
+.college{
+font-family:"Times New Roman",serif;
+font-size:clamp(7px,0.8vw,9px);
+color:#3D7A5C;
+}
+
+.language-btn{
+font-size:clamp(12px,1.3vw,16px);
+font-weight:bold;
+cursor:pointer;
+color:#1f5f3a;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+position:fixed;
+top:0;
+right:-320px;
+width:320px;
+height:100%;
+background:white;
+box-shadow:-5px 0 15px rgba(0,0,0,.15);
+transition:.3s;
+padding-top:90px;
+z-index:2000;
+overflow-y:auto;
+}
+
+.sidebar.active{
+right:0;
+}
+
+.close-btn{
+position:absolute;
+top:20px;
+left:20px;
+font-size:28px;
+cursor:pointer;
+}
+
+.sidebar a{
+display:block;
+padding:15px 25px;
+text-decoration:none;
+font-family:"Times New Roman",serif;
+color:#124c7c;
+font-size:14px;
+border-bottom:1px solid #eee;
+}
+
+.sidebar a:hover{
+background:#f3f3f3;
+}
+
+.sidebar-bottom-links{
+display:grid;
+grid-template-columns:1fr 1px 1fr;
+width:105%;
+margin-top:0;
+position:relative;
+right:0;
+}
+
+.sidebar-divider{
+width:1px;
+height:18px;
+background:#d6d6d6;
+position:relative;
+top:12px;
+left:4px;
+}
+
+.sidebar-bottom-links a{
+display:flex;
+justify-content:center;
+align-items:center;
+height:40px;
+width:95%;
+margin:0;
+padding:0;
+font-size:14px;
+font-family:"Times New Roman",serif;
+color:#124c7c;
+text-decoration:none;
+transition:.2s;
+}
+
+.sidebar-bottom-links a:hover{
+background:#f3f3f3;
+}
+
+/* MAIN CONTENT */
+
+.content{
+padding-top:75px;
+text-align:center;
+}
+
+/* INTRO SECTION */
+
+.hero-intro{
+display:flex;
+flex-direction:column;
+align-items:center;
+margin-bottom:25px;
+}
+
+.mountain-img{
+width:clamp(130px,18vw,220px);
+opacity:.7;
+margin-bottom:-50px;
+}
+
+.hero-slogan{
+font-family:"Times New Roman",serif;
+font-size:clamp(12px,1vw,15px);
+font-weight:700;
+color:#0B5D3B;
+text-align:center;
+margin-bottom:12px;
+line-height:1.5;
+}
+
+.hero-decoration{
+width:90px;
+height:2px;
+background:#9bc5aa;
+position:relative;
+}
+
+.hero-decoration::before{
+content:"✦";
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-55%);
+padding:0 10px;
+font-size:15px;
+color:#7aa78b;
+}
+
+/* HERO SEARCH */
+
+.hero-search{
+margin-top:0px;
+text-align:center;
+}
+
+.hero-search h1{
+font-family:"Times New Roman",serif;
+font-size:38px;
+color:#0B5D3B;
+margin-bottom:25px;
+font-weight:700;
+}
+
+.search-box{
+width:min(800px,85%);
+margin:auto;
+position:relative;
+}
+
+.search-box input{
+width:100%;
+height:60px;
+border:none;
+border-radius:999px;
+background:#eef8f0;
+padding-right:65px;
+padding-left:25px;
+font-family:"Times New Roman",serif;
+font-size:25px;
+outline:none;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+color:#0B5D3B;
+}
+
+.search-box span{
+position:absolute;
+right:30px;
+top:50%;
+transform:translateY(-50%);
+font-size:20px;
+color:#0B5D3B;
+}
+
+/* BUTTONS SECTION */
+
+.buttons-section{
+margin-top:45px;
+text-align:center;
+}
+
+.main-button{
+display:inline-block;
+background:#edf8ee;
+color:#0B5D3B;
+padding:16px 60px;
+border-radius:999px;
+text-decoration:none;
+font-family:"Times New Roman",serif;
+font-size:18px;
+font-weight:700;
+margin-bottom:25px;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.buttons-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:18px;
+width:min(900px,90%);
+margin:auto;
+}
+
+.buttons-grid a{
+background:#edf8ee;
+color:#0B5D3B;
+padding:15px;
+border-radius:999px;
+text-decoration:none;
+font-family:"Times New Roman",serif;
+font-size:16px;
+font-weight:600;
+box-shadow:0 2px 8px rgba(0,0,0,.06);
+transition:.2s;
+}
+
+.buttons-grid a:hover{
+transform:translateY(-2px);
+background:#dff0e2;
+}
+
+/* QUICK LINKS */
+
+.quick-links{
+margin-top:45px;
+text-align:center;
+}
+
+.quick-links-title{
+font-family:"Times New Roman",serif;
+font-size:14px;
+font-weight:700;
+color:#0B5D3B;
+margin-bottom:25px;
+position:relative;
+}
+
+.quick-links-title::before{
+content:"";
+display:block;
+width:220px;
+height:1px;
+background:#c7dcc9;
+margin:0 auto 18px auto;
+}
+
+.quick-links-icons{
+display:flex;
+justify-content:center;
+gap:50px;
+}
+
+.quick-links-icons a{
+text-decoration:none;
+}
+
+.circle-icon{
+width:55px;
+height:55px;
+border-radius:50%;
+background:#edf8ee;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+color:#0B5D3B;
+box-shadow:0 2px 8px rgba(0,0,0,.06);
+margin:auto;
+}
+
+.icon-text{
+margin-top:10px;
+font-family:"Times New Roman",serif;
+font-size:11px;
+font-weight:600;
+color:#0B5D3B;
+}
+
+/* FOOTER */
+
+footer{
+width:100%;
+height:90px;
+background:rgba(11,93,59,0.88);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+margin-top:80px;
+}
+
+footer p{
+font-family:"Times New Roman",serif;
+color:rgba(255,255,255,0.85);
+font-size:13px;
+margin:2px 0;
+}
+
+.footer-credit{
+font-size:11px;
+color:rgba(255,255,255,0.55);
+letter-spacing:.5px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="background-design">
+
+<div class="polygon p1"></div>
+<div class="polygon p2"></div>
+<div class="polygon p3"></div>
+<div class="polygon p4"></div>
+
+<div class="lines l1"></div>
+<div class="lines l2"></div>
+</div>
+<div class="bg-layer2">
+<div class="poly poly1"></div>
+<div class="poly poly2"></div>
+<div class="poly poly3"></div>
+<div class="poly poly4"></div>
+
+</div>
+<div class="dots-pattern"></div>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="menu-btn" onclick="openMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="logo-section">
+
+<img src="KAU.png" alt="logo">
+
+<div class="university">
+جــامــعــة المـــلك عــبدالـــعزيـــز
+</div>
+
+<div class="college">
+كـــليــة عــلوم الأرض
+</div>
+
+</div>
+
+<div class="language-btn">
+ع/A
+</div>
+
+</header>
+
+
+<!-- SIDEBAR -->
+
+<div class="sidebar" id="sidebar">
+
+<div class="close-btn" onclick="closeMenu()">
+✕
+</div>
+
+<a href="index.html">الرئــيــســة</a>
+<a href="ABT.html">عـن الكــليــة</a>
+<a href="DEP.html">الأقــسام العــلميــة</a>
+<a href="#">الــرحلات الحــقــليــة</a>
+<a href="#">مجــالات الــتوظــيــف</a>
+<a href="#">الــسنة التــحضيــريــية</a>
+<a href="#">مــقررات الــكليــة</a>
+<a href="#">القــبـــول</a>
+<a href="#">التـحويـل</a>
+<a href="#">الأسئلة الأكثر شيوعًا</a>
+
+
+<div class="sidebar-bottom-links">
+
+<a href="#">معرض الصور</a>
+
+<div class="sidebar-divider"></div>
+
+<a href="#">الحساب الرسمي</a>
+
+</div>
+
+</div>
+
+
+<!-- MAIN CONTENT -->
+
+<div class="content">
+
+
+<!-- HERO SEARCH -->
+
+<section class="hero-search">
+
+<div class="hero-intro">
+<img src="MOUNT.png" alt="mountain" class="mountain-img">
+
+<p class="hero-slogan">
+بالعلم نبني الأرض، وبالمعرفة نرسم المستقبل
+</p>
+<div class="hero-decoration"></div>
+
+</div>
+
+<h1>
+مـــرحــبًا بــكـم فــي كـــليــة عـلـوم الأرض !
+</h1>
+
+<div class="search-box">
+
+<span>
+<i class="fa-solid fa-magnifying-glass"></i>
+</span>
+
+<input
+type="text"
+id="searchBox"
+placeholder="ابــحــث عـن ..."
+>
+
+</div>
+
+</section>
+
+
+<!-- BUTTONS SECTION -->
+
+<section class="buttons-section">
+
+<a href="ABT.html" class="main-button">
+نــبــذة عـن الــكليــة
+</a>
+
+<div class="buttons-grid">
+
+<a href="DEP.html">الأقــسام العــلميــة</a>
+
+<a href="#">الــرحلات الحــقــليــة</a>
+
+<a href="#">مجــالات الــتوظــيــف</a>
+
+<a href="#">الــسنة التــحضيــريــية</a>
+
+<a href="#">مــقررات الــكليــة</a>
+
+<a href="#">القــبـــول </a>
+
+<a href="#">التـحويـل</a>
+
+<a href="#">الأسئلة الأكثر شيوعًا</a>
+
+</div>
+
+</section>
+
+
+<!-- QUICK LINKS -->
+
+<section class="quick-links">
+
+<div class="quick-links-title">
+اســتكــشـف الــمزيــد
+</div>
+
+<div class="quick-links-icons">
+
+<a href="#">
+<div class="circle-icon">
+<i class="fa-regular fa-images"></i>
+</div>
+<div class="icon-text">مــعرض الــصــور</div>
+</a>
+
+<a href="#">
+<div class="circle-icon">
+<i class="fa-brands fa-x-twitter"></i>
+</div>
+<div class="icon-text">الــحـساب الــرسمي</div>
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+Faculty of Earth Sciences Website Project
+</p>
+
+<p class="footer-credit">
+Designed & Developed by Retal Abdulmannan
+</p>
+
+</footer>
+</div>
+
+
+<!-- SCRIPTS -->
+
+<script>
+
+function openMenu(){
+document.getElementById("sidebar").classList.add("active");
+}
+
+function closeMenu(){
+document.getElementById("sidebar").classList.remove("active");
+}
+
+document.addEventListener("click", function(e){
+
+let sidebar = document.getElementById("sidebar");
+let menuBtn = document.querySelector(".menu-btn");
+
+if(
+!sidebar.contains(e.target) &&
+!menuBtn.contains(e.target)
+){
+sidebar.classList.remove("active");
+}
+
+});
+</script>
+
+</body>
+</html>
