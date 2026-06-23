@@ -246,7 +246,87 @@ z-index:-1;
 padding-top:95px;
 text-align:center;
 }
+/* WELCOME NOTIFICATION */
 
+.welcome-toast{
+position:fixed;
+top:95px;
+left:20px;
+
+width:min(340px,90%);
+padding:16px 18px;
+
+display:flex;
+align-items:flex-start;
+gap:12px;
+
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(10px);
+
+border-right:4px solid #0B5D3B;
+border-radius:18px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+z-index:3000;
+
+animation:
+slideIn .8s ease,
+fadeOut .8s ease 7s forwards;
+}
+
+.welcome-toast i{
+font-size:20px;
+color:#0B5D3B;
+margin-top:2px;
+}
+
+.welcome-toast p{
+font-family:"Times New Roman",serif;
+font-size:18px;
+font-weight:700;
+line-height:1.8;
+color:#355a47;
+margin:0;
+}
+
+/* الحركة */
+
+@keyframes slideIn{
+
+from{
+opacity:0;
+transform:translateX(-50px);
+}
+
+to{
+opacity:1;
+transform:translateX(0);
+}
+
+}
+
+@keyframes fadeOut{
+
+to{
+opacity:0;
+visibility:hidden;
+}
+
+}
+
+/* للجوال */
+
+@media (max-width:600px){
+
+.welcome-toast{
+left:50%;
+transform:translateX(-50%);
+width:90%;
+top:90px;
+}
+
+}
 /* HEADER */
 
 header{
@@ -508,7 +588,8 @@ text-align:center;
 
 .department-description{
 font-family:"Times New Roman",serif;
-font-size:13px;
+font-size:14px;
+font-weight:700;
 line-height:1.9;
 color:#555;
 text-align:right;
@@ -517,7 +598,7 @@ padding:0 5px;
 }
 
 .job-fields{
-font-size:14px;
+font-size:18px;
 color:#444;
 text-align:right;
 margin-bottom:1px;
@@ -571,6 +652,51 @@ background:white;
 width:70%;
 height:70%;
 object-fit:contain;
+}
+.popup-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.45);
+
+display:none;
+justify-content:center;
+align-items:center;
+
+z-index:5000;
+}
+
+.popup-box{
+width:min(500px,90%);
+background:white;
+padding:35px;
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:0 10px 35px rgba(0,0,0,.2);
+
+position:relative;
+}
+
+.popup-box p{
+font-family:"Times New Roman",serif;
+font-size:20px;
+line-height:2;
+color:#444;
+}
+
+.close-popup{
+position:absolute;
+top:15px;
+left:20px;
+
+font-size:28px;
+cursor:pointer;
+color:#124c7c;
 }
 
 /* STATISTICS SECTION */
@@ -718,7 +844,15 @@ letter-spacing:.5px;
 <div class="close-btn" onclick="closeMenu()">
 ✕
 </div>
+<div class="welcome-toast">
 
+<i class="fa-solid fa-circle-info"></i>
+
+<p>
+للمزيد من التفاصيل عن جهات التوظيف يمكن الضغظ على شعار الجهة 
+</p>
+
+</div>
 <a href="index.html">الرئــيــســة</a>
 <a href="ABT.html">عـن الكــليــة</a>
 <div class="dropdown">
@@ -809,13 +943,42 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="company-grid">
-<a href="#.html" class="company-box"><img src="ARAMCO.PNG"></a>
-<a href="#.html" class="company-box"><img src="SLB.PNG"></a>
-<a href="#.html" class="company-box"><img src="HLBRTN.PNG"></a>
-<a href="#.html" class="company-box"><img src="EXLOG.PNG"></a>
-<a href="#.html" class="company-box"><img src="MOE.PNG"></a>
-<a href="#.html" class="company-box"><img src="#.PNG"></a>
-<a href="#.html" class="company-box"><img src="#.PNG"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('إحدى أكبر شركات الطاقة في العالم، وتوفر فرصًا في الجيولوجيا والجيوفيزياء واستكشاف المكامن النفطية والغازية.')">
+<img src="ARAMCO.PNG"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('شركة عالمية متخصصة في خدمات وتقنيات النفط والغاز والاستكشاف الجيولوجي والجيوفيزيائي.')">
+<img src="SLB.PNG"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('من أكبر شركات خدمات حقول النفط، وتعمل في الحفر والاستكشاف وتحليل المكامن.')">
+<img src="HLBRTN.PNG"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('شركة سعودية متخصصة في الخدمات اللوجستية والدعم التشغيلي لقطاعات الطاقة والصناعة.')">
+<img src="EXLOG.PNG"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('الجهة الحكومية المسؤولة عن تنظيم قطاع الطاقة وتطوير سياساته وإدارة موارده.')">
+<img src="MOE.PNG"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('شركة عالمية تقدم حلول وتقنيات الطاقة وخدمات الحفر والاستكشاف وتحليل البيانات الجيولوجية.')">
+<img src="BH.PNG"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('شركة متخصصة في خدمات الآبار وتقنيات الإنتاج والاستكشاف النفطي.')">
+<img src="WF.PNG"></a>
+
 
 </div>
 </div>
@@ -847,12 +1010,27 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="company-grid">
-<a href="#.html" class="company-box"><img src="MAADEN.PNG"></a>
-<a href="#.html" class="company-box"><img src="A&B.PNG"></a>
-<a href="#.html" class="company-box"><img src="MIMR.PNG"></a>
-<a href="#.html" class="company-box"><img src="SGS.PNG"></a>
-<a href="#.html" class="company-box"><img src="#.PNG"></a>
-<a href="#.html" class="company-box"><img src="#.PNG"></a>
+<a href="#"
+class="company-box"
+onclick="openPopup('الشركة الوطنية الرائدة في التعدين بالمملكة، وتعمل في استكشاف واستخراج ومعالجة المعادن.')">
+<img src="MAADEN.PNG"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('شركة متخصصة في الاستثمار والتطوير والاستكشاف التعديني.')">
+<img src="A&B.PNG"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('الجهة الحكومية المسؤولة عن تطوير وتنظيم قطاع التعدين والصناعة.')">
+<img src="MIMR.PNG"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('تقوم بإجراء الدراسات الجيولوجية والمسوح الوطنية واستكشاف الموارد المعدنية.')">
+<img src="SGS.PNG"></a>
+
+
 
 </div>
 </div>
@@ -882,10 +1060,22 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="company-grid">
-<a href="#.html" class="company-box"><img src="MEWA.PNG"></a>
-<a href="#.html" class="company-box"><img src="company10.png"></a>
-<a href="#.html" class="company-box"><img src="company11.png"></a>
-<a href="#.html" class="company-box"><img src="company12.png"></a>
+<a href="#"
+class="company-box"
+onclick="openPopup('توفر فرصًا في إدارة المياه الجوفية والدراسات البيئية والموارد الطبيعية.')">
+<img src="MEWA.PNG"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('تشرف على تنظيم وتطوير قطاع المياه بالمملكة.')">
+<img src="SWA.png"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('تعمل في تشغيل وإدارة خدمات المياه والصرف الصحي.')">
+<img src="NWC.png"></a>
+
+
 </div>
 </div>
 
@@ -914,9 +1104,11 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="company-grid">
-<a href="#.html" class="company-box"><img src="company13.png"></a>
-<a href="#.html" class="company-box"><img src="company15.png"></a>
-<a href="#.html" class="company-box"><img src="company16.png"></a>
+<a href="#"
+class="company-box"
+onclick="openPopup('يعمل على حماية البيئة ومتابعة الالتزام بالأنظمة البيئية.')">
+<img src="NCEC.PNG"></a>
+
 </div>
 </div>
 </div>
@@ -947,10 +1139,26 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="company-grid">
-<a href="#.html" class="company-box"><img src="company17.png"></a>
-<a href="#.html" class="company-box"><img src="company18.png"></a>
-<a href="#.html" class="company-box"><img src="company19.png"></a>
-<a href="#.html" class="company-box"><img src="company20.png"></a>
+<a href="#"
+class="company-box"
+onclick="openPopup('وصف الشركة هنا')">
+<img src="company17.png"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('وصف الشركة هنا')">
+<img src="company18.png"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('وصف الشركة هنا')">
+<img src="company19.png"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('وصف الشركة هنا')">
+<img src="company20.png"></a>
+
 </div>
 </div>
 
@@ -979,10 +1187,22 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="company-grid">
-<a href="#.html" class="company-box"><img src="RR.PNG"></a>
-<a href="#.html" class="company-box"><img src="MBCC.PNG"></a>
-<a href="#.html" class="company-box"><img src="company23.png"></a>
-<a href="#.html" class="company-box"><img src="company24.png"></a>
+<a href="#"
+class="company-box"
+onclick="openPopup('شركة تعمل في مشاريع الطرق والبنية التحتية والاستشارات الهندسية.')">
+<img src="RR.PNG"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('شركة متخصصة في مواد البناء والحلول الهندسية للمشروعات الكبرى.')">
+<img src="MBCC.PNG"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('شركة تعمل في مجالات الاستشارات والخدمات الهندسية وإدارة المشاريع.')">
+<img src="AGC.png"></a>
+
+
 </div>
 </div>
 
@@ -1011,10 +1231,17 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="company-grid">
-<a href="#.html" class="company-box"><img src="KACST.PNG"></a>
-<a href="#.html" class="company-box"><img src="ME.PNG"></a>
-<a href="#.html" class="company-box"><img src="company27.png"></a>
-<a href="#.html" class="company-box"><img src="company28.png"></a>
+<a href="#"
+class="company-box"
+onclick="openPopup('مركز وطني للبحث العلمي والتطوير التقني.')">
+<img src="KACST.PNG"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('توفر فرصًا أكاديمية وبحثية في الجامعات والمؤسسات التعليمية.')">
+<img src="ME.PNG"></a>
+
+
 </div>
 </div>
 
@@ -1050,17 +1277,47 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="company-grid">
-<a href="#.html" class="company-box"><img src="MOE.PNG"></a>
-<a href="#.html" class="company-box"><img src="MIMR.PNG"></a>
-<a href="#.html" class="company-box"><img src="MEWA.PNG"></a>
-<a href="#.html" class="company-box"><img src="ME.PNG"></a>
-<a href="#.html" class="company-box"><img src="SGS.PNG"></a>
-<a href="#.html" class="company-box"><img src="ME.PNG"></a>
-<a href="#.html" class="company-box"><img src="#.PNG"></a>
-<a href="#.html" class="company-box"><img src="#.PNG"></a>
-<a href="#.html" class="company-box"><img src="#.PNG"></a>
-<a href="#.html" class="company-box"><img src="#.PNG"></a>
-<a href="#.html" class="company-box"><img src="#.PNG"></a>
+<a href="#"
+class="company-box"
+onclick="openPopup('تعمل على تنظيم وتطوير قطاع الطاقة وإدارة موارده.')">
+<img src="MOE.PNG"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('تشرف على تطوير وتنظيم قطاع التعدين والصناعة.')">
+<img src="MIMR.PNG"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('توفر فرصًا في إدارة الموارد الطبيعية والمياه والدراسات البيئية.')">
+<img src="MEWA.PNG"></a>
+
+
+<a href="#"
+class="company-box"
+onclick="openPopup('تنفذ الدراسات والمسوح الجيولوجية الوطنية واستكشاف الموارد المعدنية.')">
+<img src="SGS.PNG"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('توفر فرصًا أكاديمية وبحثية في الجامعات والمؤسسات التعليمية.')">
+<img src="ME.PNG"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('توفر فرصًا في مجالات الخرائط والموارد الطبيعية والمساحة.')">
+<img src="MOD.png"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('توظف المتخصصين في نظم المعلومات الجغرافية والاستشعار عن بعد.')">
+<img src="NM.png"></a>
+
+<a href="#"
+class="company-box"
+onclick="openPopup('تستفيد من التخصصات الجيولوجية والمكانية في العديد من القطاعات.')">
+<img src="MOI.PNG"></a>
+
 
 </div>
 </div>
@@ -1087,8 +1344,20 @@ onclick="toggleDepartments()"></i>
 
 </div></div>
 
-</body>
-</html>
+
+</div>
+<div class="popup-overlay" id="popup">
+
+<div class="popup-box">
+
+<span class="close-popup" onclick="closePopup()">
+✕
+</span>
+
+<p id="popupText"></p>
+
+</div>
+
 </div>
 
 <footer>
@@ -1123,6 +1392,19 @@ menu.style.display="none";
 else{
 menu.style.display="block";
 }
+
+}
+function openPopup(text){
+
+document.getElementById("popup").style.display="flex";
+
+document.getElementById("popupText").innerText=text;
+
+}
+
+function closePopup(){
+
+document.getElementById("popup").style.display="none";
 
 }
 </script>
