@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>الـرحــلات الحــقليــة</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Tahoma,sans-serif;
+}
+
+body{
+background:#f8f9fb;
+overflow-x:hidden;
+}
+
+
+.content{
+padding-top:0px;
+padding-bottom:80px;
+
+position:relative;
+margin-top:-40vh;
+z-index:5;
+
+}
+.content,
+.hero-content,
+footer{
+position:relative;
+z-index:5;
+}
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+right:0;
+width:100%;
+height:75px;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 12px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.menu-btn{
+display:flex;
+flex-direction:column;
+justify-content:center;
+gap:4px;
+cursor:pointer;
+}
+
+.menu-btn span{
+width:24px;
+height:1px;
+background:#124c7c;
+border-radius:10px;
+}
+
+.logo-section{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+}
+
+.logo-section img{
+width:clamp(80px,9vw,110px);
+height:auto;
+object-fit:contain;
+display:block;
+margin:0 auto;
+}
+
+.university{
+font-family:"Times New Roman",serif;
+font-size:clamp(9px,1vw,11px);
+font-weight:700;
+color:#0B5D3B;
+margin-top:px;
+
+}
+
+.college{
+font-family:"Times New Roman",serif;
+font-size:clamp(7px,0.8vw,9px);
+color:#3D7A5C;
+
+}
+
+.language-btn{
+font-size:clamp(12px,1.3vw,16px);
+font-weight:bold;
+cursor:pointer;
+color:#1f5f3a;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+position:fixed;
+top:0;
+right:-320px;
+width:320px;
+height:100%;
+background:white;
+box-shadow:-5px 0 15px rgba(0,0,0,.15);
+transition:.3s;
+padding-top:90px;
+z-index:2000;
+overflow-y:auto;
+}
+
+.sidebar.active{
+right:0;
+}
+
+.close-btn{
+position:absolute;
+top:20px;
+left:20px;
+font-size:28px;
+cursor:pointer;
+}
+
+.sidebar a{
+display:block;
+padding:15px 25px;
+text-decoration:none;
+font-family:"Times New Roman",serif;
+color:#124c7c;
+font-size:14px;
+border-bottom:1px solid #eee;
+}
+
+.sidebar a:hover{
+background:#f3f3f3;
+}
+
+.sidebar-bottom-links{
+display:grid;
+grid-template-columns:1fr 1px 1fr;
+width:105%;
+margin-top:0;
+position:relative;
+right:0;
+}
+/* DROPDOWN */
+
+.dropdown-btn{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:4px 25px;
+border-bottom:1px solid #eee;
+transition:.2s;
+}
+
+.dropdown-btn:hover{
+background:#f3f3f3;
+}
+
+.dropdown-btn a{
+display:block;
+flex:1;
+text-decoration:none;
+font-family:"Times New Roman",serif;
+font-size:14px;
+color:#124c7c;
+}
+.dropdown-btn i{
+font-size:10px;
+color:#124c7c;
+cursor:pointer;
+padding:8px;
+}
+
+.dropdown-content{
+display:none;
+background:#fafafa;
+}
+
+.dropdown-content a{
+display:block;
+padding:12px 35px;
+font-size:12px;
+line-height:1.5;
+border-bottom:1px solid #f0f0f0;
+}
+
+.dropdown-content a:hover{
+background:#f3f3f3;
+}
+
+.sidebar-divider{
+width:1px;
+height:18px;
+background:#d6d6d6;
+position:relative;
+top:12px;
+left:4px;
+}
+
+.sidebar-bottom-links a{
+display:flex;
+justify-content:center;
+align-items:center;
+height:40px;
+width:95%;
+margin:0;
+padding:0;
+font-size:14px;
+font-family:"Times New Roman",serif;
+color:#124c7c;
+text-decoration:none;
+transition:.2s;
+}
+
+.sidebar-bottom-links a:hover{
+background:#f3f3f3;
+}
+/* HERO */
+
+.field-hero{
+min-height:clamp(500px,70vh,750px);
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+overflow:hidden;
+
+padding-top:120px;
+padding-right:%;
+padding-bottom:0;
+padding-left:0;
+}
+
+body::before{
+content:"";
+position:fixed;
+
+top:75px;
+left:0;
+
+width:100%;
+height:100vh;
+
+background:
+linear-gradient(
+to left,
+
+#f8f9fb 0%,
+#f8f9fb 45%,
+rgba(248,249,251,.98) 58%,
+rgba(248,249,251,.9) 70%,
+rgba(248,249,251,.75) 82%,
+rgba(248,249,251,.45) 92%,
+rgba(248,249,251,0) 100%
+
+);
+
+pointer-events:none;
+
+z-index:0;
+}
+
+.hero-images{
+position:fixed;
+top:75px;
+left:0;
+
+width:clamp(240px,28vw,420px);
+
+display:flex;
+flex-direction:column;
+
+z-index:-1;
+pointer-events:none;
+gap:0;
+max-height:calc(100vh - 75px);
+overflow:hidden;
+
+mask-image:
+linear-gradient(
+to left,
+transparent 0%,
+black 25%,
+black 100%
+);
+
+-webkit-mask-image:
+linear-gradient(
+to left,
+transparent 0%,
+black 20%,
+black 100%
+);
+}
+/* شكل الصور */
+
+.hero-images img{
+display:block;
+
+width:100%;
+
+height:calc((100vh - 75px) / 3);
+object-fit:cover;
+
+opacity:.75;
+border-radius:0;
+}
+/* تحسين تمركز النص */
+
+.hero-content{
+position:relative;
+z-index:2;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+width:min(90%,700px);
+
+padding-inline:20px;
+
+transform:translateY(-200px);
+}
+
+/* عنوان الصفحة */
+
+.hero-content h1{
+font-family:"Times New Roman",serif;
+font-size:clamp(40px,5vw,65px);
+font-weight:700;
+
+color:#0B5D3B;
+
+margin-bottom:15px;
+
+text-shadow:0 2px 8px rgba(255,255,255,.4);
+}
+
+/* الوصف */
+
+.hero-content p{
+font-family:"Arial",sans-serif;
+
+font-size:clamp(15px,1.6vw,20px);
+
+color:#4b4b4b;
+
+line-height:2;
+
+max-width:550px;
+}
+
+/* تأثير ناعم للصور */
+
+.hero-images img{
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+transition:.4s;
+}
+
+/* حركة عند مرور الماوس */
+
+.hero-images img:hover{
+transform:scale(1.02);
+}
+
+/* SECTIONS */
+.section-title{
+text-align:center;
+font-size:38px;
+color:#0B5D3B;
+margin:70px 0 25px;
+}
+
+.glass-box{
+width:min(1200px,92%);
+margin:auto;
+padding:35px;
+border-radius:30px;
+background:rgba(255,255,255,.7);
+backdrop-filter:blur(10px);
+line-height:2.2;
+}
+
+/* IMPORTANCE */
+.importance-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+width:min(1200px,92%);
+margin:40px auto;
+}
+
+.importance-card{
+padding:30px;
+text-align:center;
+border-radius:25px;
+background:rgba(255,255,255,.7);
+transition:.3s;
+}
+
+.importance-card:hover{transform:translateY(-6px);}
+
+/* TRIPS */
+.trip-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+width:min(1000px,92%);
+margin:40px auto;
+}
+
+.trip-card{
+padding:50px 20px;
+text-align:center;
+border-radius:25px;
+cursor:pointer;
+background:rgba(11,93,59,.08);
+}
+
+/* TOOLS */
+.tools-line{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:35px;
+padding:35px;
+border-top:8px solid #c9e4cf;
+width:min(1200px,95%);
+margin:auto;
+}
+
+.tool{text-align:center;}
+.tool img{
+width:110px;
+height:110px;
+object-fit:cover;
+border-radius:50%;
+}
+
+/* REQUIREMENTS */
+.requirements{
+width:min(900px,92%);
+margin:auto;
+}
+
+.requirements li{
+margin:18px 0;
+padding-right:20px;
+border-right:4px solid #0B5D3B;
+}
+
+/* GALLERY */
+.gallery-btn{
+width:180px;height:180px;
+border-radius:50%;
+margin:50px auto;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+background:#0B5D3B;
+color:white;
+}
+
+/* POPUP */
+.popup{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.5);
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.popup-box{
+width:min(600px,90%);
+background:white;
+padding:35px;
+border-radius:25px;
+}
+
+.close-popup{
+margin-top:25px;
+padding:10px 30px;
+border:none;
+border-radius:12px;
+background:#0B5D3B;
+color:white;
+cursor:pointer;
+}
+/* FOOTER */
+
+footer{
+width:100%;
+height:90px;
+background:rgba(11,93,59,0.88);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+margin-top:80px;
+position:relative;
+z-index:20;
+background:#0B5D3B;
+}
+
+footer p{
+font-family:"Times New Roman",serif;
+color:rgba(255,255,255,0.85);
+font-size:13px;
+margin:2px 0;
+}
+
+.footer-credit{
+font-size:11px;
+color:rgba(255,255,255,0.55);
+letter-spacing:.5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="menu-btn" onclick="openMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="logo-section">
+
+<img src="MOUNT.png" alt="logo">
+
+<div class="university">
+جــامــعــة المـــلك عــبدالـــعزيـــز
+</div>
+
+<div class="college">
+كـــليــة عــلوم الأرض
+</div>
+
+</div>
+
+<div class="language-btn">
+ع/A
+</div>
+
+</header>
+
+<div class="sidebar" id="sidebar">
+
+<div class="close-btn" onclick="closeMenu()">
+✕
+</div>
+
+<a href="index.html">الرئــيــســة</a>
+<a href="ABT.html">عـن الكــليــة</a>
+<div class="dropdown">
+
+<div class="dropdown-btn">
+
+<a href="DEP.html">الأقــسام العــلميــة</a>
+
+<i class="fa-solid fa-chevron-down"
+onclick="toggleDepartments()"></i>
+
+</div>
+
+<div class="dropdown-content" id="departmentsMenu">
+
+<a href="ENVI.html">قسم الجيولوجيا الهندسية والبيئية</a>
+
+<a href="PETRO.html">قسم جيولوجيا البترول والترسبات</a>
+
+<a href="GEPHY.html">قسم الجيوفيزياء</a>
+
+<a href="MINROK.html">قسم الثروة المعدنية والصخور</a>
+
+<a href="EXPL.html">قسم تقنية الاستكشاف الجيولوجي</a>
+
+<a href="SRTUC.html">قسم الجيولوجيا البنائية والاستشعار عن بُعد</a>
+
+<a href="HYDRO.html">قسم جيولوجيا المياه</a>
+
+</div>
+
+</div><a href="#">الــرحلات الحــقــليــة</a>
+<a href="#EMPLY.html">مجـلات و إحصائيات الــتوظــيـف</a>
+<a href="#">الــسنة التــحضيــريــية</a>
+<a href="#">مــقررات الــكليــة</a>
+<a href="#">القــبـــول</a>
+<a href="#">التـحويـل</a>
+<a href="#">الأسئلة الأكثر شيوعًا</a>
+
+
+
+<div class="sidebar-bottom-links">
+
+<a href="#">معرض الصور</a>
+
+<div class="sidebar-divider"></div>
+
+<a href="#">الحساب الرسمي</a>
+
+</div>
+
+</div>
+
+<section class="field-hero">
+
+<div class="hero-images">
+<img src="RETRP.PNG">
+<img src="MOHTRP.PNG">
+<img src="MOH2TRP.PNG">
+
+</div>
+
+<div class="hero-content">
+<h1>الرحلات الحقلية</h1>
+<p>
+التعلم خارج قاعات الدراسة واكتساب الخبرة الميدانية
+</p>
+</div>
+
+</section>
+
+<div class="content">
+
+<h2 class="section-title">
+<h2 class="section-title">نبذة عن الرحلات الحقلية</h2>
+<div class="glass-box">
+تعد الرحلات الحقلية من أهم مميزات الدراسة...
+</div>
+
+<h2 class="section-title">أهمية الرحلات الحقلية</h2>
+<div class="importance-grid">
+<div class="importance-card">ربط الجانب النظري بالتطبيق العملي</div>
+<div class="importance-card">التعرف على الصخور والمعادن</div>
+<div class="importance-card">دراسة الطبقات والتراكيب الجيولوجية</div>
+<div class="importance-card">تعلم استخدام الخرائط والأدوات</div>
+<div class="importance-card">جمع العينات وتحليلها</div>
+<div class="importance-card">تنمية مهارات العمل الميداني</div>
+</div>
+
+<h2 class="section-title">الرحلات الرئيسية</h2>
+<div class="trip-grid">
+<div class="trip-card" onclick="openPopup('التعرف على الصخور والمعادن - جمع العينات - إعداد التقارير')">رحلة الجيولوجيا الحقلية</div>
+
+<div class="trip-card" onclick="openPopup('استخدام الخرائط - تتبع الطبقات - GIS')">رحلة الخرائط الجيولوجية</div>
+
+<div class="trip-card" onclick="openPopup('زيارات ميدانية قصيرة خلال الفصل الدراسي.')">الزيارات الميدانية الأخرى</div>
+</div>
+
+<h2 class="section-title">الأدوات الحقلية</h2>
+<div class="tools-line">
+<div class="tool"><img src="tool1.jpg"><p>البوصلة الجيولوجية</p></div>
+<div class="tool"><img src="tool2.jpg"><p>دفتر الحقل</p></div>
+<div class="tool"><img src="tool3.jpg"><p>المطرقة الجيولوجية</p></div>
+<div class="tool"><img src="tool4.jpg"><p>عدسة التكبير</p></div>
+<div class="tool"><img src="tool5.jpg"><p>الخرائط الجيولوجية</p></div>
+<div class="tool"><img src="tool6.jpg"><p>جهاز GPS</p></div>
+</div>
+
+<h2 class="section-title">متطلبات الرحلات الحقلية</h2>
+<ul class="requirements">
+<li>الالتزام بتعليمات السلامة.</li>
+<li>ارتداء الملابس والأحذية المناسبة.</li>
+<li>الالتزام بالحضور والمشاركة الفعالة.</li>
+<li>المحافظة على المواقع الجيولوجية والبيئة.</li>
+<li>إحضار الأدوات المطلوبة حسب طبيعة الرحلة.</li>
+</ul>
+
+<h2 class="section-title">ذكريات من الرحلات الحقلية</h2>
+<a class="gallery-btn" href="PUT_DRIVE_LINK_HERE" target="_blank">
+🖼️
+معرض الصور
+</a>
+
+<div class="glass-box">
+تمنح الرحلات الحقلية الطالب فرصة التعلم من الطبيعة مباشرة...
+</div>
+
+<div class="popup" id="popup">
+<div class="popup-box">
+<p id="popupText"></p>
+<button class="close-popup" onclick="closePopup()">إغلاق</button>
+</div>
+</div>
+
+</div>
+
+<footer>
+
+<p>
+Faculty of Earth Sciences Website Project
+</p>
+
+<p class="footer-credit">
+Designed & Developed by Retal Abdulmannan
+</p>
+
+</footer>
+
+<script>
+
+function openMenu(){
+document.getElementById("sidebar").classList.add("active");
+}
+
+function closeMenu(){
+document.getElementById("sidebar").classList.remove("active");
+}
+
+function toggleDepartments(){
+
+let menu=document.getElementById("departmentsMenu");
+
+if(menu.style.display==="block"){
+menu.style.display="none";
+}
+else{
+menu.style.display="block";
+}
+
+}
+function openPopup(text){
+document.getElementById("popup").style.display="flex";
+document.getElementById("popupText").innerText=text;
+}
+
+function closePopup(){
+document.getElementById("popup").style.display="none";
+}
+</script>
+
+</body>
+</html>
