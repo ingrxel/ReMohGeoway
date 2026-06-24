@@ -326,9 +326,7 @@ display:flex;
 flex-direction:column;
 align-items:center;
 text-align:center;
-
 width:min(90%,700px);
-
 gap:8px;
 }
 
@@ -339,21 +337,17 @@ font-family:"Times New Roman",serif;
 font-size:clamp(34px,4vw,50px);
 font-weight:700;
 color:#0B5D3B;
-
 margin:0;
 }
 
 /* الوصف */
 
 .hero-content p{
-font-family:"Arial",sans-serif;
-
+font-family:"Times New Roman",serif;
 font-size:clamp(12px,1.5vw,18px);
-
+font-weight:700;
 color:#4b4b4b;
-
 line-height:2;
-
 max-width:550px;
 }
 
@@ -389,9 +383,11 @@ border-radius:30px;
 background:rgba(255,255,255,.7);
 backdrop-filter:blur(10px);
 line-height:2.2;
+font-family:"Times New Roman", serif;
 }
 
 /* IMPORTANCE */
+
 .importance-grid{
 display:grid;
 grid-template-columns:repeat(2, 1fr);
@@ -406,12 +402,11 @@ text-align:center;
 border-radius:25px;
 background:rgba(255,255,255,.7);
 transition:.3s;
-
 display:flex;
 justify-content:center;
 align-items:center;
-
 min-height:90px;
+font-family:"Times New Roman",serif;
 font-size:clamp(14px,1.3vw,18px);
 line-height:1.8;
 }
@@ -423,7 +418,6 @@ line-height:1.8;
 display:grid;
 grid-template-columns:repeat(3, 1fr);
 gap:25px;
-
 width:min(1000px,92%);
 margin:40px auto;
 }
@@ -434,14 +428,11 @@ text-align:center;
 border-radius:25px;
 cursor:pointer;
 background:rgba(11,93,59,.08);
-
 display:flex;
 justify-content:center;
 align-items:center;
-
 min-height:140px;
 font-family:"Times New Roman",serif;
-
 font-size:clamp(14px,1.3vw,18px);
 line-height:1.8;
 }
@@ -453,10 +444,8 @@ display:flex;
 flex-wrap:nowrap; /* يمنع النزول لسطر جديد */
 justify-content:space-between;
 align-items:flex-start;
-
 gap:15px;
 padding:35px 10px;
-
 width:min(1200px,95%);
 margin:auto;
 overflow:hidden;
@@ -466,20 +455,31 @@ overflow:hidden;
 flex:1;
 min-width:0;
 text-align:center;
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
 .tool img{
-width:clamp(50px,6vw,110px);
-height:clamp(50px,6vw,110px);
-object-fit:cover;
-border-radius:50%;
+width:clamp(70px,7vw,100px);
+height:clamp(70px,7vw,100px);
+object-fit:contain;
+border:none;
+border-radius:0;
+padding:0;
+background:none;
+margin-bottom:12px;
 }
 
 .tool p{
 font-size:clamp(10px,1vw,16px);
-margin-top:8px;
+font-family:"Times New Roman",serif;
+margin:0;
+line-height:1.5;
 }
+
 /* REQUIREMENTS */
+
 .requirements{
 width:min(900px,92%);
 margin:auto;
@@ -489,22 +489,37 @@ margin:auto;
 margin:18px 0;
 padding-right:20px;
 border-right:4px solid #0B5D3B;
+font-family:"Times New Roman", serif;
 }
 
 /* GALLERY */
-.gallery-btn{
-width:180px;height:180px;
-border-radius:50%;
-margin:50px auto;
-display:flex;
-flex-direction:column;
+
+.field-gallery{
+width:min(750px,92%);
+margin:40px auto;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,180px));
+gap:20px;
 justify-content:center;
-align-items:center;
-text-decoration:none;
-background:#0B5D3B;
-color:white;
 }
 
+.field-gallery img{
+width:100%;
+aspect-ratio:1/1;
+
+object-fit:cover;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+}
+
+.field-gallery img:hover{
+transform:scale(1.03);
+}
 /* POPUP */
 .popup{
 display:none;
@@ -617,22 +632,17 @@ onclick="toggleDepartments()"></i>
 <div class="dropdown-content" id="departmentsMenu">
 
 <a href="ENVI.html">قسم الجيولوجيا الهندسية والبيئية</a>
-
 <a href="PETRO.html">قسم جيولوجيا البترول والترسبات</a>
-
 <a href="GEPHY.html">قسم الجيوفيزياء</a>
-
 <a href="MINROK.html">قسم الثروة المعدنية والصخور</a>
-
 <a href="EXPL.html">قسم تقنية الاستكشاف الجيولوجي</a>
-
 <a href="SRTUC.html">قسم الجيولوجيا البنائية والاستشعار عن بُعد</a>
-
 <a href="HYDRO.html">قسم جيولوجيا المياه</a>
 
 </div>
+</div>
 
-</div><a href="#">الــرحلات الحــقــليــة</a>
+<a href="FLD.html">الــرحلات الحــقــليــة</a>
 <a href="#EMPLY.html">مجـلات و إحصائيات الــتوظــيـف</a>
 <a href="#">الــسنة التــحضيــريــية</a>
 <a href="#">مــقررات الــكليــة</a>
@@ -666,8 +676,7 @@ onclick="toggleDepartments()"></i>
 <div class="hero-content">
 <h1>الرحلات الحقلية</h1>
 <p>
-التعلم خارج قاعات الدراسة واكتساب الخبرة الميدانية
-</p>
+حيث تلتقي المعرفة العلمية بالمغامرة الميدانية</p>
 </div>
 
 </section>
@@ -679,7 +688,7 @@ onclick="toggleDepartments()"></i>
 تعد الرحلات الحقلية من أهم مميزات الدراسة في كلية علوم الأرض، حيث ينتقل الطالب من دراسة المفاهيم داخل القاعات الدراسية إلى تطبيقها عمليًا في المواقع الجيولوجية الحقيقية. كما تسهم هذه الرحلات في تنمية مهارات الملاحظة والتحليل والعمل الميداني التي يحتاجها الجيولوجي في حياته المهنية.
 </div>
 
-<h2 class="section-title">أهمية الرحلات الحقلية</h2>
+<h2 class="section-title">أهمية الرحلات الحقلية</h2>يلا
 <div class="importance-grid">
 <div class="importance-card">ربط الجانب النظري بالتطبيق العملي</div>
 <div class="importance-card">التعرف على الصخور والمعادن</div>
@@ -700,12 +709,12 @@ onclick="toggleDepartments()"></i>
 
 <h2 class="section-title">الأدوات الحقلية</h2>
 <div class="tools-line">
-<div class="tool"><img src="tool1.jpg"><p>البوصلة الجيولوجية</p></div>
-<div class="tool"><img src="tool2.jpg"><p>دفتر الحقل</p></div>
-<div class="tool"><img src="tool3.jpg"><p>المطرقة الجيولوجية</p></div>
-<div class="tool"><img src="tool4.jpg"><p>عدسة التكبير</p></div>
-<div class="tool"><img src="tool5.jpg"><p>الخرائط الجيولوجية</p></div>
-<div class="tool"><img src="tool6.jpg"><p>جهاز GPS</p></div>
+<div class="tool"><img src="CMPS.PNG"><p>البوصلة الجيولوجية</p></div>
+<div class="tool"><img src="NOTE.PNG"><p>النوتة لحقلية</p></div>
+<div class="tool"><img src="HMMR.PNG"><p>المطرقة الجيولوجية</p></div>
+<div class="tool"><img src="MAGLENS.PNG"><p>العدسة الجيولوجية</p></div>
+<div class="tool"><img src="MAP.PNG"><p>الخرائط الجيولوجية</p></div>
+<div class="tool"><img src="GPS.PNG"><p>جهاز تحديد المواقع (GPS)</p></div>
 </div>
 
 <h2 class="section-title">متطلبات الرحلات الحقلية</h2>
@@ -717,14 +726,22 @@ onclick="toggleDepartments()"></i>
 <li>إحضار الأدوات المطلوبة حسب طبيعة الرحلة.</li>
 </ul>
 
-<h2 class="section-title">ذكريات من الرحلات الحقلية</h2>
-<a class="gallery-btn" href="PUT_DRIVE_LINK_HERE" target="_blank">
-🖼️
-معرض الصور
-</a>
+<h2 class="section-title">مقتطفات من الحقل</h2>
 
+<div class="field-gallery">
+
+<img src="BOY1.JPG" alt="">
+<img src="GLS1.PNG" alt="">
+<img src="BOY2.JPG" alt="">
+<img src="GLS2.PNG" alt="">
+<img src="BOY3.JPG" alt="">
+<img src="GLS3.PNG" alt="">
+
+
+</div>
 <div class="glass-box">
-تمنح الرحلات الحقلية الطالب فرصة التعلم من الطبيعة مباشرة، واكتساب خبرة عملية في التعرف على الصخور والمعادن ورسم الخرائط الجيولوجية وتحليل البيانات الميدانية، مما يجعلها من أكثر التجارب التعليمية تميزًا في كلية علوم الأرض.</div>
+تمنح الرحلات الحقلية الطالب فرصة التعلم من الطبيعة مباشرة، واكتساب خبرة عملية في التعرف على الصخور والمعادن ورسم الخرائط الجيولوجية وتحليل البيانات الميدانية، مما يجعلها من أكثر التجارب التعليمية تميزًا في كلية علوم الأرض.
+</div>
 
 <div class="popup" id="popup">
 <div class="popup-box">
