@@ -273,7 +273,18 @@ width:100%;
 height:100%; object-fit:cover;
  display:block; 
 }
+.about-container{
+display:flex;
+flex-wrap:wrap;
+gap:40px;
+align-items:flex-start;
 
+width:min(1400px,95%);
+margin:-350px auto 0 auto;
+flex-direction:row-reverse;
+position:relative;
+z-index:20;
+}
 
 .info-card{
 width:clamp(280px,30vw,420px);
@@ -284,17 +295,11 @@ backdrop-filter:blur(8px);
 border:1px solid rgba(11,93,59,0.15);
 border-radius:25px;
 padding:35px;
-position:relative;
-margin-top:clamp(-420px,-25vw,-250px);
-margin-left:clamp(20px,5vw,60px);
-margin-right:auto;
-float:left;
-shape-outside:margin-box;
-margin-right:40px;
+flex:1 1 320px;
+max-width:420px;
+margin:0;
 z-index:10;
-
 text-align:right;
-
 box-shadow:0 8px 30px rgba(0,0,0,.08);
 }
 
@@ -318,18 +323,15 @@ color:#2f2f2f;
 }
 
 .about-text{
-width:clamp(55%,65vw,75%);
-max-width:780px;
-
+background:transparent;
+border:none;
+box-shadow:none;
+backdrop-filter:none;
+-webkit-backdrop-filter:none;
+flex:2 1 600px;
+padding:40px;
 text-align:right;
-padding-right:clamp(15px,4vw,40px);
-
-position:relative;
-right:30px;
-
-margin-top:-200px;
-
-z-index:15;
+margin-top:120px;
 }
 
 .about-text h1{
@@ -532,6 +534,7 @@ onclick="toggleDepartments()"></i>
 
 </div>
 
+<div class="about-container">
 
 <section class="info-card">
 
@@ -563,6 +566,7 @@ onclick="toggleDepartments()"></i>
 تُعد كلية علوم الأرض من أقدم المؤسسات التعليمية المتخصصة في علوم الجيولوجيا التطبيقية بالمملكة العربية السعودية، حيث تأسست عام 1390هـ (1970م) كمركز للجيولوجيا التطبيقية بهدف تأهيل الجيولوجيين السعوديين في مجالات الجيولوجيا الحقلية واستكشاف الثروات المعدنية. وانضمت لاحقًا إلى جامعة الملك عبدالعزيز لتصبح كلية علوم الأرض عام 1398هـ (1978م). وتتميز الكلية ببرامجها الأكاديمية المتطورة ومكانتها العلمية المرموقة، إذ كانت من أوائل الكليات في المملكة التي طرحت برامج الماجستير والدكتوراه. كما تنفرد على مستوى المملكة والعالم العربي بتقديم برامج البكالوريوس في عدد من التخصصات التطبيقية في علوم الأرض، مما يسهم في إعداد كوادر وطنية مؤهلة لدعم التنمية المستدامة وتحقيق مستهدفات رؤية المملكة 2030.
 </p>
 </section>
+</div>
 
 <section class="earth-section">
 
