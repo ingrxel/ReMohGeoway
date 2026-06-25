@@ -16,7 +16,6 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Tahoma,sans-serif;
 }
 
 .background-design{
@@ -704,41 +703,48 @@ border-radius:35px;
 background:rgba(255,255,255,.70);
 backdrop-filter:blur(12px);
 border:1px solid rgba(255,255,255,.5);
+overflow:hidden;
 }
 
 .support-grid{
 display:grid;
 grid-template-columns:repeat(12,1fr);
 gap:20px;
+width:100%;
 }
 .support-wrapper{
 grid-column:1 / -1;
 width:100%;
+max-width:100%;
+overflow:hidden;
 }
-.programming-card{
-min-width:300px;
-}
+
 .support-card{
 grid-column:span 3;
-padding:18px 15px;
+padding:18px 12px;
+min-height:90px;
+
 background:rgba(11,93,59,.08);
 border:none;
 outline:none;
 border-radius:18px;
+
 text-align:center;
-font-size:clamp(14px,1.5vw,18px);
+font-size:clamp(11px,1.2vw,18px);
 font-weight:600;
+font-family:"Times New Roman", serif;
 color:#0B5D3B;
-box-shadow:none;
-line-height:1.7;
-word-break:break-word;
-overflow-wrap:break-word;
+
 display:flex;
+flex-direction:row;
 justify-content:center;
 align-items:center;
-gap:4px;
+gap:6px;
 flex-wrap:wrap;
-height:auto;
+line-height:1.5;
+white-space:normal;
+word-break:break-word;
+
 cursor:pointer;
 transition:.3s;
 }
@@ -1176,7 +1182,7 @@ onclick="openSupportModal(
 <i class="fa-solid fa-chart-column"></i>
 </button>
 
-<button class="support-card center-row programming-card"
+<button class="support-card center-row"
 onclick="openSupportModal(
 'البرمجة وحل المشكلات',
 'اكتبي هنا محتوى مقرر البرمجة وحل المشكلات'
