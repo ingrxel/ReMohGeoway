@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>القــبــول</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Times New Roman",serif;
+}
+
+.background-design{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+pointer-events:none;
+overflow:hidden;
+}
+
+/* المضلعات */
+
+.polygon{
+position:absolute;
+background:rgba(185,220,198,.25);
+backdrop-filter:blur(2px);
+}
+
+/* أعلى اليمين */
+
+.p1{
+top:-50px;
+right:-70px;
+width:320px;
+height:320px;
+clip-path:polygon(
+30% 0%,
+100% 0%,
+100% 100%,
+0% 35%
+);
+transform:rotate(8deg);
+}
+
+/* أعلى اليسار */
+
+.p2{
+top:120px;
+left:-90px;
+width:280px;
+height:280px;
+clip-path:polygon(
+0 20%,
+100% 0,
+60% 100%
+);
+background:rgba(185,220,198,.18);
+}
+
+/* أسفل اليسار */
+
+.p3{
+bottom:-90px;
+left:-60px;
+width:350px;
+height:350px;
+clip-path:polygon(
+0 0,
+100% 100%,
+0 100%
+);
+background:rgba(185,220,198,.20);
+}
+
+/* أسفل اليمين */
+
+.p4{
+bottom:-120px;
+right:-50px;
+width:340px;
+height:340px;
+clip-path:polygon(
+100% 0,
+100% 100%,
+0 60%
+);
+background:rgba(185,220,198,.18);
+transform:rotate(-10deg);
+}
+
+/* الخطوط الهندسية */
+
+.lines{
+position:absolute;
+border:1px solid rgba(150,190,165,.18);
+border-radius:50%;
+}
+
+.l1{
+width:500px;
+height:500px;
+bottom:-250px;
+right:-180px;
+}
+
+.l2{
+width:420px;
+height:420px;
+top:-210px;
+left:-180px;
+}
+
+.bg-layer2{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:-2;
+overflow:hidden;
+}
+
+.poly{
+position:absolute;
+background:rgba(11,93,59,.035);
+filter:blur(.5px);
+}
+
+/* أعلى اليمين */
+
+.poly1{
+top:-120px;
+right:-160px;
+width:520px;
+height:420px;
+clip-path:polygon(
+20% 0%,
+100% 0%,
+80% 80%,
+0% 55%
+);
+
+transform:rotate(18deg);
+}
+
+/* أعلى اليسار */
+
+.poly2{
+top:180px;
+left:-220px;
+width:500px;
+height:500px;
+clip-path:polygon(
+0% 15%,
+90% 0%,
+100% 70%,
+35% 100%
+);
+transform:rotate(-25deg);
+}
+
+/* أسفل اليسار */
+
+.poly3{
+bottom:-200px;
+left:-130px;
+width:650px;
+height:420px;
+clip-path:polygon(
+0% 35%,
+45% 0%,
+100% 45%,
+60% 100%,
+0% 100%
+);
+transform:rotate(12deg);
+}
+
+/* أسفل اليمين */
+
+.poly4{
+bottom:-150px;
+right:-180px;
+width:600px;
+height:500px;
+clip-path:polygon(
+30% 0%,
+100% 20%,
+100% 100%,
+0% 75%
+);
+transform:rotate(-18deg);
+}
+
+.dots-pattern{
+position:fixed;
+top:110px;
+left:30px;
+width:180px;
+height:120px;
+background-image:
+radial-gradient(circle, rgba(11,93,59,.18) 1px, transparent 1px);
+background-size:14px 14px;
+opacity:.7;
+pointer-events:none;
+z-index:-1;
+}
+
+body{
+background:#f8f9fb;
+}
+
+.content{
+padding:120px 5% 80px;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+right:0;
+width:100%;
+height:75px;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 12px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.menu-btn{
+display:flex;
+flex-direction:column;
+justify-content:center;
+gap:4px;
+cursor:pointer;
+}
+
+.menu-btn span{
+width:24px;
+height:1px;
+background:#124c7c;
+border-radius:10px;
+}
+
+.logo-section{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+}
+
+.logo-section img{
+width:clamp(80px,9vw,110px);
+height:auto;
+object-fit:contain;
+display:block;
+margin:0 auto;
+}
+
+.university{
+font-family:"Times New Roman",serif;
+font-size:clamp(9px,1vw,11px);
+font-weight:700;
+color:#0B5D3B;
+margin-top:px;
+
+}
+
+.college{
+font-family:"Times New Roman",serif;
+font-size:clamp(7px,0.8vw,9px);
+color:#3D7A5C;
+
+}
+
+.language-btn{
+font-size:clamp(12px,1.3vw,16px);
+font-weight:bold;
+cursor:pointer;
+color:#1f5f3a;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+position:fixed;
+top:0;
+right:-320px;
+width:320px;
+height:100%;
+background:white;
+box-shadow:-5px 0 15px rgba(0,0,0,.15);
+transition:.3s;
+padding-top:90px;
+z-index:2000;
+overflow-y:auto;
+}
+
+.sidebar.active{
+right:0;
+}
+
+.close-btn{
+position:absolute;
+top:20px;
+left:20px;
+font-size:28px;
+cursor:pointer;
+}
+
+.sidebar a{
+display:block;
+padding:15px 25px;
+text-decoration:none;
+font-family:"Times New Roman",serif;
+color:#124c7c;
+font-size:14px;
+border-bottom:1px solid #eee;
+}
+
+.sidebar a:hover{
+background:#f3f3f3;
+}
+
+.sidebar-bottom-links{
+display:grid;
+grid-template-columns:1fr 1px 1fr;
+width:105%;
+margin-top:0;
+position:relative;
+right:0;
+}
+
+/* DROPDOWN */
+
+.dropdown-btn{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:4px 25px;
+border-bottom:1px solid #eee;
+transition:.2s;
+}
+
+.dropdown-btn:hover{
+background:#f3f3f3;
+}
+
+.dropdown-btn a{
+display:block;
+flex:1;
+text-decoration:none;
+font-family:"Times New Roman",serif;
+font-size:14px;
+color:#124c7c;
+}
+.dropdown-btn i{
+font-size:10px;
+color:#124c7c;
+cursor:pointer;
+padding:8px;
+}
+
+.dropdown-content{
+display:none;
+background:#fafafa;
+}
+
+.dropdown-content a{
+display:block;
+padding:12px 35px;
+font-size:12px;
+line-height:1.5;
+border-bottom:1px solid #f0f0f0;
+}
+
+.dropdown-content a:hover{
+background:#f3f3f3;
+}
+
+.sidebar-divider{
+width:1px;
+height:18px;
+background:#d6d6d6;
+position:relative;
+top:12px;
+left:4px;
+}
+
+.sidebar-bottom-links a{
+display:flex;
+justify-content:center;
+align-items:center;
+height:40px;
+width:95%;
+margin:0;
+padding:0;
+font-size:14px;
+font-family:"Times New Roman",serif;
+color:#124c7c;
+text-decoration:none;
+transition:.2s;
+}
+
+.sidebar-bottom-links a:hover{
+background:#f3f3f3;
+}
+
+//*القبول*//
+
+
+.admission-hero{
+text-align:center;
+margin-bottom:80px;
+}
+
+.admission-hero{
+text-align:center;
+margin-bottom:20px;
+}
+
+.admission-hero h1{
+font-size:clamp(45px,6vw,65px);
+color:#0B5D3B;
+font-family:"Times New Roman",serif;
+}
+
+.admission-hero p{
+margin-top:15px;
+font-size:18px;
+color:#555;
+line-height:2;
+max-width:700px;
+margin-inline:auto;
+}
+
+
+/* البطاقات السريعة */
+
+.quick-grid{
+width:min(850px,92%);
+margin:-10px auto 50px;
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(180px,1fr));
+gap:0;
+justify-content:center;
+align-items:center;
+}
+
+.quick-card{
+text-align:center;
+padding:5px;
+transition:.3s;
+font-size:30px;
+}
+
+.quick-card:hover{
+transform:translateY(-8px);
+}
+
+.quick-img{
+width:48px;
+height:48px;
+object-fit:contain;
+display:block;
+margin:0 auto 8px;
+}
+
+.quick-card h3{
+font-size:18px;
+color:#0B5D3B;
+}
+
+
+/* عنوان الأقسام */
+
+.section-title{
+text-align:center;
+font-size:clamp(32px,4vw,42px);
+color:#0B5D3B;
+margin:30px 0 30px;
+}
+
+
+/* ROADMAP */
+
+.roadmap{
+width:min(1200px,92%);
+margin:auto;
+}
+
+.road-step{
+display:grid;
+grid-template-columns:220px 1fr;
+gap:60px;
+align-items:center;
+margin-bottom:50px;
+position:relative;
+}
+
+.road-step::after{
+content:"";
+position:absolute;
+left:105px;
+top:90px;
+width:8px;
+height:90px;
+background:#0B5D3B;
+}
+
+.road-step:last-child::after{
+display:none;
+}
+
+.step-box{
+background:#0B5D3B;
+color:white;
+padding:25px;
+border-radius:20px;
+text-align:center;
+font-size:22px;
+}
+
+.step-content{
+background:rgba(255,255,255,.75);
+padding:30px;
+border-radius:25px;
+line-height:2;
+}
+
+
+/* المعلومات */
+
+.info-grid{
+width:min(1100px,95%);
+margin:auto;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+}
+
+.info-card{
+width:320px;
+background:rgba(11,93,59,.08);
+border-radius:30px;
+overflow:hidden;
+display:flex;
+flex-direction:column;
+}
+
+.info-head{
+background:#0B5D3B;
+color:white;
+padding:18px;
+text-align:center;
+font-size:clamp(20px,2vw,24px);
+}
+
+.info-card p,
+.info-card ul{
+padding:30px;
+line-height:2;
+font-size:clamp(15px,1.2vw,18px);
+flex:1;
+}
+
+.info-card li{
+margin:5px 0;
+}
+
+
+/* التواصل */
+
+.contact-box{
+width:min(900px,92%);
+margin:80px auto;
+padding:50px;
+text-align:center;
+border-radius:35px;
+background:rgba(255,255,255,.75);
+}
+
+.admission-btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 40px;
+background:#0B5D3B;
+color:white;
+border-radius:15px;
+text-decoration:none;
+transition:.3s;
+}
+
+.admission-btn:hover{
+transform:translateY(-5px);
+}
+
+/* FOOTER */
+
+footer{
+width:100%;
+height:90px;
+background:rgba(11,93,59,0.88);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+margin-top:80px;
+}
+
+footer p{
+font-family:"Times New Roman",serif;
+color:rgba(255,255,255,0.85);
+font-size:13px;
+margin:2px 0;
+}
+
+.footer-credit{
+font-size:11px;
+color:rgba(255,255,255,0.55);
+letter-spacing:.5px;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<div class="background-design">
+
+<div class="polygon p1"></div>
+<div class="polygon p2"></div>
+<div class="polygon p3"></div>
+<div class="polygon p4"></div>
+
+<div class="lines l1"></div>
+<div class="lines l2"></div>
+</div>
+<div class="bg-layer2">
+<div class="poly poly1"></div>
+<div class="poly poly2"></div>
+<div class="poly poly3"></div>
+<div class="poly poly4"></div>
+
+</div>
+<div class="dots-pattern"></div>
+<header>
+
+<div class="menu-btn" onclick="openMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="logo-section">
+
+<img src="MOUNT.png" alt="logo">
+
+<div class="university">
+جــامــعــة المـــلك عــبدالـــعزيـــز
+</div>
+
+<div class="college">
+كـــليــة عــلوم الأرض
+</div>
+
+</div>
+
+<div class="language-btn">
+ع/A
+</div>
+
+</header>
+
+<div class="sidebar" id="sidebar">
+
+<div class="close-btn" onclick="closeMenu()">
+✕
+</div>
+
+<a href="index.html">الرئــيــســة</a>
+<a href="ABT.html">عـن الكــليــة</a>
+<div class="dropdown">
+
+<div class="dropdown-btn">
+
+<a href="DEP.html">الأقــسام العــلميــة</a>
+
+<i class="fa-solid fa-chevron-down"
+onclick="toggleDepartments()"></i>
+
+</div>
+
+<div class="dropdown-content" id="departmentsMenu">
+
+<a href="ENVI.html">قسم الجيولوجيا الهندسية والبيئية</a>
+<a href="PETRO.html">قسم جيولوجيا البترول والترسبات</a>
+<a href="GEPHY.html">قسم الجيوفيزياء</a>
+<a href="MINROK.html">قسم الثروة المعدنية والصخور</a>
+<a href="EXPL.html">قسم تقنية الاستكشاف الجيولوجي</a>
+<a href="SRTUC.html">قسم الجيولوجيا البنائية والاستشعار عن بُعد</a>
+<a href="HYDRO.html">قسم جيولوجيا المياه</a>
+
+</div>
+</div>
+
+<a href="FLD.html">الــرحلات الحــقــليــة</a>
+<a href="#EMPLY.html">مجـلات و إحصائيات الــتوظــيـف</a>
+<a href="FRSTYR.html">الــسنة التــحضيــريــية</a>
+<a href="#">مــقررات الــكليــة</a>
+<a href="#">القــبـــول</a>
+<a href="#">التـحويـل</a>
+<a href="#">الأسئلة الأكثر شيوعًا</a>
+
+
+
+<div class="sidebar-bottom-links">
+
+<a href="#">معرض الصور</a>
+
+<div class="sidebar-divider"></div>
+
+<a href="#">الحساب الرسمي</a>
+
+</div>
+</div>
+
+<div class="content">
+
+<div class="content">
+
+<section class="admission-hero">
+
+<h1>القبول في كلية علوم الأرض</h1>
+
+<p>
+تعرف على آلية القبول، وشروطه، والمعلومات الأساسية للالتحاق بكلية علوم الأرض.
+</p>
+
+</section>
+
+
+<!-- البطاقات السريعة -->
+
+<div class="quick-grid">
+
+<div class="quick-card">
+<img src="TODO.PNG" class="quick-img">
+<h3>آلية القبول</h3>
+</div>
+
+<div class="quick-card">
+<img src="CLNDR.PNG" class="quick-img">
+<h3>مواعيد التقديم</h3>
+</div>
+
+<div class="quick-card">
+<img src="UNI.PNG" class="quick-img">
+<h3>الجهة المسؤولة</h3>
+</div>
+
+<div class="quick-card">
+<img src="LAPTP.PNG" class="quick-img">
+<h3>نظام القبول</h3>
+</div>
+
+</div>
+
+
+<!-- رحلة القبول -->
+
+<h2 class="section-title">
+رحلة القبول
+</h2>
+
+<section class="roadmap">
+
+<div class="road-step">
+
+<div class="step-box">
+التقديم على الجامعة
+</div>
+
+<div class="step-content">
+التقديم يتم إلكترونيًا عبر بوابة القبول بالجامعة خلال الفترة المعلنة.
+</div>
+
+</div>
+
+
+<div class="road-step">
+
+<div class="step-box">
+الترشيح والمفاضلة
+</div>
+
+<div class="step-content">
+تتم المفاضلة بين المتقدمين وفق معايير وشروط القبول المعتمدة.
+</div>
+
+</div>
+
+
+<div class="road-step">
+
+<div class="step-box">
+القبول الجامعي
+</div>
+
+<div class="step-content">
+يتم إعلان نتائج القبول وإرسال إشعارات القبول للطلاب المرشحين.
+</div>
+
+</div>
+
+
+<div class="road-step">
+
+<div class="step-box">
+الالتحاق بكلية علوم الأرض
+</div>
+
+<div class="step-content">
+يلتحق الطالب بالكلية ويبدأ دراسة المقررات المشتركة.
+</div>
+
+</div>
+
+
+<div class="road-step">
+
+<div class="step-box">
+بدء الدراسة
+</div>
+
+<div class="step-content">
+يبدأ الطالب رحلته الأكاديمية داخل كلية علوم الأرض.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- المعلومات الرئيسية -->
+
+<h2 class="section-title">
+معلومات القبول
+</h2>
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<div class="info-head">
+شروط القبول
+</div>
+
+<ul>
+<li>أن يكون المتقدم حاصلًا على شهادة الثانوية العامة (المسار العلمي) أو ما يعادلها.</li>
+<li>استيفاء جميع متطلبات القبول الجامعي المعلنة.</li>
+<li>الحصول على موزونة لا تقل عن 85% للدخول في المفاضلة، ولن يتم إدخال المتقدمين الحاصلين على موزونة أقل من ذلك ضمن المنافسة على المقاعد المتاحة.</li>
+</ul>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="info-head">
+آلية القبول
+</div>
+
+<ul>
+<li> التقديم إلكترونيًا خلال الفترة المعلنة عبر منصة قبول.</li>
+<li>تتم المفاضلة بين المتقدمين وفق الموزونة المعتمدة.</li>
+<li>يتم قبول أعلى المتقدمين حسب عدد المقاعد المتاحة.</li>
+<li>إعلان نتائج القبول واستكمال الإجراءات النهائية.</li>
+</ul>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="info-head">
+معلومات مهمة
+</div>
+
+<ul>
+<li>القبول يخضع لأنظمة الجامعة المعلنة.</li>
+
+<li>لا يوجد معدل قبول ثابت أو مضمون، إذ يعتمد القبول على المفاضلة بين المتقدمين المستوفين للشروط.</li>
+
+<li>يتم الإعلان عن مواعيد التقديم والقبول سنويًا عبر القنوات الرسمية للجامعة.</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- التواصل -->
+
+<div class="contact-box">
+
+<p>
+
+للحصول على مزيد من المعلومات المتعلقة بالقبول، يرجى التواصل مع الجهات المختصة أو زيارة الموقع الرسمي لعمادة القبول والتسجيل.
+
+</p>
+
+<a href="https://www.kau.edu.sa/ar/page/deanship-of-admissions-and-registration"
+class="admission-btn"
+target="_blank">
+
+زيارة عمادة القبول والتسجيل
+
+</a>
+
+</div>
+
+</div>
+</div>
+
+<footer>
+
+<p>
+Faculty of Earth Sciences Website Project
+</p>
+
+<p class="footer-credit">
+Designed & Developed by Retal Abdulmannan
+</p>
+
+</footer>
+
+<script>
+
+function openMenu(){
+document.getElementById("sidebar").classList.add("active");
+}
+
+function closeMenu(){
+document.getElementById("sidebar").classList.remove("active");
+}
+
+function toggleDepartments(){
+let menu=document.getElementById("departmentsMenu");
+
+if(menu.style.display==="block"){
+menu.style.display="none";
+}
+else{
+menu.style.display="block";
+}
+}
+
+
+</script>
+
+</body>
+</html>
