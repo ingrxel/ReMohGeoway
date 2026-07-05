@@ -328,91 +328,275 @@ width:100%;
 height:100%; object-fit:cover;
  display:block; 
 }
+
+/*=============== ABOUT + TIMELINE ===============*/
+
 .about-container{
+direction:ltr;
+width:min(1250px,92%);
+
+margin:-260px auto 70px;
+
 display:flex;
+
+justify-content:space-between;
+
+align-items:stretch;
+gap:60px;
+
 flex-wrap:wrap;
-gap:40px;
-align-items:flex-start;
 
-width:min(1400px,95%);
-margin:-350px auto 0 auto;
-flex-direction:row-reverse;
 position:relative;
+
 z-index:20;
+
 }
 
-.info-card{
-width:clamp(280px,30vw,420px);
-min-height:250px;
-background:rgba(11,93,59,0.12);
-backdrop-filter:blur(8px);
--webkit-backdrop-filter:blur(8px);
-border:1px solid rgba(11,93,59,0.15);
-border-radius:25px;
-padding:35px;
-flex:1 1 320px;
-max-width:420px;
-margin:0;
-z-index:10;
-text-align:right;
-box-shadow:0 8px 30px rgba(0,0,0,.08);
+.timeline-box{
+direction:rtl;
+
+flex:0 0 330px;
+
+background:rgba(255,255,255,.88);
+
+backdrop-filter:blur(10px);
+
+border-radius:30px;
+
+padding:35px 30px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.07);
+
+border:1px solid rgba(11,93,59,.08);
+
 }
 
-.info-card h2{
-font-size:clamp(26px,3vw,32px);
+.timeline-title{
+
+font-size:32px;
+
 color:#0B5D3B;
-margin-bottom:5px;
+
+margin-bottom:12px;
+
+text-align:center;
+
 }
 
-.second-title{
-margin-top:40px;
-}
+.timeline-intro{
 
-.info-card p{
-font-family:"Arial",serif;
-font-weight:bold;
-font-size:clamp(14px,1.2vw,16px);
+font-size:15px;
+
 line-height:2;
-color:#2f2f2f;
+
+color:#666;
+
+text-align:center;
+
+margin-bottom:35px;
+
+}
+
+.timeline{
+
+position:relative;
+
+padding:10px 0;
+
+}
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+right:17px;
+
+top:0;
+
+bottom:0;
+
+width:3px;
+
+background:#0B5D3B;
+
+opacity:.25;
+
+}
+
+.timeline-item{
+
+position:relative;
+
+padding-right:55px;
+
+margin-bottom:38px;
+
+}
+
+.timeline-item::before{
+
+content:"";
+
+position:absolute;
+
+right:8px;
+
+top:8px;
+
+width:20px;
+
+height:20px;
+
+border-radius:50%;
+
+background:white;
+
+border:5px solid #0B5D3B;
+
+box-shadow:0 0 0 6px rgba(11,93,59,.08);
+
+z-index:2;
+
+}
+
+.timeline-card{
+
+background:white;
+
+padding:18px 20px;
+
+border-radius:18px;
+
+box-shadow:0 8px 22px rgba(0,0,0,.05);
+
+border:1px solid rgba(11,93,59,.08);
+
+transition:.35s;
+
+}
+
+.timeline-card:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+}
+
+.timeline-card h3{
+
+font-size:24px;
+
+color:#0B5D3B;
+
+margin-bottom:10px;
+
+}
+
+.timeline-card p{
+
+font-size:15px;
+
+line-height:1.9;
+
+color:#555;
+
 }
 
 .about-text{
-background:transparent;
-border:none;
-box-shadow:none;
-backdrop-filter:none;
--webkit-backdrop-filter:none;
-flex:2 1 600px;
-text-align:right;
-margin-top:120px;
+
+direction:rtl;
+
+flex:none;
+
+padding-top:10px;
+
 }
 
 .about-text h1{
- 
-font-size:clamp(32px,5vw,45px);
+
+font-size:44px;
+
 color:#0B5D3B;
-margin-bottom:20px;
-font-weight:700;
+
+margin-bottom:12px;
 }
 
 .about-text p{
-font-size:clamp(15px,1.5vw,18px);
-font-family:"Arial",serif;
-font-weight:bold;
-line-height:2.4;
-color:#3f3f3f;
-font-weight:500;
+direction:rtl;
+
+text-align:right;
+font-size:18px;
+
+line-height:2.35;
+
+color:#444;
+
+text-align:justify;
+margin-bottom:0;
 }
 
+@media(max-width:980px){
+
+.about-container{
+
+margin:-180px auto 60px;
+
+justify-content:center;
+
+}
+
+.timeline-box{
+
+flex:1 1 100%;
+
+max-width:550px;
+
+}
+
+.about-text{
+
+flex:1 1 100%;
+
+text-align:center;
+
+}
+
+.about-text p{
+
+text-align:center;
+
+}
+
+}
+.about-content{
+
+flex:1;
+
+display:flex;
+
+flex-direction:column;
+
+}
 /* WHY EARTH SCIENCES */
 
 .earth-section{
-width:min(1200px,90%);
-margin:20px auto;
-text-align:right;
-clear:both;
-}
 
+width:100%;
+
+margin-top:8px;
+
+margin-right:0;
+
+margin-bottom:0;
+
+margin-left:0;
+
+text-align:right;
+
+}
 .earth-title{
  
 font-size:clamp(34px,4vw,50px);
@@ -629,7 +813,7 @@ color:rgba(255,255,255,0.55);
 </div>
 
 <div class="college">
-كـــليــة عــلوم الأرض
+كــلــيــة الــتـــعديــــن
 </div>
 
 </div>
@@ -651,7 +835,7 @@ color:rgba(255,255,255,0.55);
 
 <div class="dropdown-btn">
 
-<a href="../DEP/DEP.html">الأقــسام العــلميــة</a>
+<a href="../DEP/DEP.html">التــخصــصــات الاكــاديــميــة</a>
 
 <i class="fa-solid fa-chevron-down"
 onclick="toggleDepartments()"></i>
@@ -659,13 +843,10 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="dropdown-content" id="departmentsMenu">
-<a href="../DEP/ENVI.html">قسم الجيولوجيا الهندسية والبيئية</a>
-<a href="../DEP/PTRO.html">قسم جيولوجيا البترول والترسبات</a>
-<a href="../DEP/GEPHY.html">قسم الجيوفيزياء</a>
-<a href="../DEP/MINROK.html">قسم الثروة المعدنية والصخور</a>
-<a href="../DEP/EXPL.html">قسم تقنية الاستكشاف الجيولوجي</a>
-<a href="../DEP/STRUC.html">قسم الجيولوجيا البنائية والاستشعار عن بُعد</a>
-<a href="../DEP/HYDRO.html">قسم جيولوجيا المياه</a>
+<a href="../MINE.MINE.html">هندسة التعدين</a>
+<a href="../DEP.GEO.html"> جيولوجيا </a>
+<a href="../DEP/GEPHY.html"> جيوفيزياء</a>
+
 
 </div>
 </div>
@@ -743,45 +924,130 @@ class="link-box">
 
 <div class="about-container">
 
-<section class="info-card">
+<div class="timeline-box">
 
-<h2>الرؤية</h2>
+<h2 class="timeline-title">
 
-<p>
-أن تصبح كلية علوم الأرض مرجعًا إقليميًا وعالميًا في البحوث والدراسات، وأن تسهم في إعداد كفاءات مؤهلة تلبي احتياجات سوق العمل في مجالات علوم الأرض والتعدين.
-</p>
+رحلة الكلية
 
-<h2 class="second-title">
-الرسالة
 </h2>
 
-<p>
-إعداد كفاءات علمية ومهنية متميزة في تخصص علوم الأرض لخدمة المجتمع والمملكة من خلال الاستفادة من الموارد الطبيعية للأرض.
+<p class="timeline-intro">
+
+على مدى أكثر من خمسة عقود شهدت الكلية مراحل تطور متتابعة حتى أصبحت كلية التعدين مواكبة لمستهدفات رؤية المملكة 2030.
+
 </p>
 
-</section>
+<div class="timeline">
 
+<div class="timeline-item left">
 
+<div class="timeline-card">
+
+<h3>1970</h3>
+
+<p>
+
+إنشاء مركز الجيولوجيا التطبيقية (UNESCO) ليكون النواة الأولى لعلوم الأرض بجامعة الملك عبدالعزيز.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item right">
+
+<div class="timeline-card">
+
+<h3>1973</h3>
+
+<p>
+
+تأسيس قسم الجيولوجيا ضمن كلية العلوم لبدء البرامج الأكاديمية المتخصصة في علوم الأرض.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item left">
+
+<div class="timeline-card">
+
+<h3>1975</h3>
+
+<p>
+
+تحول المركز إلى معهد الجيولوجيا التطبيقية مع توسع البرامج والأنشطة العلمية.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item right">
+
+<div class="timeline-card">
+
+<h3>1978</h3>
+
+<p>
+
+تأسيس كلية علوم الأرض كأول كلية متخصصة في المملكة والعالم العربي.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item left">
+
+<div class="timeline-card">
+
+<h3>2026</h3>
+
+<p>
+
+التحول إلى كلية التعدين لمواكبة مستهدفات رؤية المملكة ودعم قطاع التعدين.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="about-content">
 <section class="about-text">
 
 <h1>
+
 عن الكلية
+
 </h1>
 
 <p>
-تُعد كلية علوم الأرض من أقدم المؤسسات التعليمية المتخصصة في علوم الجيولوجيا التطبيقية بالمملكة العربية السعودية، حيث تأسست عام 1390هـ (1970م) كمركز للجيولوجيا التطبيقية بهدف تأهيل الجيولوجيين السعوديين في مجالات الجيولوجيا الحقلية واستكشاف الثروات المعدنية. وانضمت لاحقًا إلى جامعة الملك عبدالعزيز لتصبح كلية علوم الأرض عام 1398هـ (1978م). وتتميز الكلية ببرامجها الأكاديمية المتطورة ومكانتها العلمية المرموقة، إذ كانت من أوائل الكليات في المملكة التي طرحت برامج الماجستير والدكتوراه. كما تنفرد على مستوى المملكة والعالم العربي بتقديم برامج البكالوريوس في عدد من التخصصات التطبيقية في علوم الأرض، مما يسهم في إعداد كوادر وطنية مؤهلة لدعم التنمية المستدامة وتحقيق مستهدفات رؤية المملكة 2030.
+
+تُعد كلية التعدين من أقدم المؤسسات التعليمية المتخصصة في علوم الأرض بالمملكة العربية السعودية، حيث تأسست عام 1390هـ (1970م) كمركز للجيولوجيا التطبيقية، ثم تطورت حتى أصبحت كلية رائدة في التعليم والبحث العلمي، وأسهمت في إعداد كوادر وطنية متخصصة تخدم قطاعات التعدين والموارد الطبيعية والتنمية المستدامة بما يتوافق مع مستهدفات رؤية المملكة 2030.
+
 </p>
+
 </section>
-</div>
 
 <section class="earth-section">
 
 <h1 class="earth-title">
-لماذا دراسة علوم الأرض؟
+لماذا كلية التعدين؟
 </h1>
 
 <p class="earth-intro">
-تُعد علوم الأرض من التخصصات الحيوية التي تجمع بين المعرفة العلمية والتطبيقات العملية، وتسهم بشكل مباشر في فهم كوكب الأرض واستكشاف موارده الطبيعية وإدارتها بما يحقق التنمية المستدامة. كما تلعب دورًا محوريًا في دعم القطاعات الاستراتيجية التي تسهم في تحقيق مستهدفات رؤية المملكة العربية السعودية 2030.
+تُعد كلية التعدين من التخصصات الحيوية التي تجمع بين المعرفة العلمية والتطبيقات العملية، وتسهم بشكل مباشر في فهم كوكب الأرض واستكشاف موارده الطبيعية وإدارتها بما يحقق التنمية المستدامة. كما تلعب دورًا محوريًا في دعم القطاعات الاستراتيجية التي تسهم في تحقيق مستهدفات رؤية المملكة العربية السعودية 2030.
 </p>
 
 <div class="reasons-container">
@@ -831,7 +1097,9 @@ class="link-box">
 </div>
 
 </section>
+</div>
 
+</div>
 <footer>
 
 <div class="footer-shape shape1"></div>

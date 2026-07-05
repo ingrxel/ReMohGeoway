@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>جيوفيزياء</title>
+<title>جيولوجيا</title>
 
 <style>
 
@@ -29,7 +29,9 @@ z-index:-1;
 pointer-events:none;
 overflow:hidden;
 }
-
+body{
+background:#f8f9fb;
+}
 /* المضلعات */
 
 .polygon{
@@ -240,12 +242,9 @@ pointer-events:none;
 z-index:-1;
 }
 
-body{
-background:#f8f9fb;
-}
-
 .content{
-padding:120px 5% 80px;
+padding-top:95px;
+text-align:center;
 }
 
 /* HEADER */
@@ -444,12 +443,6 @@ transition:.2s;
 .sidebar-bottom-links a:hover{
 background:#f3f3f3;
 }
-.department-section{
-max-width:1200px;
-margin:auto;
-text-align:center;
-}
-
 
 /* LINKS MODAL */
 
@@ -507,83 +500,169 @@ background:#dff0e2;
 transform:translateY(-3px);
 }
 
-.department-title{
+/* DEPARTMENTS */
+
+.page-title{
+text-align:center;
  
-font-size:clamp(35px,4vw,50px);
+font-size:clamp(30px,4vw,48px);
 color:#0B5D3B;
+margin-bottom:30px;
+}
+
+.departments-row{
+
+display:grid;
+
+grid-template-columns:repeat(4,180px);
+
+justify-content:center;
+
+gap:22px;
+
+margin-bottom:22px;
+
+}
+
+.second-row{
+
+grid-template-columns:repeat(3,180px);
+
+}
+
+.departments-center{
+
+display:grid;
+
+grid-template-columns:repeat(1,minmax(180px,220px));
+
+justify-content:center;
+
+margin-bottom:22px;
+
+}
+
+.departments-center{
+display:flex;
+justify-content:center;
 margin-bottom:20px;
 }
 
-.department-logo{
-width:200px;
-height:200px;
-object-fit:contain;
-margin-bottom:15px;
-}
+.department-card{
 
-/* تخص صفحة الجيوفيزياء */
+width:165px;
 
-.department-section{
+min-height:165px;
 
-max-width:1200px;
+padding:12px;
 
-margin:auto;
+display:flex;
 
-padding:20px 25px 40px;
+flex-direction:column;
 
-}
+justify-content:center;
 
-.department-title{
-
-font-size:clamp(42px,5vw,58px);
-
-color:#0B5D3B;
+align-items:center;
 
 text-align:center;
+
+background:rgba(237,248,238,.9);
+
+border:1px solid rgba(11,93,59,.12);
+
+border-radius:22px;
+
+box-shadow:0 6px 18px rgba(0,0,0,.06);
+
+transition:.3s;
+
+text-decoration:none;
+
+}
+.department-card:hover{
+
+transform:translateY(-8px);
+
+background:#e5f3e7;
+
+box-shadow:0 12px 25px rgba(0,0,0,.10);
+
+}
+.department-card h2{
+ 
+font-size:clamp(14px,1.6vw,18px);
+color:#0B5D3B;
+line-height:1.2;
+margin-bottom:0;
+}
+
+.department-card img{
+width:75%;
+height:auto;
+
+object-fit:contain;
+display:block;
+
+margin-top:4px;
+}
+.fields-section{
+
+margin:70px auto 45px;
+
+text-align:center;
+
+}
+
+.fields-section .section-title{
+
+font-size:clamp(34px,4vw,46px);
 
 font-weight:700;
 
+color:#0B5D3B;
+
 margin-bottom:18px;
+
+position:relative;
 
 }
 
-.department-logo{
+.fields-section .section-title::after{
+
+content:"";
 
 display:block;
 
-margin:0 auto 28px;
+width:90px;
 
-width:210px;
+height:4px;
 
-height:210px;
+background:#0B5D3B;
 
-object-fit:contain;
+margin:16px auto 0;
 
-transition:.35s;
-
-}
-
-.department-logo:hover{
-
-transform:scale(1.05);
+border-radius:50px;
 
 }
 
-.department-intro{
+.fields-intro{
 
-max-width:900px;
+max-width:760px;
 
-margin:0 auto 65px;
+margin:0 auto 45px;
 
-font-size:19px;
+font-size:18px;
 
-line-height:2.2;
+line-height:2.1;
+
+color:#555;
 
 text-align:center;
 
-color:#4b4b4b;
-
 }
+
+/*========== GEOLOGY PAGE : PART 1 ==========*/
+
 .department-section{
 
 max-width:1200px;
@@ -967,6 +1046,7 @@ font-size:22px;
 
 color:#0B5D3B;
 
+margin-bottom:8px;
 
 }
 
@@ -989,6 +1069,7 @@ grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
 
 gap:24px;
 
+margin:50px 0 75px;
 
 }
 
@@ -1058,6 +1139,7 @@ font-size:22px;
 
 color:#0B5D3B;
 
+margin-bottom:6px;
 
 }
 
@@ -1087,6 +1169,7 @@ position:relative;
 
 overflow:hidden;
 
+margin-top:25px;
 
 }
 
@@ -1128,6 +1211,7 @@ color:#444;
 
 max-width:850px;
 
+margin:auto;
 
 }
 
@@ -1377,7 +1461,6 @@ padding:35px 22px;
 }
 
 }
-
 /* FOOTER */
 
 footer{
@@ -1524,6 +1607,7 @@ line-height:1.8;
 color:rgba(255,255,255,0.55);
 }
 
+
 </style>
 
 </head>
@@ -1547,6 +1631,7 @@ color:rgba(255,255,255,0.55);
 
 </div>
 <div class="dots-pattern"></div>
+
 <header>
 
 <div class="menu-btn" onclick="openMenu()">
@@ -1593,10 +1678,12 @@ onclick="toggleDepartments()"></i>
 
 </div>
 
+
 <div class="dropdown-content" id="departmentsMenu">
 <a href="../MINE.MINE.html">هندسة التعدين</a>
 <a href="../DEP.GEO.html"> جيولوجيا </a>
 <a href="../DEP/GEPHY.html"> جيوفيزياء</a>
+
 </div>
 </div>
 
@@ -1608,6 +1695,7 @@ onclick="toggleDepartments()"></i>
 <a href="../TRNSFR/TRNSFR.html">التـحويـل</a>
 <a href="../STUDY/STUDY.html">الــدراســة والخــطــة الــدراســية</a>
 <a href="../QSN/QSN.html">الأسئلة الأكثر شيوعًا</a>
+
 
 
 <div class="sidebar-bottom-links">
@@ -1661,20 +1749,19 @@ class="link-box">
 
 </div>
 
-<div class="content">
 
+
+<div class="content">
 <section class="department-section">
 
 <h1 class="department-title">
-الجيوفيزياء
+الجيولوجيا
 </h1>
 
-<img src="GEPHY.PNG" class="department-logo">
+<img src="GEOLOGY.png" class="department-logo">
 
 <p class="department-intro">
-
-يعنى تخصص الجيوفيزياء بدراسة باطن الأرض باستخدام المبادئ الفيزيائية والتقنيات الحديثة، بهدف فهم التراكيب الجيولوجية واستكشاف الموارد الطبيعية وتحليل الظواهر الأرضية دون الحاجة إلى الحفر المباشر.
-
+يُعنى تخصص الجيولوجيا بدراسة مكونات الأرض وموادها وبنيتها وتاريخها والعمليات الطبيعية التي شكّلت سطحها، كما يركز على استكشاف الموارد الطبيعية وفهم الظواهر الجيولوجية وتطبيق المعرفة العلمية في خدمة التنمية المستدامة.
 </p>
 
 <div class="overview-card">
@@ -1682,14 +1769,12 @@ class="link-box">
 <div class="overview-text">
 
 <h2>
-
 نبذة عن التخصص
-
 </h2>
 
 <p>
 
-يجمع تخصص الجيوفيزياء بين علوم الأرض والفيزياء لدراسة مكونات باطن الأرض وتحليل خصائصها باستخدام الموجات الزلزالية والجاذبية والمغناطيسية والطرق الكهربائية. ويسهم في استكشاف المعادن والطاقة والمياه الجوفية، إضافةً إلى دعم المشاريع الهندسية والبيئية من خلال التقنيات الجيوفيزيائية الحديثة.
+يُعد تخصص الجيولوجيا من التخصصات الأساسية في علوم الأرض، حيث يزود الطلاب بالمعارف النظرية والمهارات التطبيقية لفهم الصخور والمعادن والتراكيب الجيولوجية والعمليات الأرضية، إلى جانب التدريب على العمل الميداني واستخدام التقنيات الحديثة في الدراسات الجيولوجية.
 
 </p>
 
@@ -1697,7 +1782,7 @@ class="link-box">
 
 <div class="overview-image">
 
-<img src="GEPHY2.png">
+<img src="GEOLOGY2.png">
 
 </div>
 
@@ -1705,7 +1790,7 @@ class="link-box">
 
 <h2 class="section-title">
 
-لماذا تختار الجيوفيزياء؟
+لماذا تختار الجيولوجيا؟
 
 </h2>
 
@@ -1713,17 +1798,17 @@ class="link-box">
 
 <div class="feature-card">
 
-<i class="fa-solid fa-wave-square"></i>
+<i class="fa-solid fa-mountain"></i>
 
 <h3>
 
-استكشاف باطن الأرض
+استكشاف الأرض
 
 </h3>
 
 <p>
 
-دراسة ما يوجد أسفل سطح الأرض باستخدام الموجات والقياسات الفيزيائية دون الحاجة إلى الحفر المباشر.
+فهم تاريخ الأرض والعمليات الطبيعية التي شكلت تضاريسها عبر ملايين السنين.
 
 </p>
 
@@ -1731,17 +1816,17 @@ class="link-box">
 
 <div class="feature-card">
 
-<i class="fa-solid fa-satellite-dish"></i>
+<i class="fa-solid fa-gem"></i>
 
 <h3>
 
-تقنيات حديثة
+الثروات الطبيعية
 
 </h3>
 
 <p>
 
-استخدام أحدث الأجهزة والبرامج لتحليل البيانات الجيوفيزيائية وتفسيرها بدقة.
+المساهمة في استكشاف الموارد المعدنية ومصادر الطاقة والمياه الجوفية.
 
 </p>
 
@@ -1749,17 +1834,17 @@ class="link-box">
 
 <div class="feature-card">
 
-<i class="fa-solid fa-industry"></i>
+<i class="fa-solid fa-earth-americas"></i>
 
 <h3>
 
-فرص مهنية متنوعة
+دراسة البيئة
 
 </h3>
 
 <p>
 
-المشاركة في مشاريع التعدين والطاقة والبنية التحتية والاستكشاف الجيولوجي.
+تحليل الظواهر الطبيعية والمخاطر الجيولوجية ودراسة تأثيرها على الإنسان والبيئة.
 
 </p>
 
@@ -1767,22 +1852,24 @@ class="link-box">
 
 <div class="feature-card">
 
-<i class="fa-solid fa-chart-line"></i>
+<i class="fa-solid fa-compass-drafting"></i>
 
 <h3>
 
-تحليل البيانات
+التطبيقات الميدانية
 
 </h3>
 
 <p>
 
-تنمية مهارات تحليل البيانات واستخلاص النتائج لدعم الدراسات والمشروعات المختلفة.
+اكتساب الخبرة من خلال الرحلات الحقلية والعمل المباشر في المواقع الجيولوجية.
 
 </p>
 
 </div>
+
 </div>
+
 <h2 class="section-title">
 
 ماذا سيدرس الطالب؟
@@ -1805,7 +1892,7 @@ class="link-box">
 
 <p>
 
-الرياضيات والفيزياء والكيمياء والعلوم الأساسية المرتبطة بعلوم الأرض.
+الرياضيات والكيمياء والفيزياء والعلوم الأساسية المرتبطة بعلوم الأرض.
 
 </p>
 
@@ -1821,13 +1908,13 @@ class="link-box">
 
 <h3>
 
-المقررات الجيوفيزيائية
+المقررات الجيولوجية
 
 </h3>
 
 <p>
 
-الزلازل والجاذبية والمغناطيسية والطرق الكهربائية والكهرومغناطيسية.
+المعادن والصخور والرسوبيات والأحافير والجيولوجيا البنائية والخرائط الجيولوجية.
 
 </p>
 
@@ -1843,13 +1930,13 @@ class="link-box">
 
 <h3>
 
-التطبيقات الميدانية
+التدريب الحقلي
 
 </h3>
 
 <p>
 
-التدريب على جمع البيانات الجيوفيزيائية واستخدام أجهزة القياس في المواقع المختلفة.
+تنفيذ الرحلات الجيولوجية والتدريب على جمع البيانات وقراءة التراكيب الجيولوجية.
 
 </p>
 
@@ -1865,13 +1952,13 @@ class="link-box">
 
 <h3>
 
-معالجة البيانات
+التطبيقات الحديثة
 
 </h3>
 
 <p>
 
-تحليل النتائج باستخدام البرامج المتخصصة وإعداد الخرائط والتقارير الفنية.
+استخدام نظم المعلومات الجغرافية والاستشعار عن بعد والبرامج الجيولوجية الحديثة.
 
 </p>
 
@@ -1890,19 +1977,15 @@ class="link-box">
 
 <div class="skill-item">
 
-<i class="fa-solid fa-chart-line"></i>
+<i class="fa-solid fa-map-location-dot"></i>
 
 <div>
 
-<h3>
-
-تحليل البيانات الجيوفيزيائية
-
-</h3>
+<h3>رسم الخرائط الجيولوجية</h3>
 
 <p>
 
-اكتساب القدرة على تحليل وتفسير القياسات الجيوفيزيائية واستخلاص النتائج العلمية.
+اكتساب مهارة قراءة وإعداد الخرائط الجيولوجية وتحليل البيانات المكانية.
 
 </p>
 
@@ -1912,63 +1995,15 @@ class="link-box">
 
 <div class="skill-item">
 
-<i class="fa-solid fa-satellite-dish"></i>
+<i class="fa-solid fa-hammer"></i>
 
 <div>
 
-<h3>
-
-استخدام أجهزة القياس
-
-</h3>
+<h3>وصف الصخور والمعادن</h3>
 
 <p>
 
-التدرب على تشغيل الأجهزة الجيوفيزيائية المستخدمة في الدراسات والاستكشافات الميدانية.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="skill-item">
-
-<i class="fa-solid fa-map"></i>
-
-<div>
-
-<h3>
-
-إعداد الخرائط
-
-</h3>
-
-<p>
-
-إعداد وتفسير الخرائط الجيوفيزيائية وربطها بالبيانات الجيولوجية.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="skill-item">
-
-<i class="fa-solid fa-laptop"></i>
-
-<div>
-
-<h3>
-
-استخدام البرامج المتخصصة
-
-</h3>
-
-<p>
-
-استخدام برامج معالجة البيانات والنمذجة الجيوفيزيائية وإعداد التقارير الفنية.
+التعرف على الصخور والمعادن وتوصيفها ميدانيًا ومخبريًا.
 
 </p>
 
@@ -1982,15 +2017,47 @@ class="link-box">
 
 <div>
 
-<h3>
-
-العمل الميداني
-
-</h3>
+<h3>العمل الحقلي</h3>
 
 <p>
 
-تنفيذ القياسات الميدانية والمشاركة في أعمال المسح والاستكشاف في المواقع المختلفة.
+تنفيذ الدراسات والرحلات الحقلية وجمع العينات والقياسات الجيولوجية.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="skill-item">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<div>
+
+<h3>التحليل والاستنتاج</h3>
+
+<p>
+
+تحليل الظواهر الجيولوجية وربطها بالعمليات الطبيعية المختلفة.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="skill-item">
+
+<i class="fa-solid fa-laptop"></i>
+
+<div>
+
+<h3>التقنيات الحديثة</h3>
+
+<p>
+
+استخدام نظم المعلومات الجغرافية والاستشعار عن بعد والبرامج الجيولوجية.
 
 </p>
 
@@ -2004,15 +2071,11 @@ class="link-box">
 
 <div>
 
-<h3>
-
-العمل الجماعي
-
-</h3>
+<h3>العمل الجماعي</h3>
 
 <p>
 
-التعاون مع فرق العمل في المشاريع البحثية والهندسية وإدارة البيانات بكفاءة.
+التعاون ضمن فرق ميدانية وبحثية وإعداد التقارير العلمية.
 
 </p>
 
@@ -2021,22 +2084,70 @@ class="link-box">
 </div>
 
 </div>
+<section class="fields-section">
 
+<h2 class="section-title">
 
+استكشف فروع علم الجيولوجيا
+
+</h2>
+
+<p class="fields-intro">
+
+تعرف على أبرز الفروع العلمية التي تنتمي إلى تخصص الجيولوجيا، واستكشف مجالاتها وتطبيقاتها المختلفة.
+
+</p>
+
+<div class="departments-row">
+
+<a href="ENVI.html" class="department-card">
+<h2>الجيولوجيا الهندسية والبيئية</h2>
+<img src="ENVI.PNG">
+</a>
+
+<a href="PTRO.html" class="department-card">
+<h2>جيولوجيا البترول والترسبات</h2>
+<img src="PETRO.PNG">
+</a>
+
+<a href="GEPHY.html" class="department-card">
+<h2>الجيوفيزياء</h2>
+<img src="GEPHY.PNG">
+</a>
+
+<a href="MINROK.html" class="department-card">
+<h2>الثروة المعدنية والصخور</h2>
+<img src="MINROK.PNG">
+</a>
 
 </div>
 
-<div class="closing-card">
+<div class="departments-row second-row">
+
+<a href="EXPL.html" class="department-card">
+<h2>تقنية الاستكشاف الجيولوجي</h2>
+<img src="EXPL.PNG">
+</a>
+
+<a href="STRUC.html" class="department-card">
+<h2>الجيولوجيا البنائية والاستشعار عن بُعد</h2>
+<img src="STRUC.PNG">
+</a>
+
+<a href="HYDRO.html" class="department-card">
+<h2>جيولوجيا المياه</h2>
+<img src="HYDRO.PNG">
+</a>
+
+</div><div class="closing-card">
 
 <h2>
-
 رسالة التخصص
-
 </h2>
 
 <p>
 
-يهدف تخصص الجيوفيزياء إلى إعداد كوادر علمية قادرة على توظيف المبادئ الفيزيائية والتقنيات الحديثة لدراسة باطن الأرض واستكشاف الموارد الطبيعية وتحليل الظواهر الجيولوجية، بما يسهم في دعم التنمية المستدامة وخدمة القطاعات التعدينية والهندسية والبحثية.
+يهدف تخصص الجيولوجيا إلى إعداد كوادر علمية تمتلك المعرفة والمهارات اللازمة لدراسة الأرض ومواردها الطبيعية، والإسهام في استكشافها والمحافظة عليها، وتوظيف التقنيات الحديثة لخدمة التنمية المستدامة.
 
 </p>
 
@@ -2050,8 +2161,10 @@ class="link-box">
 
 </a>
 
-</div>
 </section>
+
+</section>
+
 </div>
 
 <footer>
@@ -2092,7 +2205,6 @@ document.getElementById("sidebar").classList.add("active");
 function closeMenu(){
 document.getElementById("sidebar").classList.remove("active");
 }
-
 function toggleDepartments(){
 
 let menu=document.getElementById("departmentsMenu");

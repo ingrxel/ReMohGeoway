@@ -8,10 +8,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>الأقسام العلمية</title>
+<title>التــخــصــصــات الأكــاديــميــة</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -45,14 +44,12 @@ top:-50px;
 right:-70px;
 width:320px;
 height:320px;
-
 clip-path:polygon(
 30% 0%,
 100% 0%,
 100% 100%,
 0% 35%
 );
-
 transform:rotate(8deg);
 }
 
@@ -63,13 +60,11 @@ top:120px;
 left:-90px;
 width:280px;
 height:280px;
-
 clip-path:polygon(
 0 20%,
 100% 0,
 60% 100%
 );
-
 background:rgba(185,220,198,.18);
 }
 
@@ -80,13 +75,11 @@ bottom:-90px;
 left:-60px;
 width:350px;
 height:350px;
-
 clip-path:polygon(
 0 0,
 100% 100%,
 0 100%
 );
-
 background:rgba(185,220,198,.20);
 }
 
@@ -97,15 +90,12 @@ bottom:-120px;
 right:-50px;
 width:340px;
 height:340px;
-
 clip-path:polygon(
 100% 0,
 100% 100%,
 0 60%
 );
-
 background:rgba(185,220,198,.18);
-
 transform:rotate(-10deg);
 }
 
@@ -155,7 +145,6 @@ top:-120px;
 right:-160px;
 width:520px;
 height:420px;
-
 clip-path:polygon(
 20% 0%,
 100% 0%,
@@ -173,14 +162,12 @@ top:180px;
 left:-220px;
 width:500px;
 height:500px;
-
 clip-path:polygon(
 0% 15%,
 90% 0%,
 100% 70%,
 35% 100%
 );
-
 transform:rotate(-25deg);
 }
 
@@ -191,7 +178,6 @@ bottom:-200px;
 left:-130px;
 width:650px;
 height:420px;
-
 clip-path:polygon(
 0% 35%,
 45% 0%,
@@ -199,7 +185,6 @@ clip-path:polygon(
 60% 100%,
 0% 100%
 );
-
 transform:rotate(12deg);
 }
 
@@ -210,14 +195,12 @@ bottom:-150px;
 right:-180px;
 width:600px;
 height:500px;
-
 clip-path:polygon(
 30% 0%,
 100% 20%,
 100% 100%,
 0% 75%
 );
-
 transform:rotate(-18deg);
 }
 
@@ -225,24 +208,23 @@ transform:rotate(-18deg);
 position:fixed;
 top:110px;
 left:30px;
-
 width:180px;
 height:120px;
-
 background-image:
 radial-gradient(circle, rgba(11,93,59,.18) 1px, transparent 1px);
-
 background-size:14px 14px;
-
 opacity:.7;
-
 pointer-events:none;
 z-index:-1;
 }
 
+
+body{
+background:#f8f9fb;
+}
+
 .content{
-padding-top:95px;
-text-align:center;
+padding:120px 5% 80px;
 }
 
 /* HEADER */
@@ -367,6 +349,7 @@ margin-top:0;
 position:relative;
 right:0;
 }
+
 /* DROPDOWN */
 
 .dropdown-btn{
@@ -442,6 +425,7 @@ transition:.2s;
 background:#f3f3f3;
 }
 
+
 /* LINKS MODAL */
 
 .links-modal{
@@ -497,117 +481,276 @@ transition:.3s;
 background:#dff0e2;
 transform:translateY(-3px);
 }
+/* ===========================
+HERO
+=========================== */
 
-/* DEPARTMENTS */
+.specializations-hero{
 
-.page-title{
 text-align:center;
- 
-font-size:clamp(30px,4vw,48px);
+
+margin-bottom:70px;
+}
+
+.specializations-hero h1{
+
+font-size:clamp(42px,6vw,65px);
+
 color:#0B5D3B;
+
+margin-bottom:20px;
+}
+
+.specializations-hero p{
+
+max-width:850px;
+
+margin:auto;
+
+font-size:20px;
+
+line-height:2;
+
+color:#555;
+}
+
+
+/* ===========================
+CONTAINER
+=========================== */
+
+.specializations-container{
+
+display:flex;
+
+flex-direction:column;
+
+gap:45px;
+}
+
+
+/* ===========================
+CARD
+=========================== */
+
+.specialization-card{
+
+display:flex;
+
+flex-wrap:wrap;
+
+align-items:center;
+
+gap:35px;
+
+padding:40px;
+
+background:rgba(255,255,255,.78);
+
+backdrop-filter:blur(12px);
+
+border-radius:35px;
+
+border:6px solid rgba(11,93,59,.18);
+
+box-shadow:
+0 12px 35px rgba(0,0,0,.06),
+0 0 0 6px rgba(11,93,59,.03);
+
+position:relative;
+
+overflow:hidden;
+
+transition:.35s;
+}
+
+.specialization-card:hover{
+
+transform:translateY(-10px);
+}
+
+
+/* زخارف */
+
+.specialization-card::before{
+
+content:"";
+
+position:absolute;
+
+top:-80px;
+
+right:-80px;
+
+width:180px;
+
+height:180px;
+
+background:rgba(11,93,59,.05);
+
+border-radius:50%;
+}
+
+.specialization-card::after{
+
+content:"";
+
+position:absolute;
+
+bottom:20px;
+
+left:20px;
+
+width:55px;
+
+height:55px;
+
+background:rgba(11,93,59,.05);
+
+clip-path:polygon(
+50% 0%,
+0% 100%,
+100% 100%
+);
+}
+
+
+/* ===========================
+ICON
+=========================== */
+
+.spec-icon{
+
+flex:0 0 180px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+}
+
+.spec-icon img{
+
+width:170px;
+
+height:170px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+background:white;
+
+padding:12px;
+
+border:4px solid rgba(11,93,59,.15);
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.35s;
+}
+
+.specialization-card:hover .spec-icon img{
+
+transform:scale(1.06);
+
+border-color:#0B5D3B;
+}
+
+
+/* ===========================
+CONTENT
+=========================== */
+
+.spec-content{
+
+flex:1;
+}
+
+.spec-content h2{
+
+font-size:34px;
+
+color:#0B5D3B;
+
+margin-bottom:20px;
+}
+
+.spec-content p{
+
+font-size:18px;
+
+line-height:2;
+
+color:#555;
+
 margin-bottom:30px;
 }
 
-.departments-row{
+
+/* ===========================
+TAGS
+=========================== */
+
+.spec-tags{
+
 display:flex;
-justify-content:center;
-align-items:stretch;
-gap:25px;
+
 flex-wrap:wrap;
-margin-bottom:20px;
+
+gap:12px;
+
+margin-bottom:30px;
 }
 
-.departments-center{
-display:flex;
-justify-content:center;
-margin-bottom:20px;
+.spec-tags span{
+
+padding:10px 18px;
+
+background:#eef5f0;
+
+color:#0B5D3B;
+
+border-radius:999px;
+
+font-size:15px;
+
+font-weight:700;
 }
 
-.department-card{
-width:clamp(140px,16vw,180px);
-min-height:clamp(140px,18vw,200px);
-background:rgba(237,248,238,.9);
-border:1px solid rgba(11,93,59,.12);
-border-radius:24px;
-padding:15px;
 
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+/* ===========================
+BUTTON
+=========================== */
+
+.spec-btn{
+
+display:inline-block;
+
+padding:15px 35px;
+
+background:#0B5D3B;
+
+color:white;
 
 text-decoration:none;
-text-align:center;
 
-box-shadow:0 6px 18px rgba(0,0,0,.06);
+border-radius:999px;
+
+font-size:16px;
+
+font-weight:700;
+
 transition:.3s;
 }
 
-/* قسم الجيولوجيا الهندسية والبيئية */
-.card-envi{
-width:clamp(105px,13vw,140px);
-min-height:clamp(105px,13vw,140px);
+.spec-btn:hover{
+
+background:#124c7c;
+
+transform:translateY(-4px);
 }
-
-/* قسم جيولوجيا البترول والترسبات */
-.card-petro{
-width:clamp(105px,13vw,140px);
-min-height:clamp(105px,13vw,140px);
-}
-
-/* قسم الجيوفيزياء */
-.card-geophy{
-width:clamp(100px,12vw,135px);
-min-height:clamp(100px,12vw,135px);
-}
-
-/* قسم الثروة المعدنية والصخور */
-.card-minrok{
-width:clamp(115px,14vw,155px);
-min-height:clamp(115px,14vw,155px);
-}
-
-/* قسم تقنيات الاستكشاف الجيولوجي */
-.card-expl{
-width:clamp(105px,13vw,140px);
-min-height:clamp(105px,13vw,140px);
-}
-
-/* قسم الجيولوجيا البنائية والاستشعار عن بعد */
-.card-struc{
-width:clamp(125px,15vw,170px);
-min-height:clamp(125px,15vw,170px);
-}
-
-/* قسم جيولوجيا المياه */
-.card-hydro{
-width:clamp(105px,13vw,140px);
-min-height:clamp(105px,13vw,140px);
-}
-.department-card:hover{
-transform:translateY(-8px);
-background:#e5f3e7;
-box-shadow:0 12px 25px rgba(0,0,0,.1);
-}
-
-.department-card h2{
- 
-font-size:clamp(14px,1.6vw,18px);
-color:#0B5D3B;
-line-height:1.2;
-margin-bottom:0;
-}
-
-.department-card img{
-width:75%;
-height:auto;
-
-object-fit:contain;
-display:block;
-
-margin-top:4px;
-}
-
 /* FOOTER */
 
 footer{
@@ -721,6 +864,8 @@ background:rgba(255,255,255,.04);
 clip-path:polygon(50% 0%,0% 100%,100% 100%);
 transform:rotate(35deg);
 }
+
+
 footer p{
  
 margin:0;
@@ -754,9 +899,7 @@ line-height:1.8;
 color:rgba(255,255,255,0.55);
 }
 
-
 </style>
-
 </head>
 
 <body>
@@ -778,7 +921,6 @@ color:rgba(255,255,255,0.55);
 
 </div>
 <div class="dots-pattern"></div>
-
 <header>
 
 <div class="menu-btn" onclick="openMenu()">
@@ -796,7 +938,7 @@ color:rgba(255,255,255,0.55);
 </div>
 
 <div class="college">
-كـــليــة عــلوم الأرض
+كــلــيــة الــتـــعديــــن
 </div>
 
 </div>
@@ -818,7 +960,7 @@ color:rgba(255,255,255,0.55);
 
 <div class="dropdown-btn">
 
-<a href="DEP.html">الأقــسام العــلميــة</a>
+<a href="../DEP/DEP.html">التــخصــصــات الاكــاديــميــة</a>
 
 <i class="fa-solid fa-chevron-down"
 onclick="toggleDepartments()"></i>
@@ -826,13 +968,9 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="dropdown-content" id="departmentsMenu">
-<a href="ENVI.html">قسم الجيولوجيا الهندسية والبيئية</a>
-<a href="PTRO.html">قسم جيولوجيا البترول والترسبات</a>
-<a href="GEPHY.html">قسم الجيوفيزياء</a>
-<a href="MINROK.html">قسم الثروة المعدنية والصخور</a>
-<a href="EXPL.html">قسم تقنية الاستكشاف الجيولوجي</a>
-<a href="STRUC.html">قسم الجيولوجيا البنائية والاستشعار عن بُعد</a>
-<a href="HYDRO.html">قسم جيولوجيا المياه</a>
+<a href="../MINE.MINE.html">هندسة التعدين</a>
+<a href="../DEP.GEO.html"> جيولوجيا </a>
+<a href="../DEP/GEPHY.html"> جيوفيزياء</a>
 
 </div>
 </div>
@@ -845,6 +983,7 @@ onclick="toggleDepartments()"></i>
 <a href="../TRNSFR/TRNSFR.html">التـحويـل</a>
 <a href="../STUDY/STUDY.html">الــدراســة والخــطــة الــدراســية</a>
 <a href="../QSN/QSN.html">الأسئلة الأكثر شيوعًا</a>
+
 
 
 
@@ -899,61 +1038,159 @@ class="link-box">
 
 </div>
 
-
-
 <div class="content">
 
-<h1 class="page-title">
-الأقسام العلمية
-</h1>
+<!-- ===========================
+HERO
+=========================== -->
 
-<div class="departments-row">
+<section class="specializations-hero">
 
-<a href="ENVI.html" class="department-card card-envi">
-<h2>قسم الجيولوجيا الهندسية والبيئية</h2>
-<img src="ENVI.PNG">
-</a>
+<h1>التخصصات الأكاديمية</h1>
 
-<a href="PTRO.html" class="department-card card-petro">
-<h2>قسم جيولوجيا البترول والترسبات</h2>
-<img src="PETRO.PNG">
-</a>
+<p>
+تعرّف على التخصصات الأكاديمية التي تقدمها كلية التعدين، واستكشف أهداف كل تخصص، ومجالاته العلمية، والفرص المهنية التي يتيحها للخريجين.
+</p>
 
-<a href="GEPHY.html" class="department-card card-geophy">
-<h2>قسم الجيوفيزياء</h2>
-<img src="GEPHY.PNG">
+</section>
+
+
+<!-- ===========================
+SPECIALIZATIONS
+=========================== -->
+
+<section class="specializations-container">
+
+
+<!-- =======================
+هندسة التعدين
+======================== -->
+
+<div class="specialization-card">
+
+<div class="spec-icon">
+
+<img src="mining.png" alt="Mining Engineering">
+
+</div>
+
+<div class="spec-content">
+
+<h2>هندسة التعدين</h2>
+
+<p>
+يُعنى هذا التخصص بدراسة تقنيات استكشاف واستخراج واستغلال الثروات المعدنية، وتصميم وتشغيل المناجم، وتطبيق أحدث التقنيات الهندسية لتحقيق الاستغلال الأمثل للموارد الطبيعية مع مراعاة معايير السلامة والاستدامة.
+</p>
+
+<div class="spec-tags">
+
+<span>المناجم</span>
+
+<span>الخامات المعدنية</span>
+
+<span>الاستدامة</span>
+
+<span>الهندسة</span>
+
+</div>
+
+<a href="../MINE/MINE.html" class="spec-btn">
+
+استكشف التخصص
+
 </a>
 
 </div>
 
-<div class="departments-center">
+</div>
 
-<a href="MINROK.html" class="department-card card-minrok">
-<h2>قسم الثروة المعدنية والصخور</h2>
-<img src="MINROK.PNG">
+
+<!-- =======================
+الجيولوجيا
+======================== -->
+
+<div class="specialization-card">
+
+<div class="spec-icon">
+
+<img src="geology.png" alt="Geology">
+
+</div>
+
+<div class="spec-content">
+
+<h2>جيولوجيا</h2>
+
+<p>
+يركز تخصص الجيولوجيا على دراسة مكونات الأرض والعمليات الجيولوجية التي شكلتها عبر الزمن، ويؤهل الطلاب لفهم الصخور والمعادن والموارد الطبيعية والبيئات الجيولوجية المختلفة، مع تطبيق المعرفة في مجالات الاستكشاف والتنمية.
+</p>
+
+<div class="spec-tags">
+
+<span>الصخور</span>
+
+<span>المعادن</span>
+
+<span>الاستكشاف</span>
+
+<span>علوم الأرض</span>
+
+</div>
+
+<a href="../DEP/GEO.html" class="spec-btn">
+
+استكشف التخصص
+
 </a>
 
 </div>
 
-<div class="departments-row">
+</div>
 
-<a href="EXPL.html" class="department-card card-minrok">
-<h2>قسم تقنية الاستكشاف الجيولوجي</h2>
-<img src="EXPL.PNG">
-</a>
 
-<a href="STRUC.html" class="department-card card-struc">
-<h2>قسم الجيولوجيا البنائية والاستشعار عن بُعد</h2>
-<img src="STRUC.PNG">
-</a>
+<!-- =======================
+الجيوفيزياء
+======================== -->
 
-<a href="HYDRO.html" class="department-card card-hydro">
-<h2>قسم جيولوجيا المياه</h2>
-<img src="HYDRO.PNG">
+<div class="specialization-card">
+
+<div class="spec-icon">
+
+<img src="geophysics.png" alt="Geophysics">
+
+</div>
+
+<div class="spec-content">
+
+<h2>جيوفيزياء</h2>
+
+<p>
+يهتم تخصص الجيوفيزياء بدراسة باطن الأرض باستخدام الطرق الفيزيائية المختلفة، وتحليل البيانات الجيوفيزيائية للكشف عن التراكيب الجيولوجية والموارد الطبيعية، ودعم أعمال الاستكشاف والتطوير الهندسي.
+</p>
+
+<div class="spec-tags">
+
+<span>الموجات الزلزالية</span>
+
+<span>الجاذبية</span>
+
+<span>المغناطيسية</span>
+
+<span>الاستكشاف</span>
+
+</div>
+
+<a href="../DEP/GEPHY.html" class="spec-btn">
+
+استكشف التخصص
+
 </a>
 
 </div>
+
 </div>
+
+</section>
 </div>
 
 <footer>
@@ -963,6 +1200,7 @@ class="link-box">
 <div class="footer-shape shape3"></div>
 <div class="footer-shape shape4"></div>
 <div class="footer-shape shape5"></div>
+
 
 <p class="footer-title">
 Faculty Website Project
@@ -994,8 +1232,8 @@ document.getElementById("sidebar").classList.add("active");
 function closeMenu(){
 document.getElementById("sidebar").classList.remove("active");
 }
-function toggleDepartments(){
 
+function toggleDepartments(){
 let menu=document.getElementById("departmentsMenu");
 
 if(menu.style.display==="block"){
@@ -1004,33 +1242,50 @@ menu.style.display="none";
 else{
 menu.style.display="block";
 }
-
 }
+/* ===========================
+SCROLL REVEAL
+=========================== */
 
-function openLinksModal(){
+const revealCards=
+document.querySelectorAll(".specialization-card");
 
-document.getElementById("linksModal")
-.style.display="flex";
+const observer=
+new IntersectionObserver(entries=>{
 
-}
+entries.forEach(entry=>{
 
-function closeLinksModal(){
+if(entry.isIntersecting){
 
-document.getElementById("linksModal")
-.style.display="none";
+entry.target.style.opacity="1";
 
-}
+entry.target.style.transform=
+"translateY(0)";
 
-window.addEventListener("click",function(e){
+observer.unobserve(entry.target);
 
-let linksModal =
-document.getElementById("linksModal");
-
-if(e.target===linksModal){
-linksModal.style.display="none";
 }
 
 });
+
+},{
+threshold:.15
+});
+
+revealCards.forEach(card=>{
+
+card.style.opacity="0";
+
+card.style.transform=
+"translateY(50px)";
+
+card.style.transition=
+".8s ease";
+
+observer.observe(card);
+
+});
+
 </script>
 
 </body>
