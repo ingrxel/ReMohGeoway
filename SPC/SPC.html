@@ -11,7 +11,8 @@
 <title>التــخــصــصــات الأكــاديــميــة</title>
 
 <style>
- *{
+
+*{
 margin:0;
 padding:0;
 box-sizing:border-box;
@@ -481,36 +482,27 @@ transition:.3s;
 background:#dff0e2;
 transform:translateY(-3px);
 }
+
 /* ===========================
 HERO
 =========================== */
 
 .specializations-hero{
-
 text-align:center;
-
 margin-bottom:70px;
 }
 
 .specializations-hero h1{
-
 font-size:clamp(42px,6vw,65px);
-
 color:#0B5D3B;
-
 margin-bottom:20px;
 }
 
 .specializations-hero p{
-
 max-width:850px;
-
 margin:auto;
-
 font-size:20px;
-
 line-height:2;
-
 color:#555;
 }
 
@@ -520,11 +512,8 @@ CONTAINER
 =========================== */
 
 .specializations-container{
-
 display:flex;
-
 flex-direction:column;
-
 gap:45px;
 }
 
@@ -534,38 +523,24 @@ CARD
 =========================== */
 
 .specialization-card{
-
 display:flex;
-
 flex-wrap:wrap;
-
 align-items:center;
-
 gap:35px;
-
 padding:40px;
-
 background:rgba(255,255,255,.78);
-
 backdrop-filter:blur(12px);
-
 border-radius:35px;
-
 border:6px solid rgba(11,93,59,.18);
-
 box-shadow:
 0 12px 35px rgba(0,0,0,.06),
 0 0 0 6px rgba(11,93,59,.03);
-
 position:relative;
-
 overflow:hidden;
-
 transition:.35s;
 }
 
 .specialization-card:hover{
-
 transform:translateY(-10px);
 }
 
@@ -573,40 +548,24 @@ transform:translateY(-10px);
 /* زخارف */
 
 .specialization-card::before{
-
 content:"";
-
 position:absolute;
-
 top:-80px;
-
 right:-80px;
-
 width:180px;
-
 height:180px;
-
 background:rgba(11,93,59,.05);
-
 border-radius:50%;
 }
 
 .specialization-card::after{
-
 content:"";
-
 position:absolute;
-
 bottom:20px;
-
 left:20px;
-
 width:55px;
-
 height:55px;
-
 background:rgba(11,93,59,.05);
-
 clip-path:polygon(
 50% 0%,
 0% 100%,
@@ -620,41 +579,26 @@ ICON
 =========================== */
 
 .spec-icon{
-
 flex:0 0 180px;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
 }
 
 .spec-icon img{
-
 width:170px;
-
 height:170px;
-
 border-radius:50%;
-
 object-fit:cover;
-
 background:white;
-
 padding:12px;
-
 border:4px solid rgba(11,93,59,.15);
-
 box-shadow:0 10px 25px rgba(0,0,0,.08);
-
 transition:.35s;
 }
 
 .specialization-card:hover .spec-icon img{
-
 transform:scale(1.06);
-
 border-color:#0B5D3B;
 }
 
@@ -664,27 +608,19 @@ CONTENT
 =========================== */
 
 .spec-content{
-
 flex:1;
 }
 
 .spec-content h2{
-
 font-size:34px;
-
 color:#0B5D3B;
-
 margin-bottom:20px;
 }
 
 .spec-content p{
-
 font-size:18px;
-
 line-height:2;
-
 color:#555;
-
 margin-bottom:30px;
 }
 
@@ -694,28 +630,18 @@ TAGS
 =========================== */
 
 .spec-tags{
-
 display:flex;
-
 flex-wrap:wrap;
-
 gap:12px;
-
 margin-bottom:30px;
 }
 
 .spec-tags span{
-
 padding:10px 18px;
-
 background:#eef5f0;
-
 color:#0B5D3B;
-
 border-radius:999px;
-
 font-size:15px;
-
 font-weight:700;
 }
 
@@ -725,32 +651,22 @@ BUTTON
 =========================== */
 
 .spec-btn{
-
 display:inline-block;
-
 padding:15px 35px;
-
 background:#0B5D3B;
-
 color:white;
-
 text-decoration:none;
-
 border-radius:999px;
-
 font-size:16px;
-
 font-weight:700;
-
 transition:.3s;
 }
 
 .spec-btn:hover{
-
 background:#124c7c;
-
 transform:translateY(-4px);
 }
+
 /* FOOTER */
 
 footer{
@@ -960,7 +876,7 @@ color:rgba(255,255,255,0.55);
 
 <div class="dropdown-btn">
 
-<a href="../DEP/DEP.html">التــخصــصــات الاكــاديــميــة</a>
+<a href="SPC.html">التــخصــصــات الاكــاديــميــة</a>
 
 <i class="fa-solid fa-chevron-down"
 onclick="toggleDepartments()"></i>
@@ -968,8 +884,8 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="dropdown-content" id="departmentsMenu">
-<a href="../MINE.MINE.html">هندسة التعدين</a>
-<a href="../DEP.GEO.html"> جيولوجيا </a>
+<a href="../MINE/MINE.html">هندسة التعدين</a>
+<a href="../DEP/GEO.html"> جيولوجيا </a>
 <a href="../DEP/GEPHY.html"> جيوفيزياء</a>
 
 </div>
@@ -1035,7 +951,6 @@ class="link-box">
 </a>
 
 </div>
-
 </div>
 
 <div class="content">
@@ -1085,23 +1000,17 @@ SPECIALIZATIONS
 <div class="spec-tags">
 
 <span>المناجم</span>
-
 <span>الخامات المعدنية</span>
-
 <span>الاستدامة</span>
-
 <span>الهندسة</span>
 
 </div>
 
 <a href="../MINE/MINE.html" class="spec-btn">
-
 استكشف التخصص
-
 </a>
 
 </div>
-
 </div>
 
 
@@ -1128,23 +1037,17 @@ SPECIALIZATIONS
 <div class="spec-tags">
 
 <span>الصخور</span>
-
 <span>المعادن</span>
-
 <span>الاستكشاف</span>
-
 <span>علوم الأرض</span>
 
 </div>
 
 <a href="../DEP/GEO.html" class="spec-btn">
-
 استكشف التخصص
-
 </a>
 
 </div>
-
 </div>
 
 
@@ -1171,23 +1074,17 @@ SPECIALIZATIONS
 <div class="spec-tags">
 
 <span>الموجات الزلزالية</span>
-
 <span>الجاذبية</span>
-
 <span>المغناطيسية</span>
-
 <span>الاستكشاف</span>
 
 </div>
 
 <a href="../DEP/GEPHY.html" class="spec-btn">
-
 استكشف التخصص
-
 </a>
 
 </div>
-
 </div>
 
 </section>

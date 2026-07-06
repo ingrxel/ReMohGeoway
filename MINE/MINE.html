@@ -483,664 +483,386 @@ transform:translateY(-3px);
 /*========== GEOLOGY PAGE : PART 1 ==========*/
 
 .department-section{
-
 max-width:1200px;
-
 margin:auto;
-
 padding:20px 25px 40px;
-
 }
 
 .department-title{
-
 font-size:clamp(42px,5vw,58px);
-
 color:#0B5D3B;
-
 text-align:center;
-
 font-weight:700;
-
 margin-bottom:18px;
-
 letter-spacing:.5px;
-
 }
 
 .department-logo{
-
 display:block;
-
 margin:0 auto 28px;
-
 width:210px;
-
 height:210px;
-
 object-fit:contain;
-
 transition:.35s;
-
 }
 
 .department-logo:hover{
-
 transform:scale(1.05);
-
 }
 
 .department-intro{
-
 max-width:900px;
-
 margin:0 auto 65px;
-
 font-size:19px;
-
 line-height:2.2;
-
 text-align:center;
-
 color:#4b4b4b;
-
 }
 
 .overview-card{
-
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
-
 gap:45px;
-
 padding:45px;
-
 border-radius:34px;
-
 background:rgba(255,255,255,.88);
-
 backdrop-filter:blur(10px);
-
 box-shadow:0 18px 40px rgba(0,0,0,.06);
-
 border:1px solid rgba(11,93,59,.08);
-
 margin-bottom:75px;
-
 position:relative;
-
 overflow:hidden;
-
 flex-wrap:wrap;
-
 }
 
 .overview-card::before{
-
 content:"";
-
 position:absolute;
-
 top:0;
-
 right:0;
-
 width:100%;
-
 height:6px;
-
 background:#0B5D3B;
-
 }
 
 .overview-text{
-
 flex:1 1 500px;
-
 }
 
 .overview-text h2{
-
 font-size:34px;
-
 color:#0B5D3B;
-
 margin-bottom:20px;
-
 }
 
 .overview-text p{
-
 font-size:18px;
-
 line-height:2.2;
-
 color:#444;
-
 text-align:justify;
-
 }
 
 .overview-image{
-
 flex:0 0 270px;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 }
 
 .overview-image img{
-
 width:260px;
-
 max-width:100%;
-
 transition:.35s;
-
 }
 
 .overview-image img:hover{
-
 transform:scale(1.05);
-
 }
 
 .section-title{
-
 font-size:34px;
-
 text-align:center;
-
 color:#0B5D3B;
-
 margin:70px 0 45px;
-
 font-weight:700;
-
 position:relative;
-
 }
 
 .section-title::after{
-
 content:"";
-
 display:block;
-
 width:90px;
-
 height:4px;
-
 background:#0B5D3B;
-
 border-radius:50px;
-
 margin:16px auto 0;
-
 }
+
 /*========== GEOLOGY PAGE : PART 2 ==========*/
 
 .feature-grid{
-
 display:grid;
-
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-
 gap:28px;
-
 margin-bottom:70px;
-
 }
 
 .feature-card{
-
 background:white;
-
 padding:35px 28px;
-
 border-radius:28px;
-
 text-align:center;
-
 position:relative;
-
 overflow:hidden;
-
 border:1px solid rgba(11,93,59,.08);
-
 box-shadow:0 12px 28px rgba(0,0,0,.05);
-
 transition:.35s;
-
 }
 
 .feature-card::before{
-
 content:"";
-
 position:absolute;
-
 top:0;
-
 left:0;
-
 width:100%;
-
 height:6px;
-
 background:linear-gradient(90deg,#0B5D3B,#63a879);
-
 }
-
 .feature-card:hover{
-
 transform:translateY(-10px);
-
 box-shadow:0 22px 45px rgba(0,0,0,.08);
-
 }
 
 .feature-card i{
-
 font-size:42px;
-
 color:#0B5D3B;
-
 margin-bottom:22px;
-
 transition:.35s;
-
 }
 
- 
 
 .feature-card h3{
-
 font-size:23px;
-
 color:#0B5D3B;
-
 margin-bottom:14px;
-
 }
 
 .feature-card p{
-
 font-size:16px;
-
 line-height:1.9;
-
 color:#555;
-
 }
 
 .study-roadmap{
-
 max-width:760px;
-
 margin:5px auto 0px;
-
 display:flex;
-
 flex-direction:column;
-
 gap:24px;
-
 }
 
 .road-item{
-
 display:flex;
-
 align-items:center;
-
 gap:22px;
-
 background:white;
-
 padding:24px 28px;
-
 border-radius:24px;
-
 border-right:6px solid #0B5D3B;
-
 box-shadow:0 10px 25px rgba(0,0,0,.05);
-
 transition:.35s;
-
 }
 
 .road-item:hover{
-
 transform:translateX(-8px);
-
 box-shadow:0 18px 35px rgba(0,0,0,.08);
-
 }
 
 .road-item span{
-
 width:58px;
-
 height:58px;
-
 flex-shrink:0;
-
 border-radius:50%;
-
 background:#edf8ee;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 border:3px solid rgba(11,93,59,.12);
-
 }
 
 .road-item span::before{
-
 content:"✓";
-
 font-size:22px;
-
 font-weight:bold;
-
 color:#0B5D3B;
-
 }
 
 .road-item h3{
-
 font-size:22px;
-
 color:#0B5D3B;
-
 margin-bottom:8px;
-
 }
 
 .road-item p{
-
 font-size:16px;
-
 line-height:1.9;
-
 color:#555;
-
 }
+
 /*========== GEOLOGY PAGE : PART 3 ==========*/
 
 .skills-grid{
-
 display:grid;
-
 grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-
 gap:24px;
-
 margin:5px 0 0px;
-
 }
 
 .skill-item{
-
 display:flex;
-
 align-items:center;
-
 gap:20px;
-
 padding:22px 24px;
-
 background:white;
-
 border-radius:24px;
-
 border:1px solid rgba(11,93,59,.08);
-
 border-right:6px solid #0B5D3B;
-
 box-shadow:0 10px 25px rgba(0,0,0,.05);
-
 transition:.35s;
-
 }
 
 .skill-item:hover{
-
 transform:translateY(-8px);
-
 box-shadow:0 18px 35px rgba(0,0,0,.08);
-
 }
 
 .skill-item i{
-
 width:68px;
-
 height:68px;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 border-radius:50%;
-
 background:#edf8ee;
-
 color:#0B5D3B;
-
 font-size:28px;
-
 flex-shrink:0;
-
 transition:.35s;
-
-
-
 }
 
 .skill-item h3{
-
 font-size:22px;
-
 color:#0B5D3B;
-
 margin-bottom:6px;
-
 }
 
 .skill-item p{
-
 font-size:16px;
-
 line-height:1.9;
-
 color:#555;
-
 }
 
 .closing-card{
-
 background:white;
-
 padding:55px;
-
 border-radius:35px;
-
 box-shadow:0 15px 35px rgba(0,0,0,.05);
-
 text-align:center;
-
 position:relative;
-
 overflow:hidden;
-
 margin-top:25px;
-
 }
 
 .closing-card::before{
-
 content:"";
-
 position:absolute;
-
 top:0;
-
 right:0;
-
 width:100%;
-
 height:7px;
-
 background:#0B5D3B;
-
 }
 
 .closing-card h2{
-
 font-size:34px;
-
 color:#0B5D3B;
-
 margin-bottom:28px;
-
 }
 
 .closing-card p{
-
 font-size:18px;
-
 line-height:2.3;
-
 color:#444;
-
 max-width:850px;
-
 margin:auto;
-
 }
-
 
 
 .back-area{
-
 text-align:center;
-
 margin-top:55px;
-
 }
 
 .back-btn{
-
 display:inline-block;
-
 padding:16px 42px;
-
 background:#0B5D3B;
-
 color:white;
-
 text-decoration:none;
-
 border-radius:999px;
-
 font-size:17px;
-
 font-weight:bold;
-
 transition:.35s;
-
 }
 
 .back-btn:hover{
-
 background:#124c7c;
-
 transform:translateY(-5px);
-
 }
+
 .closing-card{
-
 max-width:900px;
-
 margin:0px auto 0;
-
 background:white;
-
 padding:55px;
-
 border-radius:35px;
-
 box-shadow:0 15px 35px rgba(0,0,0,.05);
-
 text-align:center;
-
 position:relative;
-
 overflow:hidden;
-
 }
 
 
 /*========== GEOLOGY PAGE : PART 4 ==========*/
 
 .fields-section{
-
 margin:80px auto 50px;
-
 text-align:center;
-
 }
 
 .fields-intro{
-
 max-width:760px;
-
 margin:20px auto 45px;
-
 font-size:18px;
-
 line-height:2.1;
-
 color:#555;
-
 }
 
 .overview-card,
 .feature-card,
 .skill-item,
 .closing-card{
-
 transition:all .35s ease;
-
 }
 
 .overview-card:hover{
-
 transform:translateY(-5px);
-
 box-shadow:0 25px 45px rgba(0,0,0,.08);
-
 }
 
 .section-title{
-
 scroll-margin-top:120px;
-
 }
 
 .department-title,
@@ -1148,88 +870,61 @@ scroll-margin-top:120px;
 .closing-card h2{
 
 letter-spacing:.3px;
-
 }
 
 .department-intro,
 .fields-intro,
 .closing-card p{
-
 text-wrap:pretty;
-
 }
 
 .feature-card,
 .skill-item{
-
 cursor:default;
-
 }
 
 .back-btn{
-
 min-width:260px;
-
 justify-content:center;
-
 }
 
 .back-btn::after{
-
 content:" ←";
-
 font-size:18px;
-
 transition:.3s;
-
 }
 
 .back-btn:hover::after{
-
 padding-right:8px;
-
 }
 
 @media (max-width:900px){
 
 .overview-card{
-
 padding:30px;
-
 text-align:center;
-
 }
 
 .overview-text p{
-
 text-align:center;
-
 }
 
 .overview-image{
-
 order:-1;
-
 }
 
 .department-logo{
-
 width:170px;
-
 height:170px;
 
 }
 
 .department-title{
-
 font-size:42px;
-
 }
 
 .section-title{
-
 font-size:30px;
-
 }
 
 }
@@ -1237,47 +932,32 @@ font-size:30px;
 @media (max-width:650px){
 
 .department-section{
-
 padding:10px;
-
 }
 
 .feature-grid{
-
 grid-template-columns:1fr;
-
 }
 
 .skills-grid{
-
 grid-template-columns:1fr;
-
 }
 
 .study-roadmap{
-
 max-width:100%;
-
 }
 
 .road-item{
-
 padding:18px;
-
 }
 
 .road-item span{
-
 width:52px;
-
 height:52px;
-
 }
 
 .closing-card{
-
 padding:35px 22px;
-
 }
 
 }
@@ -1499,8 +1179,8 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="dropdown-content" id="departmentsMenu">
-<a href="../MINE.MINE.html">هندسة التعدين</a>
-<a href="../DEP.GEO.html"> جيولوجيا </a>
+<a href="MINE.html">هندسة التعدين</a>
+<a href="../DEP/GEO.html"> جيولوجيا </a>
 <a href="../DEP/GEPHY.html"> جيوفيزياء</a>
 
 </div>
@@ -1565,7 +1245,6 @@ class="link-box">
 </a>
 
 </div>
-
 </div>
 
 <div class="content">
@@ -1592,9 +1271,7 @@ class="link-box">
 </h2>
 
 <p>
-
 يجمع تخصص هندسة التعدين بين العلوم الهندسية والتطبيقات العملية، ويهدف إلى تأهيل الطلاب لفهم العمليات المرتبطة باستكشاف واستخراج ومعالجة الخامات المعدنية، إضافةً إلى إدارة العمليات التعدينية وتطوير حلول هندسية تسهم في الاستفادة المثلى من الموارد الطبيعية.
-
 </p>
 
 </div>
@@ -1604,14 +1281,10 @@ class="link-box">
 <img src="MINING2.png">
 
 </div>
-
 </div>
 
-
 <h2 class="section-title">
-
 لماذا تختار هندسة التعدين؟
-
 </h2>
 
 
@@ -1622,15 +1295,11 @@ class="link-box">
 <i class="fa-solid fa-mountain"></i>
 
 <h3>
-
 قطاع واعد
-
 </h3>
 
 <p>
-
 يُعد قطاع التعدين أحد القطاعات الإستراتيجية الداعمة للتنمية الاقتصادية في المملكة.
-
 </p>
 
 </div>
@@ -1641,15 +1310,11 @@ class="link-box">
 <i class="fa-solid fa-gears"></i>
 
 <h3>
-
 تعليم تطبيقي
-
 </h3>
 
 <p>
-
 يجمع البرنامج بين الدراسة الأكاديمية والتطبيقات العملية والميدانية.
-
 </p>
 
 </div>
@@ -1660,15 +1325,11 @@ class="link-box">
 <i class="fa-solid fa-helmet-safety"></i>
 
 <h3>
-
 بيئة احترافية
-
 </h3>
 
 <p>
-
 يتعرف الطالب على معايير السلامة وإدارة العمليات التعدينية الحديثة.
-
 </p>
 
 </div>
@@ -1679,26 +1340,19 @@ class="link-box">
 <i class="fa-solid fa-earth-americas"></i>
 
 <h3>
-
 تنمية مستدامة
-
 </h3>
 
 <p>
-
 يركز التخصص على استغلال الموارد الطبيعية بطريقة مسؤولة ومستدامة.
-
 </p>
 
 </div>
-
 </div>
 
 
 <h2 class="section-title">
-
 ماذا سيدرس الطالب؟
-
 </h2>
 
 
@@ -1713,13 +1367,10 @@ class="link-box">
 <h3>العلوم الأساسية</h3>
 
 <p>
-
 الرياضيات، الفيزياء، والكيمياء الهندسية.
-
 </p>
 
 </div>
-
 </div>
 
 
@@ -1732,15 +1383,11 @@ class="link-box">
 <h3>المقررات التخصصية</h3>
 
 <p>
-
 استكشاف الخامات، تصميم المناجم، وتقنيات التعدين.
-
 </p>
 
 </div>
-
 </div>
-
 
 <div class="road-item">
 
@@ -1751,13 +1398,10 @@ class="link-box">
 <h3>المختبرات</h3>
 
 <p>
-
 التدريب على الأجهزة والتقنيات المستخدمة في التعدين.
-
 </p>
 
 </div>
-
 </div>
 
 
@@ -1770,19 +1414,15 @@ class="link-box">
 <h3>التدريب الحقلي</h3>
 
 <p>
-
 زيارة المواقع التعدينية واكتساب الخبرة العملية.
-
 </p>
 
 </div>
+</div>
+</div>
 
-</div>
-</div>
 <h2 class="section-title">
-
 المهارات المكتسبة
-
 </h2>
 
 <div class="skills-grid">
@@ -1796,13 +1436,10 @@ class="link-box">
 <h3>تخطيط المناجم</h3>
 
 <p>
-
 اكتساب القدرة على تصميم وتخطيط عمليات التعدين بكفاءة.
-
 </p>
 
 </div>
-
 </div>
 
 <div class="skill-item">
@@ -1814,13 +1451,10 @@ class="link-box">
 <h3>تقييم الخامات</h3>
 
 <p>
-
 تحليل خصائص الخامات المعدنية وتحديد أفضل طرق استغلالها.
-
 </p>
 
 </div>
-
 </div>
 
 <div class="skill-item">
@@ -1832,13 +1466,10 @@ class="link-box">
 <h3>استخدام التقنيات الحديثة</h3>
 
 <p>
-
 التعامل مع البرمجيات والأجهزة المستخدمة في قطاع التعدين.
-
 </p>
 
 </div>
-
 </div>
 
 <div class="skill-item">
@@ -1850,13 +1481,10 @@ class="link-box">
 <h3>السلامة المهنية</h3>
 
 <p>
-
 تطبيق إجراءات السلامة وإدارة المخاطر في بيئات العمل التعدينية.
-
 </p>
 
 </div>
-
 </div>
 
 <div class="skill-item">
@@ -1868,13 +1496,10 @@ class="link-box">
 <h3>تحليل البيانات</h3>
 
 <p>
-
 قراءة البيانات الفنية واتخاذ القرارات المناسبة.
-
 </p>
 
 </div>
-
 </div>
 
 <div class="skill-item">
@@ -1886,33 +1511,22 @@ class="link-box">
 <h3>العمل الجماعي</h3>
 
 <p>
-
 تنمية مهارات التعاون والعمل ضمن فرق هندسية متعددة التخصصات.
-
 </p>
 
 </div>
-
 </div>
-
 </div>
-
-
 </div>
-
 
 <div class="closing-card">
 
 <h2>
-
 رسالة التخصص
-
 </h2>
 
 <p>
-
 يهدف تخصص هندسة التعدين إلى إعداد كوادر هندسية تمتلك المعرفة العلمية والمهارات التطبيقية اللازمة لاستغلال الموارد المعدنية بكفاءة، والإسهام في تطوير قطاع التعدين وفق أحدث الممارسات الهندسية، بما يدعم التنمية المستدامة ورؤية المملكة 2030.
-
 </p>
 
 </div>
@@ -1921,9 +1535,7 @@ class="link-box">
 <div class="back-area">
 
 <a href="DEP.html" class="back-btn">
-
 العودة إلى التخصصات الأكاديمية
-
 </a>
 
 </div>

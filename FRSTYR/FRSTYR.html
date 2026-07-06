@@ -501,18 +501,31 @@ background:#dff0e2;
 transform:translateY(-3px);
 }
 
+.page-note{
+text-align:center;
+font-size:17px;
+font-weight:700;
+color:#8B1E1E;
+font-style:italic;
+line-height:2;
+}
+.notice-box strong{
+color:#5E1621;
+font-size:18px;
+font-weight:800;
+}
+
 /*  HERO  */
 
 .shared-hero{
 text-align:center;
-margin-bottom:90px;
+margin-bottom:25px;
 }
 
 .shared-hero h1{
 font-size:clamp(42px,6vw,72px);
- 
 color:#0B5D3B;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 .shared-hero p{
@@ -539,8 +552,7 @@ margin:45px 0 35px;
 width:min(1200px,92%);
 margin:auto;
 padding:45px;
-margin-top:clamp(-40px,-6vw,-60px);
-border-radius:35px;
+margin-top:clamp(-80px,-8vw,-100px);border-radius:35px;
 background:rgba(255,255,255,.45);
 backdrop-filter:blur(12px);
 border:1px solid rgba(255,255,255,.5);
@@ -757,145 +769,6 @@ box-shadow:0 6px 18px rgba(11,93,59,.25);
 background:#08472d;
 transform:translateY(-3px);
 box-shadow:0 8px 22px rgba(11,93,59,.35);
-}
-
-/*  SUPPORT  */
-
-.support-box{
-width:100%;
-margin:auto;
-padding:40px;
-border-radius:35px;
-background:rgba(255,255,255,.70);
-backdrop-filter:blur(12px);
-border:1px solid rgba(255,255,255,.5);
-overflow:hidden;
-}
-
-.support-grid{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-width:100%;
-}
-
-.support-wrapper{
-grid-column:1 / -1;
-width:100%;
-max-width:100%;
-overflow:hidden;
-margin-top:-20px;
-}
-
-.support-card{
-flex:0 1 220px;
-max-width:250px;padding:18px 12px;
-min-height:90px;
-
-background:rgba(11,93,59,.08);
-border:none;
-outline:none;
-border-radius:18px;
-
-text-align:center;
-font-size:clamp(11px,1.2vw,18px);
-font-weight:600;
-font-family:"Times New Roman", serif;
-color:#0B5D3B;
-
-display:flex;
-flex-direction:row;
-justify-content:center;
-align-items:center;
-gap:6px;
-flex-wrap:wrap;
-line-height:1.5;
-white-space:normal;
-word-break:break-word;
-
-cursor:pointer;
-transition:.3s;
-}
-
-.support-card i{
-color:#0B5D3B;
-font-size:18px;
-flex-shrink:0;
-}
-
-.support-card:hover{
-background:#0B5D3B;
-color:white;
-transform:translateX(-8px);
-}
-
-.support-card:hover i{
-color:white;
-}
-
-.inside-support-title{
-grid-column:1/-1;
-text-align:center;
-font-size:clamp(30px,4vw,42px);
- 
-color:#0B5D3B;
-margin:35px 0 25px;
-}
-
-.support-modal{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.5);
-z-index:6000;
-justify-content:center;
-align-items:center;
-padding:20px;
-}
-
-.support-modal-box{
-width:min(700px,100%);
-background:white;
-border-radius:30px;
-padding:40px;
-max-height:85vh;
-overflow-y:auto;
-}
-
-.support-modal-box h2{
-text-align:center;
-margin-bottom:25px;
-color:#0B5D3B;
- 
-}
-
-.support-modal-content{
-line-height:2;
-font-size:18px;
-color:#444;
-}
-
-.support-close-btn{
-display:block;
-margin:30px auto 0;
-padding:14px 35px;
-border:none;
-border-radius:15px;
-background:#0B5D3B;
-color:white;
-font-size:16px;
-font-weight:600;
-cursor:pointer;
-transition:.3s;
-}
-
-.support-close-btn:hover{
-background:#08472d;
-transform:translateY(-3px);
 }
 /*  SKILLS  */
 
@@ -1145,8 +1018,8 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="dropdown-content" id="departmentsMenu">
-<a href="../MINE.MINE.html">هندسة التعدين</a>
-<a href="../DEP.GEO.html"> جيولوجيا </a>
+<a href="../MINE/MINE.html">هندسة التعدين</a>
+<a href="../DEP/GEO.html"> جيولوجيا </a>
 <a href="../DEP/GEPHY.html"> جيوفيزياء</a>
 
 </div>
@@ -1226,6 +1099,13 @@ class="link-box">
 
 </section>
 
+<p class="page-note">
+<strong>تنويه:</strong>
+ المعلومات الواردة في هذه الصفحة مستندة إلى المعلومات الرسمية الخاصة بكلية علوم الأرض، وذلك لعدم اكتمال نشر المعلومات الرسمية المتعلقة بكلية التعدين حتى الآن، وسيتم تحديث هذه الصفحة فور صدور أي مستجدات رسمية.
+
+</p>
+
+</div>
 
 <!-- النبذة -->
 
@@ -1235,8 +1115,6 @@ class="link-box">
 
 </div>
 
-
-<!-- الرحلة الأكاديمية -->
 
 <!-- الرحلة الأكاديمية -->
 
@@ -1259,22 +1137,36 @@ class="link-box">
 </div>
 
 <button class="year-btn"
-onclick="openModal('جيولوجيا طبيعية (1)','دراسة أساسيات علم الأرض، مثل نشأة الأرض، المعادن، الصخور، الصفائح التكتونية، والبراكين والزلازل.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+onclick="openModal('جيولوجيا طبيعية (1)', `تقدر ترسل فيز وعربي مرا وحدة؟ وعلهم بدزن زر
+يتناول المقرر المفاهيم الأساسية في الجيولوجيا الطبيعية، بما في ذلك أصل الأرض وتركيبها والمعادن والصخور والعمليات الجيولوجية المختلفة مثل البراكين والزلازل والصفائح التكتونية، مع التركيز على تنمية الفهم النظري والمهارات العملية في علوم الأرض.
+<br><br>
+<a href='ضعي رابط Google Drive هنا'
+target='_blank'
+class='modal-link-btn'>
+محتوى المقرر
+</a>
+`)">
 جيولوجيا طبيعية
 </button>
 
 <button class="year-btn"
-onclick="openModal('اللغة الإنجليزية (1) - علمي ',' هو مقرر تحضيري مكثف. يهدف إلى صقل مهاراتك الأساسية (الاستماع، التحدث، القراءة، والكتابة) ورفع كفاءتك اللغوية لتناسب متطلبات دراسة التخصصات العلمية باللغة الإنجليزية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-اللغة الإنجليزية 
+onclick="openModal('اللغة الإنجليزية (1) - علمي', `
+يهدف المقرر إلى صقل مهاراتك الأساسية في الاستماع، والتحدث، والقراءة، والكتابة، ورفع كفاءتك اللغوية بما يتناسب مع متطلبات دراسة التخصصات العلمية باللغة الإنجليزية.
+`)">
+اللغة الإنجليزية
 </button>
 
 <button class="year-btn"
-onclick="openModal('الفيزياء العامة','دراسة مبادئ الميكانيكا والكهرباء والطاقة وتطبيقاتها في العلوم الطبيعية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+onclick="openModal('الفيزياء العامة', `
+يدرس المقرر المبادئ الأساسية في الفيزياء، مثل الميكانيكا، والطاقة، والكهرباء، والمغناطيسية، مع التركيز على التطبيقات العلمية التي تدعم فهم الظواهر الطبيعية وتخدم التخصصات العلمية.
+`)">
 الفيزياء العامة
 </button>
 
 <button class="year-btn"
-onclick="openModal('اللغة العربية (1) ',' يركز المقرر على قواعد الإملاء، علامات الترقيم، مهارات الكتابة، التعبير السليم، والفهم الاستيعابي.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+onclick="openModal('اللغة العربية (1)', `
+يركز المقرر على قواعد الإملاء، وعلامات الترقيم، ومهارات الكتابة، والتعبير السليم، والفهم الاستيعابي؛ بهدف تنمية مهارات التواصل والكتابة باللغة العربية.
+`)">
 اللغة العربية
 </button>
 
@@ -1283,27 +1175,49 @@ onclick="openModal('اللغة العربية (1) ',' يركز المقرر عل
 </div>
 
 <button class="year-btn"
-onclick="openModal('جيولوجيا طبيعية (2)','استكمال لمفاهيم الجيولوجيا العامة مع التركيز على تاريخ الأرض، العمليات الجيولوجية، والموارد الطبيعية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+onclick="openModal('جيولوجيا طبيعية (2)', `
+يعد المقرر استكمالًا لمفاهيم الجيولوجيا الطبيعية، حيث يركز على تاريخ الأرض، والعمليات الجيولوجية الداخلية والخارجية، والموارد الطبيعية، مع تعميق فهم الطالب لتطور كوكب الأرض والعوامل المؤثرة في تشكيل سطحه.
+<br><br>
+<a href='ضعي رابط Google Drive هنا'
+target='_blank'
+class='modal-link-btn'>
+محتوى المقرر
+</a>
+`)">
 جيولوجيا طبيعية
 </button>
 
 <button class="year-btn"
-onclick="openModal('.اللغة الإنجليزية (2) - علمي','مصمم لتطوير مهارات القراءة والكتابة والاستماع والمحادثة، ورفع مستوى الكفاءة اللغوية للطلاب لتمكينهم من استيعاب المراجع العلمية وفهم النصوص الأكاديمية والتقنية..<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-اللغة الإنجليزية 
+onclick="openModal('اللغة الإنجليزية (2) - علمي', `
+صُمم المقرر لتطوير مهارات القراءة، والكتابة، والاستماع، والمحادثة، ورفع مستوى الكفاءة اللغوية للطلاب؛ لتمكينهم من استيعاب المراجع العلمية وفهم النصوص الأكاديمية والتقنية باللغة الإنجليزية.
+`)">
+اللغة الإنجليزية
 </button>
 
 <button class="year-btn"
-onclick="openModal('الرياضيات العامة','دراسة التفاضل والتكامل والجبر والرياضيات الأساسية المستخدمة في التحليل العلمي.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+onclick="openModal('الرياضيات العامة', `
+يتناول المقرر أساسيات الرياضيات، بما في ذلك التفاضل والتكامل، والجبر، والمفاهيم الرياضية الضرورية التي تُستخدم في التحليل العلمي وحل المشكلات في التخصصات العلمية.
+`)">
 الرياضيات العامة
 </button>
 
 <button class="year-btn"
-onclick="openModal('بصريات المعادن','دراسة المعادن باستخدام المجهر المستقطب للتعرف على خواصها البصرية وتشخيصها..<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+onclick="openModal('بصريات المعادن', `
+يتناول المقرر دراسة المعادن باستخدام المجهر المستقطب، مع التركيز على خواصها البصرية وطرق التعرف عليها وتشخيصها، بما يساعد على تمييز المعادن وتحليل الصخور في الدراسات الجيولوجية.
+<br><br>
+<a href='ضعي رابط Google Drive هنا'
+target='_blank'
+class='modal-link-btn'>
+محتوى المقرر
+</a>
+`)">
 بصريات المعادن
 </button>
 
 <button class="year-btn"
-onclick="openModal('الثقافة الإسلامية (1)','دراسة المفاهيم والقيم الإسلامية وربطها بالجوانب العلمية والمجتمعية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+onclick="openModal('الثقافة الإسلامية (1)', `
+يتناول المقرر المفاهيم والقيم الإسلامية، ويربطها بالجوانب العلمية والمجتمعية، بما يسهم في تعزيز الوعي الفكري والأخلاقي لدى الطالب.
+`)">
 الثقافة الإسلامية
 </button>
 
@@ -1335,34 +1249,70 @@ onclick="openModal('الثقافة الإسلامية (1)','دراسة المف�
 <div class="semester-title">
 الفصل الدراسي الأول
 </div>
+
 <button class="year-btn"
-onclick="openModal('علم الرسوبيات والأحافير','دراسة تكوين الرواسب والصخور الرسوبية، وطرق ترسيبها، والأحافير واستخدامها في تفسير البيئات الجيولوجية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+onclick="openModal('علم الرسوبيات والأحافير', `
+يتناول المقرر المبادئ الأساسية في علم الرسوبيات والطباقية وعلم الأحافير، مع التركيز على العمليات الرسوبية، والبيئات الترسيبية، والتراكيب الرسوبية، ومبادئ الطباقية، بالإضافة إلى دراسة الأحافير وأهميتها في تفسير البيئات القديمة والتاريخ الجيولوجي للأرض.
+<br><br>
+<a href='ضعي رابط Google Drive هنا'
+target='_blank'
+class='modal-link-btn'>
+محتوى المقرر
+</a>
+`)">
 علم الرسوبيات والأحافير
 </button>
 
 <button class="year-btn"
-onclick="openModal('الصخور النارية والمتحولة','دراسة نشأة الصخور النارية والمتحولة، وتصنيفها، وتركيبها المعدني، والعمليات التي تؤدي إلى تكوينها.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+onclick="openModal('الصخور النارية والمتحولة', `
+يتناول المقرر نشأة الصخور النارية والمتحولة، وطرق تصنيفها، وتركيبها المعدني، وخصائصها النسيجية، والعمليات الجيولوجية المسؤولة عن تكوينها، بما يساعد على فهم تطور القشرة الأرضية.
+<br><br>
+<a href='ضعي رابط Google Drive هنا'
+target='_blank'
+class='modal-link-btn'>
+محتوى المقرر
+</a>
+`)">
 الصخور النارية والمتحولة
 </button>
 
 <button class="year-btn"
-onclick="openModal('جيولوجيا بنائية','دراسة تشوهات القشرة الأرضية مثل الطيات والفوالق والفواصل وتحليل الإجهادات والحركات التكتونية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-جيولوجيا بنائية 
+onclick="openModal('جيولوجيا بنائية', `
+يركز المقرر على دراسة التراكيب الجيولوجية الناتجة عن تشوه القشرة الأرضية، مثل الطيات، والفوالق، والفواصل، وتحليل الإجهادات والحركات التكتونية المؤثرة في تكوينها.
+<br><br>
+<a href='ضعي رابط Google Drive هنا'
+target='_blank'
+class='modal-link-btn'>
+محتوى المقرر
+</a>
+`)">
+جيولوجيا بنائية
 </button>
 
 <button class="year-btn"
-onclick="openModal('جيوفيزياء','تطبيق المبادئ الفيزيائية لدراسة باطن الأرض واستكشاف التراكيب والموارد باستخدام الطرق الجيوفيزيائية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+onclick="openModal('جيوفيزياء', `
+يتناول المقرر تطبيق المبادئ الفيزيائية لدراسة باطن الأرض، واستخدام الطرق الجيوفيزيائية المختلفة في استكشاف التراكيب الجيولوجية والموارد الطبيعية وتحليل خصائصها.
+<br><br>
+<a href='ضعي رابط Google Drive هنا'
+target='_blank'
+class='modal-link-btn'>
+محتوى المقرر
+</a>
+`)">
 جيوفيزياء
-
 </button>
 
 <button class="year-btn"
-onclick="openModal('اللغة العربية (2)','يهدف المقرر إلى تطوير مهارات التعبير السليم لدى الطلاب، وصقل قدرتهم على الكتابة الوظيفية والإبداعية بما يخدم تخصصاتهم الأكاديمية والعملية المختلفة.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+onclick="openModal('اللغة العربية (2)', `
+يهدف المقرر إلى تطوير مهارات التعبير السليم لدى الطلاب، وصقل قدرتهم على الكتابة الوظيفية والإبداعية، وتعزيز مهارات التواصل اللغوي بما يخدم دراستهم الأكاديمية وحياتهم العملية.
+`)">
 اللغة العربية
 </button>
 
 <button class="year-btn"
-onclick="openModal('الكيمياء العامة','دراسة تركيب المادة، التفاعلات الكيميائية، والروابط والعناصر كأساس لفهم العمليات الجيولوجية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+onclick="openModal('الكيمياء العامة', `
+يتناول المقرر أساسيات الكيمياء العامة، بما في ذلك تركيب المادة، والروابط الكيميائية، والتفاعلات، والمحاليل، والاتزان الكيميائي، باعتبارها أساسًا لفهم العمليات الجيولوجية والعلوم الطبيعية.
+`)">
 الكيمياء العامة
 </button>
 
@@ -1371,110 +1321,82 @@ onclick="openModal('الكيمياء العامة','دراسة تركيب الم
 </div>
 
 <button class="year-btn"
-onclick="openModal('الإحصاء العام ','استخدام الأساليب الإحصائية لتحليل البيانات الجيولوجية وتفسير النتائج.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+onclick="openModal('الإحصاء العام', `
+يتناول المقرر الأساليب الإحصائية الأساسية المستخدمة في جمع البيانات وتنظيمها وتحليلها وتفسيرها، مع تطبيقاتها في الدراسات العلمية والجيولوجية.
+`)">
 الإحصاء العام
 </button>
 
 <button class="year-btn"
-onclick="openModal('الصخور الرسوبية','دراسة أنواع الصخور الرسوبية، مكوناتها، وطرق تكوينها وتصنيفها وتفسير بيئات الترسيب.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+onclick="openModal('الصخور الرسوبية', `
+يتناول المقرر دراسة أنواع الصخور الرسوبية، ومكوناتها، وطرق تكوينها، وتصنيفها، والبيئات الرسوبية المختلفة، مع التعرف على خصائصها وأهميتها في تفسير التاريخ الجيولوجي.
+<br><br>
+<a href='ضعي رابط Google Drive هنا'
+target='_blank'
+class='modal-link-btn'>
+محتوى المقرر
+</a>
+`)">
 الصخور الرسوبية
 </button>
 
 <button class="year-btn"
-onclick="openModal('الخرائط الجيولوجية','تعلم قراءة وإعداد وتفسير الخرائط الجيولوجية وربطها بالتراكيب والصخور في الميدان.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+onclick="openModal('الخرائط الجيولوجية', `
+يركز المقرر على تعلم قراءة الخرائط الجيولوجية وإعدادها وتفسيرها، وربط المعلومات الجيولوجية بالتراكيب والصخور والبيانات الحقلية؛ بما يساعد على تحليل المواقع الجيولوجية.
+<br><br>
+<a href='ضعي رابط Google Drive هنا'
+target='_blank'
+class='modal-link-btn'>
+محتوى المقرر
+</a>
+`)">
 الخرائط الجيولوجية
 </button>
 
 <button class="year-btn"
-onclick="openModal('الجيولوجيا الحقلية','تطبيق عملي في المواقع الجيولوجية يشمل رسم الخرائط، ووصف الصخور، وقياس التراكيب، وجمع العينات وكتابة الملاحظات.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+onclick="openModal('الجيولوجيا الحقلية', `
+يتناول المقرر التدريب العملي في المواقع الجيولوجية، ويشمل رسم الخرائط، ووصف الصخور، وقياس التراكيب الجيولوجية، وجمع العينات، وتوثيق الملاحظات الحقلية وإعداد التقارير.
+<br><br>
+<a href='ضعي رابط Google Drive هنا'
+target='_blank'
+class='modal-link-btn'>
+محتوى المقرر
+</a>
+`)">
 الجيولوجيا الحقلية
 </button>
 
 <button class="year-btn"
-onclick="openModal('نظم المعلومات الجغرافية والاستشعار عن بعد','استخدام نظم المعلومات الجغرافية وصور الأقمار الصناعية لتحليل البيانات المكانية وإنتاج الخرائط ودعم الدراسات الجيولوجية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-نظم المعلومات الجغرافية والاستشعار عن بعد</button>
+onclick="openModal('نظم المعلومات الجغرافية والاستشعار عن بعد', `
+يتناول المقرر استخدام نظم المعلومات الجغرافية (GIS) وتقنيات الاستشعار عن بعد في جمع وتحليل البيانات المكانية، وإنتاج الخرائط الرقمية، ودعم الدراسات الجيولوجية.
+<br><br>
+<a href='ضعي رابط Google Drive هنا'
+target='_blank'
+class='modal-link-btn'>
+محتوى المقرر
+</a>
+`)">
+نظم المعلومات الجغرافية والاستشعار عن بعد
+</button>
 
 <button class="year-btn"
-onclick="openModal('كتابة التقارير الجيولوجية','تعلم إعداد التقارير العلمية والفنية الخاصة بالأعمال الحقلية وتحليل النتائج وعرضها بطريقة احترافية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+onclick="openModal('كتابة التقارير الجيولوجية', `
+يهدف المقرر إلى تنمية مهارات إعداد وكتابة التقارير العلمية والفنية الخاصة بالأعمال الحقلية، وتنظيم البيانات، وتحليل النتائج، وعرضها بأسلوب احترافي.
+<br><br>
+<a href='ضعي رابط Google Drive هنا'
+target='_blank'
+class='modal-link-btn'>
+محتوى المقرر
+</a>
+`)">
 كتابة التقارير الجيولوجية
 </button>
 
 <button class="year-btn"
-onclick="openModal('البرمجة وحل المشكلات','تعلم أساسيات البرمجة والتفكير المنطقي لتطوير حلول للمشكلات العلمية وتحليل البيانات.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+onclick="openModal('البرمجة وحل المشكلات', `
+يهدف المقرر إلى تنمية مهارات التفكير المنطقي وحل المشكلات، والتعرف على أساسيات البرمجة وتطبيقاتها في تحليل البيانات ودعم الحلول العلمية.
+`)">
 البرمجة وحل المشكلات
-</button>
-
-</div>
-</div>
-</div>
-
-<div class="support-wrapper">
-<h2 class="section-title">المقررات المساندة</h2>
-<div class="support-box">
-
-<div class="support-grid">
-
-<button class="support-card"
-onclick="openSupportModal(
-'الرياضيات العامة',
-'اكتبي هنا محتوى مقرر الرياضيات العامة'
-)">
-<span>الرياضيات العامة</span>
-<i class="fa-solid fa-calculator"></i>
-</button>
-
-<button class="support-card"
-onclick="openSupportModal(
-'الفيزياء العامة',
-'اكتبي هنا محتوى مقرر الفيزياء العامة'
-)">
-<span>الفيزياء العامة</span>
-<i class="fa-solid fa-atom"></i>
-</button>
-
-<button class="support-card"
-onclick="openSupportModal(
-'الكيمياء العامة',
-'اكتبي هنا محتوى مقرر الكيمياء العامة'
-)">
-<span>الكيمياء العامة</span>
-<i class="fa-solid fa-flask"></i>
-</button>
-
-<button class="support-card"
-onclick="openSupportModal(
-'اللغة الإنجليزية',
-'اكتبي هنا محتوى مقرر اللغة الإنجليزية'
-)">
-<span>اللغة الإنجليزية</span>
-<i class="fa-solid fa-language"></i>
-</button>
-
-<button class="support-card center-row"
-onclick="openSupportModal(
-'اللغة العربية',
-'اكتبي هنا محتوى مقرر اللغة العربية'
-)">
-<span>اللغة العربية</span>
-<i class="fa-solid fa-book-open"></i>
-</button>
-
-<button class="support-card center-row"
-onclick="openSupportModal(
-'الإحصاء',
-'اكتبي هنا محتوى مقرر الإحصاء'
-)">
-<span>الإحصاء</span>
-<i class="fa-solid fa-chart-column"></i>
-</button>
-
-<button class="support-card center-row"
-onclick="openSupportModal(
-'البرمجة وحل المشكلات',
-'اكتبي هنا محتوى مقرر البرمجة وحل المشكلات'
-)">
-<span>البرمجة وحل المشكلات</span>
-<i class="fa-solid fa-code"></i>
 </button>
 
 </div>
@@ -1628,21 +1550,6 @@ modal.style.display="none";
 
 }
 
-function openSupportModal(title,content){
-
-document.getElementById("supportModal").style.display="flex";
-
-document.getElementById("supportModalTitle").innerText=title;
-
-document.querySelector(".support-modal-content").innerHTML=content;
-
-}
-
-function closeSupportModal(){
-
-document.getElementById("supportModal").style.display="none";
-
-}
 
 function openLinksModal(){
 
