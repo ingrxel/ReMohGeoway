@@ -579,6 +579,217 @@ line-height:2;
 color:#444;
 }
 
+/*==========================
+      STUDY PLAN
+==========================*/
+
+.studyplan-section{
+width:min(1400px,94%);
+margin:90px auto;
+padding:50px clamp(20px,4vw,60px);
+background:#f8f9fb;
+border-radius:35px;
+box-shadow:0 15px 40px rgba(0,0,0,.05);
+overflow:hidden;
+}
+
+.studyplan-container{
+width:100%;
+}
+
+.studyplan-title{
+text-align:center;
+font-size:clamp(2rem,3vw,3rem);
+color:#0B5D3B;
+font-weight:800;
+margin-bottom:15px;
+}
+
+.studyplan-desc{
+max-width:850px;
+margin:auto;
+margin-bottom:70px;
+text-align:center;
+line-height:2;
+font-size:clamp(.95rem,1.2vw,1.1rem);
+color:#555;
+}
+
+.studyplan-timeline{
+position:relative;
+display:grid;
+grid-template-columns:repeat(5,minmax(170px,1fr));
+gap:clamp(18px,2vw,35px);
+align-items:center;
+}
+
+.studyplan-line{
+position:absolute;
+left:3%;
+right:3%;
+top:50%;
+height:4px;
+background:#0B5D3B;
+border-radius:20px;
+transform:translateY(-50%);
+z-index:1;
+}
+
+.studyplan-step{
+position:relative;
+display:flex;
+flex-direction:column;
+align-items:center;
+z-index:2;
+}
+
+.studyplan-step.top{
+padding-bottom:220px;
+}
+
+.studyplan-step.bottom{
+padding-top:220px;
+}
+
+.studyplan-card{
+width:100%;
+background:#fff;
+padding:25px;
+border-radius:22px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+text-align:center;
+transition:.35s;
+}
+
+.studyplan-card:hover{
+transform:translateY(-8px);
+}
+
+.studyplan-card h3{
+color:#26B985;
+font-size:clamp(1rem,1.4vw,1.35rem);
+margin-bottom:14px;
+}
+
+.studyplan-card p{
+color:#555;
+line-height:1.9;
+font-size:clamp(.82rem,1vw,.98rem);
+}
+
+.studyplan-dot{
+width:20px;
+height:20px;
+background:#0B5D3B;
+border:5px solid #D8F3EA;
+border-radius:50%;
+margin:18px 0;
+}
+
+.studyplan-year{
+background:#DFF6EE;
+padding:8px 22px;
+border-radius:12px;
+font-size:1rem;
+font-weight:700;
+color:#0B5D3B;
+box-shadow:0 5px 10px rgba(0,0,0,.06);
+}
+/*==========================
+     STUDY PLAN MOBILE
+==========================*/
+
+@media (max-width:900px){
+
+.studyplan-section{
+
+padding:40px 20px;
+
+}
+
+.studyplan-desc{
+
+margin-bottom:40px;
+
+}
+
+.studyplan-timeline{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:35px;
+
+position:relative;
+
+padding-right:45px;
+
+}
+
+.studyplan-line{
+
+top:0;
+
+bottom:0;
+
+right:15px;
+
+left:auto;
+
+width:4px;
+
+height:100%;
+
+transform:none;
+
+}
+
+.studyplan-step{
+
+width:100%;
+
+padding:0 !important;
+
+display:flex;
+
+flex-direction:row;
+
+align-items:flex-start;
+
+gap:18px;
+
+}
+
+.studyplan-dot{
+
+margin:10px 0 0;
+
+flex-shrink:0;
+
+}
+
+.studyplan-year{
+
+order:-1;
+
+margin-top:6px;
+
+min-width:72px;
+
+text-align:center;
+
+}
+
+.studyplan-card{
+
+width:100%;
+
+}
+
+}
 .academic-life{
 width:min(1200px,92%);
 margin:35px auto;
@@ -1094,6 +1305,142 @@ class="link-box">
 </div>
 
 </div>
+<!-- ===================== -->
+<!-- الخطة الدراسية -->
+<!-- ===================== -->
+
+<section class="studyplan-section">
+
+<div class="studyplan-container">
+
+<h2 class="studyplan-title">
+الخطة الدراسية
+</h2>
+
+<p class="studyplan-desc">
+رحلة الطالب منذ بداية الدراسة وحتى التدريب والتخرج، مع توضيح مراحل التخصص والمهارات التي يكتسبها خلال كل سنة.
+</p>
+
+<div class="studyplan-timeline">
+
+<div class="studyplan-line"></div>
+
+<!-- السنة الأولى -->
+
+<div class="studyplan-step top">
+
+<div class="studyplan-card">
+
+<h3>السنة الأولى (تأسيسية)</h3>
+
+<p>
+مقررات أساسية في العلوم والرياضيات واللغة الإنجليزية، مع بناء المهارات الأكاديمية اللازمة للدراسة الجامعية.
+</p>
+
+</div>
+
+<div class="studyplan-dot"></div>
+
+<span class="studyplan-year">
+2026
+</span>
+
+</div>
+
+<!-- السنة الثانية -->
+
+<div class="studyplan-step bottom">
+
+<span class="studyplan-year">
+2027
+</span>
+
+<div class="studyplan-dot"></div>
+
+<div class="studyplan-card">
+
+<h3>السنة الثانية</h3>
+
+<p>
+بداية التخصص، والتعرف على المقررات التخصصية، والرحلات الحقلية، والمهارات العملية.
+</p>
+
+</div>
+
+</div>
+
+<!-- السنة الثالثة -->
+
+<div class="studyplan-step top">
+
+<div class="studyplan-card">
+
+<h3>السنة الثالثة</h3>
+
+<p>
+التعمق في مقررات التخصص، وزيادة التطبيقات العملية والرحلات الحقلية.
+</p>
+
+</div>
+
+<div class="studyplan-dot"></div>
+
+<span class="studyplan-year">
+2028
+</span>
+
+</div>
+
+<!-- السنة الرابعة -->
+
+<div class="studyplan-step bottom">
+
+<span class="studyplan-year">
+2029
+</span>
+
+<div class="studyplan-dot"></div>
+
+<div class="studyplan-card">
+
+<h3>السنة الرابعة</h3>
+
+<p>
+التركيز على المقررات المتقدمة، واكتساب مهارات البحث العلمي والتحليل والاستعداد لسوق العمل.
+</p>
+
+</div>
+
+</div>
+
+<!-- السنة الخامسة -->
+
+<div class="studyplan-step top">
+
+<div class="studyplan-card">
+
+<h3>السنة الخامسة</h3>
+
+<p>
+التدريب التعاوني، ومشروع التخرج، والتأهيل المهني قبل الانطلاق إلى سوق العمل.
+</p>
+
+</div>
+
+<div class="studyplan-dot"></div>
+
+<span class="studyplan-year">
+2030
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 <section class="academic-life">
 
 <h2 class="academic-title">

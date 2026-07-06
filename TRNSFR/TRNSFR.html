@@ -545,6 +545,68 @@ color:#0B5D3B;
 margin:70px 0 30px;
 }
 
+.info-group{
+padding:12px 28px;
+}
+
+.info-group:not(:last-child){
+border-bottom:1px solid rgba(11,93,59,.15);
+}
+
+.info-group h4{
+color:#0B5D3B;
+font-size:18px;
+font-weight:700;
+margin-bottom:2px;
+}
+
+.info-group ul{
+margin:0;
+padding-right:18px;
+line-height:2;
+font-size:16px;
+color:#444;
+}
+
+.info-group li{
+}
+
+.process-box{
+width:min(1100px,92%);
+margin:auto;
+background:rgba(255,255,255,.72);
+backdrop-filter:blur(10px);
+border-radius:30px;
+padding:35px;
+
+}
+
+.process-item{
+display:flex;
+align-items:center;
+gap:18px;
+padding:18px 0;
+font-size:17px;
+color:#444;
+}
+
+.process-item:not(:last-child){
+border-bottom:1px solid rgba(11,93,59,.12);
+}
+
+.process-item span{
+width:42px;
+height:42px;
+border-radius:50%;
+background:#0B5D3B;
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+font-weight:700;
+font-size:18px;
+flex-shrink:0;
+}
 
 /* معلومات مهمة */
 
@@ -608,6 +670,39 @@ padding:35px;
 line-height:2.2;
 font-size:17px;
 }
+
+.transfer-card p{
+padding:35px;
+font-size:17px;
+line-height:2.2;
+text-align:center;
+color:#555;
+}
+
+.guide-btn-box{
+text-align:center;
+margin-top:35px;
+}
+
+.guide-btn{
+display:inline-block;
+padding:14px 34px;
+background:#0B5D3B;
+color:#fff;
+text-decoration:none;
+font-size:17px;
+font-weight:700;
+border-radius:14px;
+transition:.3s;
+box-shadow:0 8px 20px rgba(11,93,59,.18);
+}
+
+.guide-btn:hover{
+background:#157347;
+transform:translateY(-3px);
+box-shadow:0 12px 25px rgba(11,93,59,.25);
+}
+
 /* FOOTER */
 
 footer{
@@ -817,7 +912,7 @@ color:rgba(255,255,255,0.55);
 
 <div class="dropdown-btn">
 
-<a href="../DEP/DEP.html">التــخصــصــات الاكــاديــميــة</a>
+ <a href="../SPC/SPC.html">التــخصــصــات الاكــاديــميــة</a>
 
 <i class="fa-solid fa-chevron-down"
 onclick="toggleDepartments()"></i>
@@ -930,6 +1025,127 @@ class="link-box">
 
 
 <h2 class="section-title">
+نوع التحويل
+</h2>
+
+<div class="transfer-grid">
+
+<div class="transfer-card">
+
+<div class="card-head">
+التحويل إلى كلية التعدين
+</div>
+
+<p>
+تعرض هذه البطاقة جميع المعلومات المتعلقة بالتحويل إلى كلية التعدين، بما في ذلك شروط التحويل، والمقررات المطلوب اجتيازها.
+</p>
+<div class="info-group">
+
+<h4>شروط التحويل</h4>
+
+<ul>
+<li>استيفاء شروط التحويل المعتمدة من الجامعة.</li>
+<li>تحقيق الحد الأدنى للمعدل المطلوب.</li>
+<li>توفر مقاعد شاغرة في الكلية.</li>
+</ul>
+
+</div>
+
+<div class="info-group">
+
+<h4>المقررات</h4>
+
+<ul>
+<li>اللغة الانجليزية من اهم المقررات التي يجب اجتيازها.</li>
+</ul>
+
+</div>
+
+<div class="info-group">
+
+<h4>مهم</h4>
+
+<ul>
+<li>لا تزال الشروط تحت الدراسة ويتم الغعلان عنها في دليل القبول عبر الجامعة </li>
+</ul>
+
+</div>
+</div>
+
+<div class="transfer-card">
+
+<div class="card-head">
+التحويل من كلية التعدين
+</div>
+
+<p>
+تتضمن البطاقة أهم الإرشادات المتعلقة بالتحويل من كلية التعدين إلى كلية أخرى، مع ضرورة مراجعة دليل التحويل الرسمي للكلية المراد الانتقال إليها لمعرفة جميع الشروط والمتطلبات.
+</p>
+<div class="info-group">
+
+<h4>شروط التحويل</h4>
+
+<ul>
+<li>تختلف الشروط حسب الكلية المراد الانتقال إليها.</li>
+<li>قد تختلف متطلبات المعدل والمفاضلة بين الكليات.</li>
+</ul>
+
+</div>
+
+<div class="info-group">
+
+<h4>المقررات</h4>
+
+<ul>
+<li> تشترط بعض الكليات اجتياز مقررات معينة قبل قبول طلب التحويل مثل كلية الهندسة.</li>
+</ul>
+
+</div>
+
+<div class="info-group">
+
+<h4>مهم</h4>
+
+<ul>
+<li>يرجى مراجعة دليل التحويل الرسمي الخاص بالكلية المراد الانتقال إليها قبل التقديم، للتأكد من جميع الشروط والمتطلبات.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<h2 class="section-title">
+آلية التحويل
+</h2>
+
+<div class="process-box">
+
+<div class="process-item">
+<span>1</span>
+التقديم إلكترونيًا خلال فترة التحويل المعلنة.
+</div>
+
+<div class="process-item">
+<span>2</span>
+مراجعة الطلبات والتأكد من استيفاء الشروط.
+</div>
+
+<div class="process-item">
+<span>3</span>
+دراسة المقررات المطلوب معادلتها.
+</div>
+
+<div class="process-item">
+<span>4</span>
+إجراء المفاضلة بين المتقدمين حسب المقاعد المتاحة.
+</div>
+
+<div class="process-item">
+<span>5</span>
+إعلان نتائج التحويل واستكمال الإجراءات النهائية.
+</div>
+
+</div>
+<h2 class="section-title">
 معلومات مهمة
 </h2>
 
@@ -945,50 +1161,21 @@ class="link-box">
 <li>
 يُنصح بمتابعة الإعلانات الرسمية للكلية والجامعة بشكل مستمر للحصول على أحدث المستجدات.
 </li>
+<li>
+بالنسبة للتحويل من كلية التعدين إلى كلية أخرى، يجب مراجعة دليل التحويل الرسمي الخاص بالكلية المراد الانتقال إليها، حيث تختلف الشروط والمقررات المطلوبة من كلية إلى أخرى.
+</li>
 </ul>
+<div class="guide-btn-box">
+
+<a href="ضعي_رابط_دليل_التحويل_هنا"
+target="_blank"
+class="guide-btn">
+
+مراجعة دليل التحويل الرسمي
+
+</a>
 
 </div>
-
-
-<h2 class="section-title">
-شروط وآلية التحويل المستقبلية
-</h2>
-
-<div class="transfer-grid">
-
-
-<div class="transfer-card">
-<div class="card-head">
-شروط التحويل المتوقعة
-</div>
-
-<ul>
-<li>استيفاء شروط التحويل المعتمدة من الجامعة.</li>
-<li>تحقيق الحد الأدنى للمعدل المطلوب للتحويل.</li>
-<li>توفر مقاعد شاغرة في الكلية.</li>
-<li>اجتياز المفاضلة بين المتقدمين.</li>
-<li>معادلة المقررات الأساسية والعلمية وفق الأنظمة المعتمدة.</li>
-</ul>
-
-</div>
-
-
-
-<div class="transfer-card">
-<div class="card-head">
-آلية التحويل المتوقعة
-</div>
-
-<ol>
-<li>التقديم إلكترونيًا خلال فترة التحويل المعلنة.</li>
-<li>مراجعة الطلبات والتأكد من استيفاء الشروط.</li>
-<li>دراسة المقررات المطلوب معادلتها.</li>
-<li>إجراء المفاضلة بين المتقدمين حسب المقاعد المتاحة.</li>
-<li>إعلان نتائج التحويل واستكمال الإجراءات النهائية.</li>
-</ol>
-
-</div>
-
 </div>
 </div>
 

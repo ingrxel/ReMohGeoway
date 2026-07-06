@@ -511,16 +511,13 @@ margin-bottom:30px;
 }
 
 .departments-row{
-
 display:grid;
-grid-template-columns:repeat(4,180px);
+grid-template-columns:repeat(3,220px);
 justify-content:center;
-gap:22px;
-margin-bottom:22px;
-}
-
-.second-row{
-grid-template-columns:repeat(3,180px);
+justify-items:center;
+width:fit-content;
+margin:0 auto 24px;
+gap:24px;
 }
 
 .departments-center{
@@ -545,7 +542,7 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:rgba(237,248,238,.9)
+background:rgba(237,248,238,.9);
 border:1px solid rgba(11,93,59,.12);
 border-radius:22px;
 box-shadow:0 6px 18px rgba(0,0,0,.06);
@@ -574,6 +571,25 @@ display:block;
 margin-top:4px;
 }
 
+@media (max-width:900px){
+
+.departments-row,
+grid-template-columns:repeat(2,minmax(160px,1fr));
+
+}
+}
+
+@media (max-width:600px){
+
+.departments-row,
+grid-template-columns:1fr;
+}
+
+.department-card{
+max-width:260px;
+margin:auto;
+}
+}
 .fields-section{
 margin:70px auto 45px;
 text-align:center;
@@ -946,17 +962,6 @@ background:#124c7c;
 transform:translateY(-5px);
 }
 
-.closing-card{
-max-width:900px;
-margin:25px auto 0;
-background:white;
-padding:55px;
-border-radius:35px;
-box-shadow:0 15px 35px rgba(0,0,0,.05);
-text-align:center;
-position:relative;
-overflow:hidden;
-}
 
 /*========== GEOLOGY PAGE : PART 4 ==========*/
 
@@ -1293,7 +1298,7 @@ color:rgba(255,255,255,0.55);
 
 <div class="dropdown-btn">
 
-<a href="DEP.html">التــخصــصــات الاكــاديــميــة</a>
+ <a href="../SPC/SPC.html">التــخصــصــات الاكــاديــميــة</a>
 
 <i class="fa-solid fa-chevron-down"
 onclick="toggleDepartments()"></i>
@@ -1663,19 +1668,12 @@ class="link-box">
 <img src="PETRO.PNG">
 </a>
 
-<a href="GEPHY.html" class="department-card">
-<h2>الجيوفيزياء</h2>
-<img src="GEPHY.PNG">
-</a>
+
 
 <a href="MINROK.html" class="department-card">
 <h2>الثروة المعدنية والصخور</h2>
 <img src="MINROK.PNG">
 </a>
-
-</div>
-
-<div class="departments-row second-row">
 
 <a href="EXPL.html" class="department-card">
 <h2>تقنية الاستكشاف الجيولوجي</h2>
