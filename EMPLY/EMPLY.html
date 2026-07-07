@@ -581,6 +581,47 @@ background:#dff0e2;
 transform:translateY(-3px);
 }
 
+.hint-toast{
+position:fixed;
+top:95px;
+left:20px;
+
+width:min(360px,90%);
+padding:16px 18px;
+
+display:flex;
+align-items:flex-start;
+gap:12px;
+
+background:rgba(255,255,255,.95);
+backdrop-filter:blur(10px);
+
+border-right:4px solid #0B5D3B;
+border-radius:18px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+z-index:3000;
+
+animation:
+slideIn .7s ease,
+fadeOut .7s ease 6s forwards;
+}
+
+.hint-toast i{
+font-size:22px;
+color:#0B5D3B;
+margin-top:2px;
+}
+
+.hint-toast p{
+margin:0;
+font-size:17px;
+font-weight:700;
+line-height:1.8;
+color:#355a47;
+}
+
 /* PAGE TITLE */
 
 .page-title{
@@ -1123,6 +1164,11 @@ color:rgba(255,255,255,0.55);
 
 <body>
 
+<div class="hint-toast">
+    <i class="fa-solid fa-hand-pointer"></i>
+    <p>اضغط على شعار أي شركة أو جهة لعرض نبذة تعريفية عنها.</p>
+</div>
+
 <div class="background-design">
 
 <div class="polygon p1"></div>
@@ -1282,7 +1328,6 @@ class="link-box">
 <p class="department-description">
 تعد الجهات الحكومية من أكبر الجهات المستقطبة لخريجي كلية التعدين، حيث توفر فرصًا في إدارة الموارد الطبيعية، والإشراف على مشاريع التعدين والطاقة، وإعداد الدراسات والخرائط الجيولوجية، وتنظيم الأنظمة والتشريعات.
 </p>
-
 <div class="company-title">
 أبرز الجهات
 </div>
@@ -1291,31 +1336,31 @@ class="link-box">
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('الجهة الحكومية المسؤولة عن تطوير وتنظيم قطاع التعدين والصناعة والثروة المعدنية في المملكة.')">
+onclick="openPopup('هي الجهة الحكومية المسؤولة عن تنظيم وتطوير قطاعي الصناعة والتعدين في المملكة، وتعمل على تنمية الاستثمار في الثروات المعدنية ودعم تحقيق مستهدفات رؤية السعودية 2030.')">
 <img src="MIMR.PNG">
 </a>
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('الجهة المسؤولة عن إعداد الخرائط الجيولوجية الوطنية واستكشاف الموارد المعدنية وإجراء الدراسات الجيولوجية.')">
+onclick="openPopup('هي جهة حكومية متخصصة في إعداد الخرائط الجيولوجية، واستكشاف الموارد المعدنية، ورصد المخاطر الجيولوجية، وإجراء الدراسات والأبحاث العلمية المتعلقة بعلوم الأرض.')">
 <img src="SGS.PNG">
 </a>
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('الجهة المسؤولة عن تنظيم قطاع الطاقة والإشراف على سياساته وتطويره.')">
+onclick="openPopup('هي الجهة المسؤولة عن رسم سياسات قطاع الطاقة في المملكة والإشراف على تطوير موارده، بما يشمل النفط والغاز والكهرباء والطاقة المتجددة، بما يحقق الاستدامة وأمن الطاقة.')">
 <img src="MOE.PNG">
 </a>
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('تشرف على إدارة الموارد المائية والزراعية والبيئية بالمملكة.')">
+onclick="openPopup('شرف على إدارة وتنمية قطاعات البيئة والمياه والزراعة، وتعمل على حماية الموارد الطبيعية وتحقيق الأمن المائي والغذائي والاستدامة البيئية.')">
 <img src="MEWA.PNG">
 </a>
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('الهيئة المنظمة لقطاع المياه والإشراف على خدماته.')">
+onclick="openPopup('الجهة المنظمة لقطاع المياه في المملكة، وتعمل على تطوير الأنظمة والسياسات ورفع كفاءة خدمات المياه وتعزيز استدامة الموارد المائية.')">
 <img src="SWA.png">
 </a>
 
@@ -1341,37 +1386,37 @@ onclick="openPopup('الهيئة المنظمة لقطاع المياه والإ
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('الشركة الوطنية الرائدة في التعدين واستكشاف واستخراج ومعالجة المعادن.')">
+onclick="openPopup('هي الشركة الوطنية الرائدة في قطاع التعدين، وتعمل في استكشاف واستخراج وتصنيع المعادن، وتسهم في تطوير الصناعة التعدينية بالمملكة.')">
 <img src="MAADEN.PNG">
 </a>
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('إحدى أكبر شركات الطاقة في العالم وتوفر فرصًا في الجيولوجيا والجيوفيزياء وهندسة التعدين.')">
+onclick="openPopup('هي إحدى أكبر شركات الطاقة المتكاملة في العالم، وتعمل في استكشاف وإنتاج النفط والغاز والتكرير والبتروكيماويات، إضافةً إلى تطوير تقنيات الطاقة الحديثة.')">
 <img src="ARAMCO.PNG">
 </a>
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة سعودية متخصصة في الاستثمار والتطوير والاستكشاف التعديني.')">
+onclick="openPopup('شركة سعودية تعمل في الاستثمار والاستكشاف والتطوير التعديني، وتسهم في تنفيذ مشاريع التعدين واستغلال الموارد المعدنية.')">
 <img src="A&B.PNG">
 </a>
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة تعمل في مشاريع الطرق والبنية التحتية والاستشارات الهندسية.')">
+onclick="openPopup('قدم خدمات التصميم والإشراف والاستشارات الهندسية، وتشارك في تنفيذ مشاريع الطرق والبنية التحتية في المملكة.')">
 <img src="RR.png">
 </a>
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة متخصصة في مواد البناء والحلول الهندسية.')">
+onclick="openPopup('هي شركة عالمية متخصصة في تطوير حلول البناء والمواد الإنشائية المتقدمة، وتوفر منتجات وتقنيات تُستخدم في مشاريع البنية التحتية والإنشاءات.')">
 <img src="MBCC.PNG">
 </a>
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة تقدم خدمات هندسية وإدارة مشاريع في مختلف القطاعات.')">
+onclick="openPopup('للاستشارات الهندسية تقدم خدمات الاستشارات الهندسية وإدارة المشاريع والإشراف الفني، وتشارك في تنفيذ المشاريع الهندسية بمختلف تخصصاتها.')">
 <img src="AGC.png">
 </a>
 
@@ -1397,25 +1442,25 @@ onclick="openPopup('شركة تقدم خدمات هندسية وإدارة مش�
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة عالمية متخصصة في خدمات وتقنيات النفط والغاز والاستكشاف الجيولوجي والجيوفيزيائي.')">
+onclick="openPopup('هي أكبر شركة عالمية في مجال تقنيات الطاقة، وتقدم حلولًا متقدمة للاستكشاف والحفر وإدارة المكامن وتحليل البيانات لقطاع النفط والغاز.')">
 <img src="SLB.PNG">
 </a>
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('من أكبر شركات خدمات حقول النفط والحفر والاستكشاف.')">
+onclick="openPopup('شركة أمريكية عالمية تقدم خدمات وتقنيات حقول النفط، وتشمل أعمال الحفر وإكمال الآبار والاستشارات الهندسية وإدارة مشاريع الطاقة.')">
 <img src="HLBRTN.PNG">
 </a>
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة عالمية تقدم حلول وتقنيات الطاقة والحفر وتحليل البيانات.')">
+onclick="openPopup('شركة عالمية متخصصة في تقنيات الطاقة، توفر حلولًا للحفر والإنتاج وتحليل البيانات والتحول الرقمي لدعم قطاع النفط والغاز.')">
 <img src="BH.png">
 </a>
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة متخصصة في خدمات الآبار وتقنيات الإنتاج والاستكشاف.')">
+onclick="openPopup('شركة دولية تقدم خدمات وتقنيات الآبار والحفر والإنتاج، وتطور حلولًا هندسية وتقنية لرفع كفاءة عمليات استكشاف وإنتاج الطاقة.')">
 <img src="WF.png">
 </a>
 
@@ -1445,7 +1490,7 @@ onclick="openPopup('شركة متخصصة في خدمات الآبار وتقن�
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('توفر الجامعات السعودية فرصًا للعمل الأكاديمي والبحثي في مختلف التخصصات.')">
+onclick="openPopup('توفر الجامعات السعودية فرصًا للعمل الأكاديمي والبحثي من خلال التدريس والإشراف على المختبرات وإجراء الدراسات والأبحاث العلمية في مختلف التخصصات.')">
 <img src="ME.PNG">
 </a>
 
@@ -1471,7 +1516,7 @@ onclick="openPopup('توفر الجامعات السعودية فرصًا للع
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('مدينة الملك عبدالعزيز للعلوم والتقنية، إحدى أبرز الجهات البحثية في المملكة.')">
+onclick="openPopup('هي مؤسسة وطنية رائدة في البحث والتطوير والابتكار، وتدعم الأبحاث العلمية والتقنيات المتقدمة في مختلف المجالات.')">
 <img src="KACST.PNG">
 </a>
 
@@ -1497,20 +1542,19 @@ onclick="openPopup('مدينة الملك عبدالعزيز للعلوم وال
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة متخصصة في الاستشارات الهندسية وإدارة المشاريع.')">
+onclick="openPopup('للاستشارات الهندسية تقدم خدمات الاستشارات الهندسية وإدارة المشاريع والإشراف الفني، وتشارك في تنفيذ المشاريع الهندسية بمختلف تخصصاتها.')">
 <img src="AGC.png">
 </a>
 
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة تعمل في مشاريع الطرق والبنية التحتية والاستشارات الهندسية.')">
+onclick="openPopup('تقدم خدمات التصميم والإشراف والاستشارات الهندسية، وتشارك في تنفيذ مشاريع الطرق والبنية التحتية في المملكة.')">
 <img src="RR.png">
 </a>
 
 </div>
 </div>
 </div>
-
 <h2 class="section-title">
 أبرز مجالات العمل
 </h2>
@@ -1531,25 +1575,37 @@ onclick="openPopup('شركة تعمل في مشاريع الطرق والبني�
 أبرز جهات التوظيف
 </div>
 <div class="sector-company-grid">
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('إحدى أكبر شركات الطاقة في العالم، وتوفر فرصًا في الجيولوجيا والجيوفيزياء وهندسة التعدين واستكشاف النفط والغاز.')"><img src="ARAMCO.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة عالمية رائدة في خدمات وتقنيات النفط والغاز.')"><img src="SLB.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('من أكبر شركات خدمات حقول النفط والحفر والاستكشاف.')"><img src="HLBRTN.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة عالمية متخصصة في تقنيات الطاقة والحفر.')"><img src="BH.png"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة متخصصة في خدمات الآبار والإنتاج والاستكشاف.')"><img src="WF.png"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة سعودية تقدم خدمات لوجستية وتشغيلية لقطاع الطاقة.')"><img src="EXLOG.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الجهة الحكومية المسؤولة عن تنظيم قطاع الطاقة والإشراف على سياساته.')"><img src="MOE.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تُعد من أكبر شركات الطاقة المتكاملة في العالم، وتعمل في استكشاف وإنتاج النفط والغاز والتكرير والبتروكيماويات، إضافةً إلى تطوير تقنيات الطاقة الحديثة.')"><img src="ARAMCO.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تُعد من أكبر الشركات العالمية في مجال تقنيات الطاقة، وتقدم حلولًا متقدمة للاستكشاف والحفر وإدارة المكامن وتحليل البيانات لقطاع النفط والغاز.')"><img src="SLB.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تقدم خدمات وتقنيات متقدمة لحقول النفط، تشمل أعمال الحفر وإكمال الآبار والاستشارات الهندسية وإدارة مشاريع الطاقة.')"><img src="HLBRTN.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('توفر حلولًا وتقنيات متقدمة لقطاع الطاقة، وتشمل خدمات الحفر والإنتاج وتحليل البيانات والتحول الرقمي.')"><img src="BH.png"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('متخصصة في خدمات الآبار والحفر والإنتاج، وتطور حلولًا هندسية وتقنية لرفع كفاءة عمليات استكشاف وإنتاج الطاقة.')"><img src="WF.png"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تقدم خدمات لوجستية ودعمًا تشغيليًا لقطاع الطاقة، وتوفر حلولًا متكاملة للمشاريع الصناعية والنفطية.')"><img src="EXLOG.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الجهة الحكومية المسؤولة عن رسم سياسات قطاع الطاقة في المملكة والإشراف على تطوير موارده، بما يشمل النفط والغاز والكهرباء والطاقة المتجددة.')"><img src="MOE.PNG"></a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup(' السعودية متخصصة في أعمال المسح والاستكشاف الجيوفيزيائي وتقديم الخدمات الزلزالية لقطاع النفط والغاز.')">
+onclick="openPopup('متخصصة في أعمال المسح والاستكشاف الجيوفيزيائي، وتقدم الخدمات الزلزالية والدراسات الجيوفيزيائية لدعم عمليات استكشاف النفط والغاز.')">
 <img src="ARGAS.PNG"></a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة TAQA السعودية تقدم خدمات الحفر وصيانة الآبار والخدمات الهندسية لقطاع الطاقة.')">
-<img src="#"></a>
+onclick="openPopup('تقدم خدمات متكاملة في الحفر وصيانة الآبار والخدمات الهندسية، وتدعم مشاريع النفط والغاز والطاقة في المملكة.')">
+<img src="TAQA.PNG">
+</a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة NESR (National Energy Services Reunited) متخصصة في خدمات الطاقة، وتقدم حلول الحفر وصيانة الآبار وتحسين الإنتاج.')">
-<img src="#"></a>
+onclick="openPopup('متخصصة في خدمات الطاقة، وتوفر حلولًا للحفر وصيانة الآبار وتحسين الإنتاج والتقنيات الهندسية لقطاع النفط والغاز.')">
+<img src="NESR.PNG">
+</a>
 
 </div>
 </div>
@@ -1568,31 +1624,40 @@ onclick="openPopup('شركة NESR (National Energy Services Reunited) متخصص
 أبرز جهات التوظيف
 </div>
 <div class="sector-company-grid">
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الشركة الوطنية الرائدة في التعدين بالمملكة، وتعمل في استكشاف واستخراج وتصنيع المعادن.')"><img src="MAADEN.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الجهة الوطنية المسؤولة عن إعداد الخرائط الجيولوجية واستكشاف الموارد المعدنية.')"><img src="SGS.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الوزارة المسؤولة عن تطوير وتنظيم قطاع الصناعة والثروة المعدنية.')"><img src="MIMR.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة متخصصة في الاستثمار والتطوير والاستكشاف التعديني.')"><img src="A&B.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة تعدين سعودية تعمل في استكشاف واستخراج ومعالجة الخامات المعدنية.')"><img src="AMAK.PNG"></a>
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تُعد الشركة الوطنية الرائدة في قطاع التعدين، وتعمل في استكشاف واستخراج وتصنيع المعادن، وتسهم في تطوير الصناعة التعدينية بالمملكة.')"><img src="MAADEN.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الجهة الحكومية المتخصصة في إعداد الخرائط الجيولوجية، واستكشاف الموارد المعدنية، وإجراء الدراسات والأبحاث المتعلقة بعلوم الأرض.')"><img src="SGS.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الجهة الحكومية المسؤولة عن تنظيم وتطوير قطاعي الصناعة والتعدين، وتعزيز الاستثمار في الثروات المعدنية بالمملكة.')"><img src="MIMR.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('متخصصة في الاستثمار والاستكشاف والتطوير التعديني، وتسهم في تنفيذ مشاريع التعدين واستغلال الموارد المعدنية.')"><img src="A&B.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تعمل في استكشاف واستخراج وإنتاج المعادن، وتُعد من أبرز شركات التعدين في المملكة.')"><img src="AMAK.PNG"></a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup(' متخصصة في الاستثمار وتطوير المشاريع التعدينية واستكشاف الموارد المعدنية.')">
+onclick="openPopup('متخصصة في الاستثمار وتطوير المشاريع التعدينية، واستكشاف الموارد المعدنية ودعم نمو قطاع التعدين.')">
 <img src="NAM.PNG"></a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('  إحدى أكبر شركات التعدين العالمية، وتعمل في استكشاف واستخراج ومعالجة المعادن.')">
+onclick="openPopup('تُعد من كبرى شركات التعدين العالمية، وتعمل في استكشاف واستخراج ومعالجة المعادن، وتدير مشاريع تعدين في عدة دول.')">
 <img src="ERG.PNG"></a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة Barrick Gold من أكبر شركات تعدين الذهب في العالم، وتعمل في الاستكشاف والتعدين وتطوير المناجم.')">
-<img src="#"></a>
+onclick="openPopup('تُعد من أكبر شركات تعدين الذهب في العالم، وتعمل في استكشاف واستخراج الذهب وتطوير وتشغيل المناجم.')">
+<img src="BGM.PNG"></a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة Vision Mining متخصصة في الخدمات التعدينية والاستشارات الجيولوجية.')">
-<img src="#"></a>
+onclick="openPopup('متخصصة في تقديم الخدمات التعدينية والاستشارات الجيولوجية، ودعم مشاريع الاستكشاف والتعدين وتقييم الخامات المعدنية.')">
+<img src="VM.PNG"></a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة Saudi Comedat متخصصة في تطوير المناجم وأعمال التعدين والحفر والخدمات المساندة.')">
-<img src="#"></a>
+onclick="openPopup('متخصصة في تطوير وتشغيل المناجم، وتقديم خدمات التعدين والحفر ونقل الخامات وإدارة العمليات التعدينية.')">
+<img src="CMDT.PNG"></a>
 </div>
 </div>
 
@@ -1611,23 +1676,30 @@ onclick="openPopup('شركة Saudi Comedat متخصصة في تطوير المن
 أبرز جهات التوظيف
 </div>
 <div class="sector-company-grid">
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('وزارة البيئة والمياه والزراعة.')"><img src="MEWA.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الهيئة السعودية للمياه.')"><img src="SWA.png"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة المياه الوطنية.')"><img src="NWC.png"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('هيئة المساحة الجيولوجية السعودية.')"><img src="SGS.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('أرامكو السعودية.')"><img src="ARAMCO.PNG"></a>
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تشرف على إدارة وتنمية قطاعات البيئة والمياه والزراعة، وتعمل على حماية الموارد الطبيعية وتحقيق الاستدامة البيئية والأمن المائي والغذائي.')"><img src="MEWA.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الجهة المنظمة لقطاع المياه، وتعمل على تطوير الأنظمة والسياسات ورفع كفاءة خدمات المياه وتعزيز استدامة الموارد المائية.')"><img src="SWA.png"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تقدم خدمات المياه والصرف الصحي، وتعمل على تشغيل وصيانة وتطوير البنية التحتية لقطاع المياه في مختلف مناطق المملكة.')"><img src="NWC.png"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('متخصصة في إعداد الخرائط الجيولوجية، واستكشاف الموارد المعدنية، وإجراء الدراسات والأبحاث المتعلقة بعلوم الأرض.')"><img src="SGS.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تُعد من أكبر شركات الطاقة المتكاملة في العالم، وتعمل في استكشاف وإنتاج النفط والغاز والتكرير والبتروكيماويات، إضافةً إلى تطوير تقنيات الطاقة الحديثة.')"><img src="ARAMCO.PNG"></a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('المؤسسة الحكومية المسؤولة عن تحلية مياه البحر وإنتاج المياه في المملكة.')">
-<img src="#"></a>
+onclick="openPopup('تتولى إنتاج المياه المحلاة وتشغيل محطات التحلية، وتسهم في توفير إمدادات المياه لمختلف مناطق المملكة.')">
+<img src="SWCC.PNG"></a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة Water Transmission Company (WTCO) مسؤولة عن شبكات نقل المياه وتنفيذ مشاريع البنية التحتية المائية.')">
-<img src="#"></a>
+onclick="openPopup('تتولى تشغيل وإدارة شبكات نقل المياه، وتنفيذ مشاريع البنية التحتية لضمان نقل المياه بكفاءة بين مناطق المملكة.')">
+<img src="WTCO.PNG"></a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('الجهة الحكومية المشرفة على مشاريع الري وإدارة الموارد المائية في المملكة.')">
-<img src="#"></a>
+onclick="openPopup('تشرف على مشاريع الري وإدارة الموارد المائية، وتسهم في تنمية القطاع الزراعي وتحسين كفاءة استخدام المياه.')">
+<img src="SIO.PNG"></a>
 </div>
 </div>
 
@@ -1646,16 +1718,23 @@ onclick="openPopup('الجهة الحكومية المشرفة على مشاري
 أبرز جهات التوظيف
 </div>
 <div class="sector-company-grid">
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة متخصصة في الاستشارات الهندسية وإدارة المشاريع.')"><img src="AGC.png"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة تعمل في مشاريع الطرق والبنية التحتية والاستشارات الهندسية.')"><img src="RR.png"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة متخصصة في مواد البناء والحلول الهندسية.')"><img src="MBCC.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('أحد أكبر المشاريع التطويرية في المملكة ويستقطب تخصصات الجيولوجيا والهندسة.')"><img src="NEOM.png"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة روشن للتطوير العقاري.')"><img src="#"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة الدرعية للتطوير.')"><img src="#"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة Parsons العالمية للاستشارات الهندسية.')"><img src="#"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة AECOM العالمية للتصميم والاستشارات الهندسية.')"><img src="#"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة Bechtel العالمية للمشاريع الكبرى.')"><img src="#"></a>
-</div>
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تقدم خدمات الاستشارات الهندسية وإدارة المشاريع والإشراف الفني في مختلف القطاعات الهندسية.')"><img src="AGC.png"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('متخصصة في تنفيذ مشاريع الطرق والبنية التحتية، وتقديم الحلول والاستشارات الهندسية.')"><img src="RR.png"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تطور مواد البناء المتقدمة والحلول الهندسية المستخدمة في مشاريع البنية التحتية والإنشاءات.')"><img src="MBCC.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('مشروع سعودي عالمي يهدف إلى بناء مدينة مستقبلية تعتمد على الابتكار والاستدامة، ويوفر فرصًا في مجالات الهندسة والجيولوجيا والبنية التحتية.')"><img src="NEOM.png"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تتولى تطوير مشاريع ومجتمعات سكنية متكاملة، وتسهم في دعم قطاع التطوير العقاري بالمملكة.')"><img src="RSN.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تشرف على تطوير مشروع الدرعية التاريخي، وتنفيذ مشاريع عمرانية وسياحية وثقافية وفق أعلى المعايير.')"><img src="DC.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تقدم خدمات الاستشارات الهندسية والتصميم وإدارة المشاريع في قطاعات البنية التحتية والنقل والطاقة.')"><img src="PRSN.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة عالمية متخصصة في التصميم والاستشارات الهندسية وإدارة المشاريع والتخطيط العمراني.')"><img src="ACOM.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تتولى تنفيذ وإدارة المشاريع الهندسية والصناعية الكبرى، وتقدم خدمات الهندسة والإنشاء وإدارة المشاريع حول العالم.')"><img src="BCHL.PNG"></a></div>
 </div>
 
 <div class="sector-card">
@@ -1672,27 +1751,33 @@ onclick="openPopup('الجهة الحكومية المشرفة على مشاري
 أبرز جهات التوظيف
 </div>
 <div class="sector-company-grid">
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('المركز الوطني للرقابة على الالتزام البيئي.')"><img src="NCEC.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('وزارة البيئة والمياه والزراعة.')"><img src="MEWA.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة نيوم توفر فرصًا في البيئة والاستدامة.')"><img src="NEOM.png"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('أرامكو السعودية.')"><img src="ARAMCO.PNG"></a>
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تتولى الرقابة على الالتزام بالأنظمة واللوائح البيئية، وتعمل على حماية البيئة والحد من التلوث وتعزيز الاستدامة البيئية.')"><img src="NCEC.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تشرف على إدارة وتنمية قطاعات البيئة والمياه والزراعة، وتعمل على حماية الموارد الطبيعية وتحقيق الاستدامة البيئية والأمن المائي والغذائي.')"><img src="MEWA.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('مشروع سعودي عالمي يعتمد على الابتكار والاستدامة، ويضم مبادرات ومشاريع للحفاظ على البيئة والموارد الطبيعية وتطوير السياحة المستدامة.')"><img src="NEOM.png"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تُعد من أكبر شركات الطاقة المتكاملة في العالم، وتعمل في استكشاف وإنتاج النفط والغاز، مع تنفيذ مبادرات للحفاظ على البيئة وتقليل الانبعاثات.')"><img src="ARAMCO.PNG"></a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة تطوير سعودية تقود مشاريع سياحية مستدامة وتركز على حماية البيئة والمحافظة على الموارد الطبيعية.')">
-<img src="#"></a>
+onclick="openPopup('تقود تطوير وجهات سياحية مستدامة، وتركز على حماية البيئة البحرية والبرية والمحافظة على الموارد الطبيعية وفق أعلى معايير الاستدامة.')">
+<img src="RSG.PNG "></a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('الجهة الحكومية المسؤولة عن تنظيم وتطوير الأنشطة السياحية والبحرية على ساحل البحر الأحمر.')">
-<img src="#"></a>
+onclick="openPopup('تشرف على تنظيم وتطوير الأنشطة السياحية الساحلية والبحرية، مع الحفاظ على البيئة البحرية وتعزيز الاستثمار المستدام.')">
+<img src="TRSDC.PNG"></a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة تطوير وطنية تنفذ مشاريع حضرية وسياحية وفق أعلى معايير الاستدامة البيئية.')">
-<img src="#"></a>
+onclick="openPopup('تنفذ مشاريع حضرية وسياحية وفق مبادئ الاستدامة، مع الاهتمام بحماية البيئة ورفع جودة الحياة.')">
+<img src="QIC.PNG"></a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('الجهة المسؤولة عن تطوير وإدارة المدن الصناعية مع تطبيق معايير الاستدامة وحماية البيئة.')">
-<img src="RCJY.PNG"></a>
-</div>
+onclick="openPopup('تتولى تطوير وإدارة المدن الصناعية، وتعمل على تطبيق معايير الاستدامة البيئية وحماية الموارد الطبيعية داخل المدن الصناعية.')">
+<img src="RCJY.PNG"></a></div>
 </div>
 
 <div class="sector-card">
@@ -1709,34 +1794,41 @@ onclick="openPopup('الجهة المسؤولة عن تطوير وإدارة ا�
 أبرز جهات التوظيف
 </div>
 <div class="sector-company-grid">
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الهيئة العامة للمساحة والمعلومات الجيومكانية، الجهة الوطنية المختصة بالبيانات الجيومكانية.')"><img src="GEOSA.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الهيئة السعودية للمساحة الجيولوجية وتستخدم تقنيات GIS والاستشعار عن بعد في أعمالها.')"><img src="SGS.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('مدينة الملك عبدالعزيز للعلوم والتقنية وتوفر فرصًا في الأبحاث والبيانات المكانية.')"><img src="KACST.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة نيوم تعتمد بشكل كبير على نظم المعلومات الجغرافية في التخطيط وإدارة المشاريع.')"><img src="NEOM.png"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('أرامكو تستخدم نظم المعلومات الجغرافية في إدارة الأصول والاستكشاف.')"><img src="ARAMCO.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة معادن تعتمد على نظم المعلومات الجغرافية في الاستكشاف وإدارة المناجم.')"><img src="MAADEN.PNG"></a>
-<!-- Esri Saudi Arabia -->
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الجهة الوطنية المختصة بتنظيم قطاع المساحة والمعلومات الجيومكانية، وتطوير البنية التحتية للبيانات المكانية ودعم التحول الرقمي.')"><img src="GEOSA.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تتولى إعداد الخرائط الجيولوجية واستكشاف الموارد المعدنية، وتستخدم نظم المعلومات الجغرافية والاستشعار عن بعد في الدراسات الجيولوجية.')"><img src="SGS.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تدعم الأبحاث العلمية والتقنيات المتقدمة، وتوفر فرصًا في تحليل البيانات المكانية والاستشعار عن بعد والابتكار.')"><img src="KACST.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('يعتمد على نظم المعلومات الجغرافية والاستشعار عن بعد في التخطيط الحضري وإدارة المشاريع والبنية التحتية الذكية.')"><img src="NEOM.png"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تستخدم نظم المعلومات الجغرافية في إدارة الأصول، وتحليل البيانات المكانية، ودعم أعمال الاستكشاف والتطوير.')"><img src="ARAMCO.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تعتمد على نظم المعلومات الجغرافية في أعمال الاستكشاف، وإدارة المناجم، وتحليل البيانات المكانية.')"><img src="MAADEN.PNG"></a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة متخصصة في حلول نظم المعلومات الجغرافية والتحليل المكاني وتطوير التطبيقات الجيومكانية.')">
-<img src="#">
+onclick="openPopup('متخصصة في حلول نظم المعلومات الجغرافية، وتطوير التطبيقات الجيومكانية، والتحليل المكاني، ودعم التحول الرقمي.')">
+<img src="ESRI.PNG">
 </a>
-<!-- Ministry of Municipalities and Housing -->
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('الوزارة المسؤولة عن التخطيط الحضري والخدمات البلدية، وتعتمد على نظم المعلومات الجغرافية في إدارة المدن والمشاريع.')">
-<img src="#">
+onclick="openPopup('تشرف على التخطيط الحضري والخدمات البلدية، وتعتمد على نظم المعلومات الجغرافية في إدارة المدن والمشاريع.')">
+<img src="MMRAH.PNG">
 </a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('شركة سعودية متخصصة في أعمال المسح والاستكشاف الجيوفيزيائي وتقديم الخدمات الزلزالية.')">
+onclick="openPopup('متخصصة في أعمال المسح والاستكشاف الجيوفيزيائي، وتقديم الخدمات الزلزالية والدراسات المكانية لقطاع الطاقة.')">
 <img src="ARGAS.PNG">
 </a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('مدينة علمية رائدة تطور الأبحاث والتقنيات المتقدمة في الاستشعار عن بعد وتحليل البيانات الجيومكانية.')">
-<img src="KACST.PNG">
-</a>
+onclick="openPopup('تطور الأبحاث والتقنيات المتقدمة في الاستشعار عن بعد، وتحليل البيانات الجيومكانية، والابتكار العلمي.')">
+<img src="KACST.PNG"></a>
 </div>
 </div>
 <div class="sector-card">
@@ -1748,38 +1840,39 @@ onclick="openPopup('مدينة علمية رائدة تطور الأبحاث و�
 <div class="sector-fields">
 <span>باحث علمي</span><span>أخصائي مختبرات</span><span>محلل عينات</span><span>مساعد باحث</span><span>باحث جيولوجي</span><span>باحث جيوفيزيائي</span><span>أخصائي تطوير</span>
 </div>
+
 <div class="sector-title">
 أبرز جهات التوظيف
 </div>
 <div class="sector-company-grid">
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('جامعة الملك عبدالعزيز وتوفر فرصًا أكاديمية وبحثية في علوم الأرض.')"><img src="KAU.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('مدينة الملك عبدالعزيز للعلوم والتقنية، من أبرز الجهات البحثية في المملكة.')"><img src="KACST.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الهيئة السعودية للمساحة الجيولوجية وتنفذ العديد من المشاريع البحثية.')"><img src="SGS.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة أرامكو تدعم الابتكار والبحوث والتطوير في قطاع الطاقة.')"><img src="ARAMCO.PNG"></a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('شركة معادن تدعم الأبحاث المتعلقة بالاستكشاف والتعدين.')"><img src="MAADEN.PNG"></a>
-<!-- King Fahd University of Petroleum and Minerals -->
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('توفر فرصًا أكاديمية وبحثية في علوم الأرض، وتدعم الدراسات العليا والأبحاث العلمية في مختلف التخصصات.')"><img src="KAU.png"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تُعد من أبرز الجهات الوطنية في البحث والتطوير والابتكار، وتدعم الأبحاث العلمية والتقنيات المتقدمة في مختلف المجالات.')"><img src="KACST.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تجري الدراسات والأبحاث الجيولوجية، وتنفذ مشاريع علمية لاستكشاف الموارد الطبيعية ورصد المخاطر الجيولوجية.')"><img src="SGS.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تدعم الابتكار والبحوث والتطوير في قطاع الطاقة، وتسهم في تطوير التقنيات والحلول الحديثة.')"><img src="ARAMCO.PNG"></a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تدعم الأبحاث المتعلقة بالاستكشاف والتعدين، وتسهم في تطوير التقنيات التعدينية واستغلال الموارد المعدنية.')"><img src="MAADEN.PNG"></a>
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('جامعة رائدة في مجالات الطاقة والهندسة وعلوم الأرض، وتوفر فرصًا أكاديمية وبحثية متقدمة.')">
-<img src="#">
+onclick="openPopup('تُعد من الجامعات الرائدة في مجالات الطاقة والهندسة وعلوم الأرض، وتوفر برامج أكاديمية وبحثية متقدمة.')">
+<img src="KFUPM.PNG">
 </a>
-<!-- King Saud University -->
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('جامعة سعودية تضم مراكز بحثية متقدمة في علوم الأرض والبيئة والموارد الطبيعية.')">
-<img src="#">
+onclick="openPopup('تضم مراكز بحثية متقدمة في علوم الأرض والبيئة والموارد الطبيعية، وتدعم الأبحاث والابتكار العلمي.')">
+<img src="KSU.PNG">
 </a>
-<!-- National Center for Geological and Environmental Research -->
+
 <a href="javascript:void(0)"
 class="company-box"
-onclick="openPopup('مركز بحثي متخصص في الدراسات الجيولوجية والبيئية وتطوير الأبحاث المتعلقة بالموارد الطبيعية.')">
-<img src="#">
-</a>
-<a href="javascript:void(0)"
-class="company-box"
-onclick="openPopup('مدينة علمية وطنية تقود الأبحاث والابتكار في مجالات التقنية وعلوم الأرض.')">
+onclick="openPopup('تقود الأبحاث والابتكار في مجالات التقنية وعلوم الأرض، وتسهم في تطوير الحلول العلمية والتقنيات الحديثة.')">
 <img src="KACST.PNG">
 </a>
+
 </div>
 </div>
 <div class="sector-card">
@@ -1798,36 +1891,41 @@ onclick="openPopup('مدينة علمية وطنية تقود الأبحاث و�
 
 <div class="sector-company-grid">
 
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الجهة الحكومية المسؤولة عن تنظيم قطاع الطاقة وإدارة موارده.')">
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الجهة الحكومية المسؤولة عن رسم سياسات قطاع الطاقة والإشراف على تطوير موارده، بما يشمل النفط والغاز والكهرباء والطاقة المتجددة.')">
 <img src="MOE.PNG">
 </a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الجهة الحكومية المسؤولة عن تطوير وتنظيم قطاع الصناعة والثروة المعدنية.')">
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الجهة الحكومية المسؤولة عن تنظيم وتطوير قطاعي الصناعة والتعدين، وتعزيز الاستثمار في الثروات المعدنية بالمملكة.')">
 <img src="MIMR.PNG">
 </a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الجهة الحكومية المسؤولة عن إدارة الموارد المائية والبيئية والزراعية.')">
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تشرف على إدارة وتنمية قطاعات البيئة والمياه والزراعة، وتعمل على حماية الموارد الطبيعية وتحقيق الاستدامة البيئية.')">
 <img src="MEWA.PNG">
 </a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الهيئة الوطنية المسؤولة عن إعداد الخرائط الجيولوجية واستكشاف الموارد المعدنية.')">
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('متخصصة في إعداد الخرائط الجيولوجية، واستكشاف الموارد المعدنية، وإجراء الدراسات والأبحاث المتعلقة بعلوم الأرض.')">
 <img src="SGS.PNG">
 </a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('وزارة التعليم توفر فرصًا أكاديمية وبحثية في الجامعات والمؤسسات التعليمية.')">
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تشرف على تطوير منظومة التعليم، وتوفر فرصًا أكاديمية وبحثية في الجامعات والمؤسسات التعليمية بالمملكة.')">
 <img src="ME.PNG">
 </a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('وزارة الدفاع توفر فرصًا في المساحة والخرائط والدراسات الجيولوجية والهندسية.')">
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('توفر فرصًا في المجالات الهندسية، والمساحة، والخرائط، والدراسات الجيولوجية، ودعم المشاريع العسكرية والبنية التحتية.')">
 <img src="MOD.png">
 </a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الحرس الوطني يوفر فرصًا في نظم المعلومات الجغرافية والمساحة وإدارة البيانات المكانية.')">
-<img src="NG.PNG">
-</a>
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('وزارة الداخلية تستفيد من المختصين في نظم المعلومات الجغرافية والاستشعار عن بعد وإدارة البيانات المكانية.')">
-<img src="MOI.PNG">
-</a>
-<!-- Ministry of Municipalities and Housing -->
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('الوزارة المسؤولة عن التخطيط الحضري والخدمات البلدية، وتعتمد على نظم المعلومات الجغرافية في إدارة المدن والمشاريع.')">
-<img src="#">
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('يوفر فرصًا في نظم المعلومات الجغرافية، والمساحة، وإدارة البيانات المكانية، ودعم المشاريع الوطنية.')">
+<img src="NM.PNG">
 </a>
 
-</div>
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تستفيد من المختصين في نظم المعلومات الجغرافية، والاستشعار عن بعد، وتحليل وإدارة البيانات المكانية لدعم الأعمال الأمنية.')">
+<img src="MOI.PNG">
+</a>
+
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تشرف على التخطيط الحضري والخدمات البلدية، وتعتمد على نظم المعلومات الجغرافية في إدارة المدن والمشاريع وتطوير البنية التحتية.')">
+<img src="MMH.PNG">
+</a></div>
 
 </div>
 </div>
