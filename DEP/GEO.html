@@ -301,8 +301,6 @@ margin:0 auto;
 font-size:clamp(9px,1vw,11px);
 font-weight:700;
 color:#0B5D3B;
-margin-top:px;
-
 }
 
 .college{
@@ -573,16 +571,15 @@ margin-top:4px;
 
 @media (max-width:900px){
 
-.departments-row,
-grid-template-columns:repeat(2,minmax(160px,1fr));
-
+.departments-row{
+    grid-template-columns:repeat(2,minmax(160px,1fr));
 }
 }
 
 @media (max-width:600px){
 
-.departments-row,
-grid-template-columns:1fr;
+.departments-row{
+    grid-template-columns:1fr;
 }
 
 .department-card{
@@ -603,7 +600,8 @@ margin-bottom:18px;
 position:relative;
 }
 
-.fields-section .section-title::after{
+.fields-section 
+.section-title::after{
 content:"";
 display:block;
 width:90px;
@@ -706,14 +704,15 @@ text-align:justify;
 }
 
 .overview-image{
-flex:0 0 270px;
+flex:0 0 470px;
 display:flex;
 justify-content:center;
 align-items:center;
 }
 
 .overview-image img{
-width:260px;
+width:360px;
+border-radius:34px;
 max-width:100%;
 transition:.35s;
 }
@@ -1327,7 +1326,7 @@ onclick="toggleDepartments()"></i>
 
 <div class="sidebar-bottom-links">
 
-<a href="#">معرض الصور</a>
+<a href="https://drive.google.com/drive/folders/1L8PNAZlhpasgDI0nEztV9_ZAgAvO3O1G?usp=drive_link">معرض الصور</a>
 
 <div class="sidebar-divider"></div>
 
@@ -1399,7 +1398,7 @@ class="link-box">
 </h2>
 
 <p>
-يُعد تخصص الجيولوجيا من التخصصات الأساسية في علوم الأرض، حيث يزود الطلاب بالمعارف النظرية والمهارات التطبيقية لفهم الصخور والمعادن والتراكيب الجيولوجية والعمليات الأرضية، إلى جانب التدريب على العمل الميداني واستخدام التقنيات الحديثة في الدراسات الجيولوجية.
+يُعد تخصص الجيولوجيا من التخصصات الأساسية في كلية التعدين ، حيث يزود الطلاب بالمعارف النظرية والمهارات التطبيقية لفهم الصخور والمعادن والتراكيب الجيولوجية والعمليات الأرضية، إلى جانب التدريب على العمل الميداني واستخدام التقنيات الحديثة في الدراسات الجيولوجية.
 </p>
 
 </div>
@@ -1697,7 +1696,7 @@ class="link-box">
 </h2>
 
 <p>
-يهدف تخصص الجيولوجيا إلى إعداد كوادر علمية تمتلك المعرفة والمهارات اللازمة لدراسة الأرض ومواردها الطبيعية، والإسهام في استكشافها والمحافظة عليها، وتوظيف التقنيات الحديثة لخدمة التنمية المستدامة.
+يهدف تخصص الجيولوجيا إلى إعداد كوادر علمية تمتلك المعرفة والمهارات اللازمة لدراسة الأرض ومواردها الطبيعية، والإسهام في استكشافها والمحافظة عليها، وتوظيف التقنيات الحديثة لخدمة التنمية المستدامة،  بما يدعم التوجه ورؤية 2030 في المملكة العربية السعودية.
 </p>
 
 </div>
