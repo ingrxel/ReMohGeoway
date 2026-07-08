@@ -647,12 +647,18 @@ color:#444;
 /* EMPLOYMENT GRID */
 
 .employment-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 gap:25px;
 max-width:1200px;
 margin:auto;
 padding:0 20px;
+}
+
+.employment-card{
+flex:1 1 320px;
+max-width:380px;
 }
 
 .employment-grid:first-of-type{
@@ -1632,7 +1638,7 @@ onclick="openPopup('متخصصة في خدمات الطاقة، وتوفر حل�
 
 <a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('متخصصة في الاستثمار والاستكشاف والتطوير التعديني، وتسهم في تنفيذ مشاريع التعدين واستغلال الموارد المعدنية.')"><img src="A&B.PNG"></a>
 
-<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تعمل في استكشاف واستخراج وإنتاج المعادن، وتُعد من أبرز شركات التعدين في المملكة.')"><img src="AMAK.PNG"></a>
+<a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تعمل في استكشاف واستخراج وإنتاج المعادن، وتُعد من أبرز شركات التعدين في المملكة.')"><img src="AMAK.png"></a>
 
 <a href="javascript:void(0)"
 class="company-box"
@@ -1916,7 +1922,7 @@ onclick="openPopup('تقود الأبحاث والابتكار في مجالات
 </a>
 
 <a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('يوفر فرصًا في نظم المعلومات الجغرافية، والمساحة، وإدارة البيانات المكانية، ودعم المشاريع الوطنية.')">
-<img src="NM.PNG">
+<img src="NM.png">
 </a>
 
 <a href="javascript:void(0)" class="sector-company-box" onclick="openPopup('تستفيد من المختصين في نظم المعلومات الجغرافية، والاستشعار عن بعد، وتحليل وإدارة البيانات المكانية لدعم الأعمال الأمنية.')">
