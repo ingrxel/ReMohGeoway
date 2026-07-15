@@ -948,73 +948,98 @@ width:70%;
 height:70%;
 object-fit:contain;
 }
+
 /* STATISTICS SECTION */
 
 .statistics-box{
 width:min(1200px,95%);
 margin:60px auto;
 padding:35px;
-
 background:rgba(11,93,59,.08);
 border:1px solid rgba(11,93,59,.15);
 border-radius:30px;
-
 backdrop-filter:blur(10px);
-
 display:flex;
 justify-content:center;
 gap:25px;
 flex-wrap:wrap;
+
 }
 
-.stat-card{
-display:flex;
-align-items:center;
-gap:12px;
-
-padding:18px;
-
-
-/* المهم */
-width:min(100%,500px);
-flex:1 1 450px;
-max-width:500px;
-overflow:hidden;
+.statistics-box{
+width:min(1400px,95%);
+margin:60px auto;
+padding:35px;
+background:rgba(11,93,59,.08);
+border:1px solid rgba(11,93,59,.15);
+border-radius:35px;
+backdrop-filter:blur(10px);
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
 }
 
-.chart-image{
-width:min(100%,320px);
-height:auto;
-aspect-ratio:4/3;
+.statistics-title{
+width: 100%;
+text-align: center;
+font-size: 42px;
+color: #0B5D3B;
+font-weight: 700;
+}
 
-border:2px dashed rgba(11,93,59,.2);
+.statistics-title{
+grid-column: 1 / -1;
+}
+
+.statistics-card{
+background:white;
 border-radius:25px;
-
-background:rgba(255,255,255,.75);
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-flex-shrink:1;
+padding:25px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+text-align:center;
 }
 
-.chart-image img{
+.statistics-card h3{
+color:#0B5D3B;
+font-size:24px;
+margin-bottom:10px;
+}
+
+.statistics-subtitle{
+color:#666;
+font-size:16px;
+margin-bottom:20px;
+}
+
+.chart-placeholder{
+width:100%;
+height:260px;
+border:2px dashed rgba(11,93,59,.18);
+border-radius:20px;
+background:#f6f9f7;
+margin-bottom:20px;
+}
+
+.chart-placeholder img{
 width:100%;
 height:100%;
 object-fit:contain;
+display:block;
+border-radius:15px;
 }
 
-.chart-title{
-writing-mode:vertical-rl;
-transform:rotate(180deg);
+.statistics-note{
+background:#edf6ef;
+padding:15px;
+border-radius:15px;
+font-size:15px;
+color:#555;
+}
 
- 
-font-size:clamp(22px,2vw,30px);
-font-weight:bold;
-color:#0B5D3B;
-
-flex-shrink:0;
+@media (max-width:900px){
+.statistics-box{
+grid-template-columns:1fr;
+}
 }
 
 /* FOOTER */
@@ -1248,7 +1273,7 @@ onclick="toggleDepartments()"></i>
 </div>
 </div>
 
-<a href="../FLD/FLD.html">الــرحلات الحــقــليــة</a>
+<a href="../FLD/FLD.html">الرحــلات والــزيــارات الــميــدانيـــة</a>
 <a href="EMPLY.html">مجـلات و إحصائيات الــتوظــيـف</a>
 <a href="../FRSTYR/FRSTYR.html">الــسنة التــحضيــريــية</a>
 <a href="../CURS/CURS.html">مــقررات الــكليــة</a>
@@ -1318,9 +1343,62 @@ class="link-box">
 </h1>
 
 <p class="page-description">
-تعرض هذه الصفحة أبرز المجالات الوظيفية والجهات التي يمكن لخريجي كــلــيــة الــتـــعديــــن العمل بها في مختلف القطاعات الحكومية والخاصة.
+تعرض هذه الصفحة أبرز الجهات الوظيفية والمجالات المهنية والإحصاءات المرتبطة بخريجي كلية التعدين، بما يشمل فرص العمل في مختلف القطاعات الحكومية والخاصة، إضافةً إلى مؤشرات التوظيف وإحصاءات الخريجين والبرامج الأكاديمية.</p>
+<div class="statistics-box">
+
+<h2 class="statistics-title">
+لوحة الإحصائيات
+</h2>
+
+<div class="statistics-card">
+<h3>معدلات التوظيف</h3>
+
+<p class="statistics-subtitle">
+قسم هندسة التعدين
 </p>
 
+<div class="chart-placeholder">
+<img src="MINCH.PNG">
+</div>
+
+<div class="statistics-note">
+تعتمد هذه الإحصائيات على بيانات قسم هندسة التعدين قبل انتقاله إلى كلية التعدين، وسيتم تحديثها دوريًا وفق أحدث البيانات المتاحة.</div>
+
+</div>
+
+<div class="statistics-card">
+<h3>معدلات التوظيف حسب البرنامج الأكاديمي</h3>
+
+<p class="statistics-subtitle">
+كلية علوم الأرض
+</p>
+
+<div class="chart-placeholder">
+<img src="ESCH1.PNG">
+</div>
+
+<div class="statistics-note">
+تعتمد هذه الإحصائيات على بيانات كلية علوم الأرض قبل التحول إلى كلية التعدين، وسيتم تحديثها دوريًا وفق أحدث البيانات المتاحة.</div>
+
+</div>
+
+<div class="statistics-card">
+<h3>عدد الخريجين</h3>
+
+<p class="statistics-subtitle">
+كلية علوم الأرض
+</p>
+
+<div class="chart-placeholder">
+<img src="ESCH2.PNG">
+</div>
+
+<div class="statistics-note">
+تعتمد هذه الإحصائيات على بيانات كلية علوم الأرض قبل التحول إلى كلية التعدين، وسيتم تحديثها دوريًا وفق أحدث البيانات المتاحة.</div>
+
+
+</div>
+</div>
 <h2 class="section-title">
 جهات التوظيف
 </h2>
@@ -1936,34 +2014,8 @@ onclick="openPopup('تقود الأبحاث والابتكار في مجالات
 </div>
 </div>
 
-<div class="statistics-box">
-
-<div class="stat-card">
-
-<div class="chart-image">
-<img src="EMPSTAT.png">
-</div>
-
-<div class="chart-title">
-معدل التوظيف
-</div>
-
-</div>
 
 
-<div class="stat-card">
-
-<div class="chart-image">
-<img src="GRADSTAT.png">
-</div>
-
-<div class="chart-title">
-أعداد الخريجين
-</div>
-
-</div>
-
-</div>
 <div class="popup-overlay" id="popup">
 
 <div class="popup-box">

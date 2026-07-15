@@ -503,28 +503,22 @@ color:#555;
 }
 
 
-
 /*  Accordion */
 
 .faq-category{
 width: fit-content;
 margin: 4rem auto 2rem;
 padding: .9rem 2.5rem;
-
 background: linear-gradient(135deg,#0B5D3B,#1e7a52);
-
 color: white;
-
 font-size: clamp(1.3rem,2vw,1.8rem);
 font-weight: 700;
-
 border-radius: 50px;
-
 box-shadow: 0 8px 25px rgba(11,93,59,.18);
-
 text-align: center;
 letter-spacing: .5px;
 }
+
 .faq-section{
 width:100%;
 max-width:1400px;
@@ -738,7 +732,51 @@ transition:.3s;
 transform:translateY(-4px);
 }
 
+.male-modal-box{
+width:min(760px,95%);
+max-height:85vh;
+overflow-y:auto;
+}
 
+.male-student-card{
+display:flex;
+align-items:center;
+gap:25px;
+padding:25px;
+background:white;
+border-radius:25px;
+border:2px solid rgba(11,93,59,.08);
+box-shadow:0 5px 20px rgba(0,0,0,.06);
+margin-bottom:20px;
+}
+
+.male-avatar{
+width:140px;
+height:140px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid rgba(11,93,59,.1);
+flex-shrink:0;
+}
+
+.male-email-btn{
+display:inline-block;
+margin-top:10px;
+padding:12px 25px;
+border-radius:40px;
+background:#0B5D3B;
+color:white;
+text-decoration:none;
+}
+
+@media (max-width:700px){
+
+.male-student-card{
+flex-direction:column;
+text-align:center;
+}
+
+}
 
 /*   معلومات مهمة */
 
@@ -996,7 +1034,7 @@ onclick="toggleDepartments()"></i>
 </div>
 </div>
 
-<a href="../FLD/FLD.html">الــرحلات الحــقــليــة</a>
+<a href="../FLD/FLD.html">الرحــلات والــزيــارات الــميــدانيـــة</a>
 <a href="../EMPLY/EMPLY.html">مجـلات و إحصائيات الــتوظــيـف</a>
 <a href="../FRSTYR/FRSTYR.html">الــسنة التــحضيــريــية</a>
 <a href="../CURS/CURS.html">مــقررات الــكليــة</a>
@@ -1474,7 +1512,7 @@ class="link-box">
 
 <div class="modal-overlay" id="maleModal">
 
-<div class="modal-box">
+<div class="modal-box male-modal-box">
 
 <div class="modal-title">
 استفسارات الطلاب
@@ -1485,20 +1523,30 @@ onclick="closeModal('maleModal')">
 ×
 </button>
 
-<img src="MOH.PNG"
-class="modal-avatar">
+<div class="students-container">
 
-<h3>محمد خبراني</h3>
+<div class="male-student-card">
 
-<h4>جيولوجي ثروة معدنية و صخور </h4>
+<img src="MOH.PNG" class="male-avatar">
+
+<div class="student-info">
+
+<div class="student-header">
+
+
+</div>
+
+<h3>محمد الخبراني</h3>
+
+<h4>جيولوجي ثروة معدنية وصخور</h4>
 
 <p>mohakhbr@gmail.com</p>
 
 <p>Telegram:@mokhk22</p>
 
 <a href="mailto:mohakhbr@gmail.com"
-class="email-btn">
-
+class="male-email-btn">
+<i class="fa-regular fa-envelope"></i>
 إرسال بريد إلكتروني
 
 </a>
@@ -1506,8 +1554,38 @@ class="email-btn">
 </div>
 
 </div>
+<div class="male-student-card">
 
+<img src="MUR.PNG" class="male-avatar">
 
+<div class="student-info">
+
+<div class="student-header">
+
+</div>
+
+<h3>مراد الحربي</h3>
+
+<h4>مهندس تعدين</h4>
+
+<p>Telegram:@PETE_24</p>
+
+<a href="https://www.linkedin.com/in/murad-alharbi-b4546a307/"
+target="_blank"
+class="male-email-btn">
+
+LinkedIn
+<i class="fa-brands fa-linkedin"></i>
+
+</a>
+
+</div>
+
+</div></div>
+
+</div>
+
+</div>
 
 <!-- نافذة الطالبات -->
 
@@ -1537,7 +1615,7 @@ class="modal-avatar">
 
 <a href="mailto:remannan@outlook.sa"
 class="email-btn">
-
+<i class="fa-regular fa-envelope"></i>
 إرسال بريد إلكتروني
 
 </a>

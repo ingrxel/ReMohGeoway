@@ -8,8 +8,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>الـرحــلات الحــقليــة</title>
-
+<title>الرحــلات والــزيــارات الــميــدانيـــة</title>
 <style>
 
 *{
@@ -473,25 +472,33 @@ line-height:1.8;
 
 .trip-grid{
 display:grid;
-grid-template-columns:repeat(3, 1fr);
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(280px, 300px)
+);justify-content:center;
 gap:25px;
 width:min(1000px,92%);
 margin:40px auto;
 }
 
 .trip-card{
-padding:35px 15px;
+padding:25px 40px;
+width:fit-content;
+min-width:250px;
 text-align:center;
 border-radius:25px;
 cursor:pointer;
-background:rgba(11,93,59,.08);
+background:#e6efea;
 display:flex;
 justify-content:center;
 align-items:center;
-min-height:140px;
- 
 font-size:clamp(14px,1.3vw,18px);
 line-height:1.8;
+box-shadow:
+0 10px 0 #b8c8bf,
+0 18px 30px rgba(0,0,0,.12);
+transition:.3s;
 }
 
 /* TOOLS */
@@ -578,27 +585,42 @@ transform:scale(1.03);
 }
 /* POPUP */
 
+.popup-title{
+color:#0B5D3B;
+font-size:22px;
+font-weight:700;
+margin-bottom:10px;
+}
+
 .popup{
 display:none;
 position:fixed;
-inset:0;
+top:90px;
+left:0;
+right:0;
+bottom:0;
 background:rgba(0,0,0,.5);
 justify-content:center;
 align-items:center;
+padding:20px;
+overflow-y:auto;
 z-index:9999;
 }
 
 .popup-box{
-width:min(600px,90%);
+width:min(700px,90%);
 background:white;
 padding:35px;
 border-radius:25px;
+max-height:85vh;
+overflow-y:auto;
+}
+
 #popupText{
 font-family:"Times New Roman", serif;
 font-size:18px;
 line-height:2;
 text-align:center;
-}
 }
 
 .close-popup{
@@ -612,7 +634,18 @@ cursor:pointer;
 display:block;
 margin:25px auto 0;
 min-width:120px;
- 
+
+}
+
+.trip-note{
+width:fit-content;
+max-width:700px;
+margin:25px auto 0;
+text-align:center;
+font-size:17px;
+line-height:2.1;
+color:#555;
+padding:20px 30px;
 }
 
 /* FOOTER */
@@ -821,7 +854,7 @@ onclick="toggleDepartments()"></i>
 </div>
 </div>
 
-<a href="FLD.html">الــرحلات الحــقــليــة</a>
+<a href="FLD.html">الرحــلات والــزيــارات الــميــدانيـــة</a>
 <a href="../EMPLY/EMPLY.html">مجـلات و إحصائيات الــتوظــيـف</a>
 <a href="../FRSTYR/FRSTYR.html">الــسنة التــحضيــريــية</a>
 <a href="../CURS/CURS.html">مــقررات الــكليــة</a>
@@ -893,40 +926,113 @@ class="link-box">
 </div>
 
 <div class="hero-content">
-<h1>الرحلات الحقلية</h1>
+<h1>الرحلات والزيارات الميدانية</h1>
+
 <p>
-حيث تلتقي المعرفة العلمية بالمغامرة الميدانية</p>
+حيث يلتقي الجانب النظري بالتطبيق العملي من خلال الرحلات الحقلية والزيارات الميدانية.
+</p>
 </div>
 
 </section>
 
 <div class="content">
 
-<h2 class="section-title">نبذة عن الرحلات الحقلية</h2>
+<h2 class="section-title">
+ عن التعلّم الميداني
+</h2>
 <div class="glass-box">
-تعد الرحلات الحقلية من أهم مميزات الدراسة في كــلــيــة الــتـــعديــــن، حيث ينتقل الطالب من دراسة المفاهيم داخل القاعات الدراسية إلى تطبيقها عمليًا في المواقع الجيولوجية الحقيقية. كما تسهم هذه الرحلات في تنمية مهارات الملاحظة والتحليل والعمل الميداني التي يحتاجها الجيولوجي في حياته المهنية.
+تُعد الرحلات والزيارات الميدانية من أهم وسائل التعلم العملي في كلية التعدين، إذ تتيح للطلاب الانتقال من دراسة المفاهيم النظرية داخل القاعات الدراسية إلى تطبيقها عمليًا في المواقع الجيولوجية والمناجم وبيئات العمل المختلفة. وتسهم هذه التجارب في تنمية مهارات الملاحظة والتحليل والعمل الميداني، وإكساب الطلاب الخبرات اللازمة لمسيرتهم المهنية في مجالات الجيولوجيا وهندسة التعدين.
 </div>
 
-<h2 class="section-title">أهمية الرحلات الحقلية</h2>
+<h2 class="section-title">
+أهمية التعلّم الميداني
+</h2>
+
 <div class="importance-grid">
-<div class="importance-card">ربط الجانب النظري بالتطبيق العملي</div>
-<div class="importance-card">التعرف على الصخور والمعادن</div>
-<div class="importance-card">دراسة الطبقات والتراكيب الجيولوجية</div>
-<div class="importance-card">تعلم استخدام الخرائط والأدوات</div>
-<div class="importance-card">جمع العينات وتحليلها</div>
-<div class="importance-card">تنمية مهارات العمل الميداني</div>
+
+<div class="importance-card">
+ربط الجانب النظري بالتطبيق العملي.
+</div>
+<div class="importance-card">
+دراسة الصخور والتراكيب الجيولوجية.
+</div>
+<div class="importance-card">
+التعرّف على بيئات العمل التعدينية.
+</div>
+<div class="importance-card">
+استخدام الأدوات والأجهزة المتخصصة.
+</div>
+<div class="importance-card">
+جمع البيانات وتحليلها.
+</div>
+<div class="importance-card">
+تنمية مهارات العمل الميداني.
+</div>
+<div class="importance-card">
+التعرّف على إجراءات السلامة المهنية.
+</div>
+<div class="importance-card">
+تعزيز العمل الجماعي والتواصل.
 </div>
 
-<h2 class="section-title">الرحلات الرئيسية</h2>
+</div>
+
+<h2 class="section-title">
+الرحلات والزيارات الميدانية
+</h2>
+
 <div class="trip-grid">
-<div class="trip-card" onclick="openPopup('التعرف على الصخور والمعادن - جمع العينات - إعداد التقارير')">رحلة الجيولوجيا الحقلية</div>
 
-<div class="trip-card" onclick="openPopup('استخدام الخرائط - تتبع الطبقات - إسقاطها على برنامج Arc GIS')">رحلة الخرائط الجيولوجية</div>
+<div class="trip-card"
+onclick="openPopup(`
 
-<div class="trip-card" onclick="openPopup('تتضمن بعض المقررات زيارات ورحلات ميدانية قصيرة خلال الفصل الدراسي، تستغرق عادة عدة ساعات أثناء الدوام الجامعي، وتهدف إلى مشاهدة الظواهر الجيولوجية المختلفة وتطبيق المفاهيم التي يتم دراستها داخل القاعات الدراسية.')">الزيارات الميدانية الأخرى</div>
+<h3 class='popup-title'>
+رحلة الخرائط الجيولوجية
+</h3>
+تهدف إلى تدريب الطلاب على استخدام الخرائط الجيولوجية وتتبع الطبقات وتحليل البيانات الميدانية وإسقاطها على برنامج Arc GIS.
+<br><br>
+<h3 class='popup-title'>
+رحلة الجيولوجيا الحقلية
+</h3>
+تهدف إلى تدريب الطلاب على التعرف على الصخور والمعادن وجمع العينات وإعداد التقارير وتطبيق المفاهيم الجيولوجية عمليًا في المواقع الميدانية.
+`)">
+الرحلات الجيولوجية
+
 </div>
 
-<h2 class="section-title">الأدوات الحقلية</h2>
+<div class="trip-card"
+onclick="openPopup(`
+<h3 class='popup-title'>
+زيارة المناجم السطحية
+</h3>
+التعرف على بيئة العمل التعدينية واكتساب الخبرة الميدانية.
+<br><br>
+<h3 class='popup-title'>
+زيارة المنشآت والمصانع التعدينية
+</h3>
+الاطلاع على مراحل العمليات التعدينية ومعالجة الخامات.
+<br><br>
+<h3 class='popup-title'>
+التعرف على المعدات والعمليات التعدينية
+</h3>
+فهم آلية عمل المعدات والأنظمة المستخدمة داخل المنجم.
+<br><br>
+<h3 class='popup-title'>
+تطبيق إجراءات السلامة المهنية
+</h3>
+التعرف على معايير الصحة والسلامة والبيئة وربط الجانب الأكاديمي بالتطبيق العملي.
+`)">
+الزيارات للمناجم
+
+</div>
+</div>
+
+<div class="glass-box trip-note">
+
+قد تتطلب بعض المقررات الدراسية رحلات أو زيارات ميدانية إضافية تُنظم حسب طبيعة المقرر وأهدافه الأكاديمية واحتياجاته التعليمية خلال الفصل الدراسي.
+
+</div>
+<h2 class="section-title">الأدوات الحقلية الجيولوجية </h2>
 <div class="tools-line">
 <div class="tool"><img src="CMPS.PNG"><p>البوصلة الجيولوجية</p></div>
 <div class="tool"><img src="NOTE.PNG"><p>النوتة الحقلية</p></div>
@@ -936,7 +1042,7 @@ class="link-box">
 <div class="tool"><img src="GPS.PNG"><p>جهاز تحديد المواقع (GPS)</p></div>
 </div>
 
-<h2 class="section-title">متطلبات الرحلات الحقلية</h2>
+<h2 class="section-title">متطلبات التعلّم الميداني</h2>
 <ul class="requirements">
 <li>إحضار الماء.</li>
 <li>الإلتزام بإحضار وارتداء سترة السلامة بلون ساطع.</li>
@@ -945,22 +1051,25 @@ class="link-box">
 <li>توفير النوتة الحقلية ذات الغلاف القاسي و كل ما يلزم لتسجيل الملاحظات .</li>
 <li>الالتزام بالحضور .</li>
 <li>المحافظة على المواقع الجيولوجية والبيئة.</li>
+<li>
+ خوذة السلامة من المتطلبات الإضافية لطلاب هندسة التعدين أثناء الزيارات الميدانية للمناجم.</li>
 </ul>
 
-<h2 class="section-title">مقتطفات من الحقل</h2>
-
+<h2 class="section-title">
+مقتطفات من التعلّم الميداني
+</h2>
 <div class="field-gallery">
-<img src="BOY1.JPG" alt="">
+<img src="MIN1.JPG" alt="">
 <img src="GLS1.PNG" alt="">
-<img src="BOY2.JPG" alt="">
+<img src="BOY1.JPG" alt="">
 <img src="GLS2.PNG" alt="">
-<img src="BOY3.JPG" alt="">
-<img src="GLS3.PNG" alt="">
+<img src="BOY2.JPG" alt="">
+<img src="MIN2.PNG" alt="">
 
 
 </div>
 <div class="glass-box">
-تمنح الرحلات الحقلية الطالب فرصة التعلم من الطبيعة مباشرة، واكتساب خبرة عملية في التعرف على الصخور والمعادن ورسم الخرائط الجيولوجية وتحليل البيانات الميدانية، مما يجعلها من أكثر التجارب التعليمية تميزًا في كــلــيــة الــتـــعديــــن.
+تمنح الرحلات والزيارات الميدانية الطلاب فرصة التعلم المباشر واكتساب الخبرة العملية في مجالات الجيولوجيا والتعدين، من خلال التعرف على الصخور والخامات ومشاهدة العمليات التعدينية واستخدام الأدوات والخرائط، مما يجعلها من أكثر التجارب التعليمية تميزًا في كلية التعدين.
 </div>
 
 <div class="popup" id="popup">
@@ -1023,9 +1132,10 @@ menu.style.display="block";
 }
 
 }
+
 function openPopup(text){
 document.getElementById("popup").style.display="flex";
-document.getElementById("popupText").innerText=text;
+document.getElementById("popupText").innerHTML=text;
 }
 
 function closePopup(){
