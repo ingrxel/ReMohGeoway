@@ -542,7 +542,8 @@ margin-bottom:20px;
 text-align:center;
 font-size:40px;
 color:#0B5D3B;
-margin:70px 0 30px;
+margin:10px 0 15px;
+
 }
 
 .info-group{
@@ -608,6 +609,102 @@ font-size:18px;
 flex-shrink:0;
 }
 
+.equivalence-box{
+width:min(1100px,92%);
+margin:70px auto 40px;
+padding:35px;
+border-radius:35px;
+background:linear-gradient(135deg,rgba(11,93,59,.08),rgba(255,255,255,.85));
+backdrop-filter:blur(12px);
+box-shadow:0 12px 30px rgba(0,0,0,.06);
+}
+
+.tabs-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-bottom:30px;
+}
+
+.tab-btn{
+border:none;
+padding:14px 28px;
+border-radius:18px;
+background:white;
+color:#0B5D3B;
+font-size:17px;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.tab-btn.active{
+background:#0B5D3B;
+color:white;
+transform:translateY(-3px);
+}
+
+.tab-content{
+display:none;
+background:white;
+border-radius:25px;
+padding:30px;
+animation:fadeTab .3s ease;
+margin-bottom:25px;
+}
+
+.tab-content.active{
+display:block;
+}
+
+.tab-content ul{
+padding-right:18px;
+line-height:2.2;
+font-size:17px;
+color:#444;
+}
+
+.fixed-notes{
+background:rgba(11,93,59,.08);
+border-radius:25px;
+padding:25px;
+}
+
+.fixed-notes h3{
+color:#0B5D3B;
+font-size:24px;
+margin-bottom:15px;
+}
+
+.fixed-notes ul{
+padding-right:18px;
+line-height:2.2;
+font-size:16px;
+}
+
+@keyframes fadeTab{
+from{
+opacity:0;
+transform:translateY(8px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@media (max-width:700px){
+
+.tabs-buttons{
+flex-direction:column;
+}
+
+.tab-btn{
+width:100%;
+}
+
+}
 /* معلومات مهمة */
 
 .important-box{
@@ -1113,6 +1210,7 @@ class="link-box">
 </div>
 </div>
 </div>
+
 <h2 class="section-title">
 آلية التحويل
 </h2>
@@ -1142,6 +1240,79 @@ class="link-box">
 <div class="process-item">
 <span>5</span>
 إعلان نتائج التحويل واستكمال الإجراءات النهائية.
+</div>
+
+</div>
+
+<div class="equivalence-box">
+<h2 class="section-title">
+معادلة المواد
+</h2>
+
+<div class="tabs-buttons">
+
+<button class="tab-btn active"
+onclick="changeTab('general')">
+المواد العامة
+</button>
+
+<button class="tab-btn"
+onclick="changeTab('major')">
+المواد التخصصية
+</button>
+
+<button class="tab-btn"
+onclick="changeTab('hours')">
+الساعات الحرة
+</button>
+
+</div>
+
+<div id="general"
+class="tab-content active">
+
+<ul>
+<li>تتم معادلة المواد العام بشكل طبيعي وفقًا للخطة الدراسية المعتمدة.</li>
+<li>في بعض الحالات، قد تُعادل بعض المقررات على شكل ساعات حرة بدلًا من إضافتها ضمن الخطة الدراسية الجديدة.<br>
+على سبيل المثال، تُعادل ساعات مقرر الأحياء إلى ساعات حرة لعدم وجود مقرر مكافئ لها في خطة التخصص.</li>
+<li>تبقى المواد المجتازة مسجلة في السجل الأكاديمي للطالب.</li>
+</ul>
+
+</div>
+
+<div id="major"
+class="tab-content">
+
+<ul>
+(وفقًا لخطة كلية علوم الأرض سابقًا)
+<li>تُضاف مواد التخصص تلقائيًا في الفصل الدراسي الأول بعد التحويل.</li>
+<li>تُرتب المقررات وفقًا لتسلسل الخطة الدراسية التحضيرية الخاصة بسنة التحويل.</li>
+<li>لا يمكن للطالب إضافة مواد تخصصية أخرى في الفصل الأول؛ إذ تعتمد معظم المقررات على اجتياز المقرر الأساسي «جيولوجية طبيعية 1».</li>
+</ul>
+
+</div>
+
+<div id="hours"
+class="tab-content">
+
+<ul>
+<li>قد تُعادل بعض المواد العامة التي لا يوجد لها مقرر مكافئ في الخطة الدراسية على شكل ساعات حرة.</li>
+<li>يتمكن الطالب من زيادة عدد الساعات الحرة في الفصل الدراسي الأول بعد التحويل، وذلك وفقًا للخطة الدراسية والضوابط الأكاديمية المعتمدة.</li>
+</ul>
+
+</div>
+
+<div class="fixed-notes">
+
+<h3>⚠️ ملاحظات مهمة</h3>
+
+<ul>
+<li>تعتمد آلية معادلة المواد الموضحة في هذه الصفحة على الإجراءات والخطط الدراسية التي كانت مطبقة في كلية علوم الأرض.</li>
+<li>قد تتغير آلية المعادلة أو المتطلبات الأكاديمية مستقبلًا عند تحديث الخطط الدراسية أو تعديل اللوائح المعتمدة.</li>
+<li>تختلف بعض التفاصيل والإجراءات باختلاف سنة التحويل والخطة الدراسية الخاصة بكل دفعة.</li>
+<li>يُنصح بالرجوع إلى الجهة المختصة والدليل الأكاديمي المعتمد للتأكد من أحدث الإجراءات والمتطلبات المتعلقة بالتحويل ومعادلة المواد.</li>
+</ul>
+
 </div>
 
 </div>
@@ -1253,6 +1424,32 @@ linksModal.style.display="none";
 }
 
 });
+function changeTab(tabId){
+
+document
+.querySelectorAll(".tab-content")
+.forEach(tab=>{
+
+tab.classList.remove("active");
+
+});
+
+document
+.querySelectorAll(".tab-btn")
+.forEach(btn=>{
+
+btn.classList.remove("active");
+
+});
+
+document
+.getElementById(tabId)
+.classList.add("active");
+
+event.target
+.classList.add("active");
+
+}
 
 </script>
 
