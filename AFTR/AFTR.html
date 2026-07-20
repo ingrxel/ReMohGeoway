@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>مـاذا بـــعــد الــقبـــول؟</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Times New Roman",serif;
+}
+
+.background-design{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+pointer-events:none;
+overflow:hidden;
+}
+
+/* المضلعات */
+
+.polygon{
+position:absolute;
+background:rgba(185,220,198,.25);
+backdrop-filter:blur(2px);
+}
+
+/* أعلى اليمين */
+
+.p1{
+top:-50px;
+right:-70px;
+width:320px;
+height:320px;
+clip-path:polygon(
+30% 0%,
+100% 0%,
+100% 100%,
+0% 35%
+);
+transform:rotate(8deg);
+}
+
+/* أعلى اليسار */
+
+.p2{
+top:120px;
+left:-90px;
+width:280px;
+height:280px;
+clip-path:polygon(
+0 20%,
+100% 0,
+60% 100%
+);
+background:rgba(185,220,198,.18);
+}
+
+/* أسفل اليسار */
+
+.p3{
+bottom:-90px;
+left:-60px;
+width:350px;
+height:350px;
+clip-path:polygon(
+0 0,
+100% 100%,
+0 100%
+);
+background:rgba(185,220,198,.20);
+}
+
+/* أسفل اليمين */
+
+.p4{
+bottom:-120px;
+right:-50px;
+width:340px;
+height:340px;
+clip-path:polygon(
+100% 0,
+100% 100%,
+0 60%
+);
+background:rgba(185,220,198,.18);
+transform:rotate(-10deg);
+}
+
+/* الخطوط الهندسية */
+
+.lines{
+position:absolute;
+border:1px solid rgba(150,190,165,.18);
+border-radius:50%;
+}
+
+.l1{
+width:500px;
+height:500px;
+bottom:-250px;
+right:-180px;
+}
+
+.l2{
+width:420px;
+height:420px;
+top:-210px;
+left:-180px;
+}
+
+.bg-layer2{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:-2;
+overflow:hidden;
+}
+
+.poly{
+position:absolute;
+background:rgba(11,93,59,.035);
+filter:blur(.5px);
+}
+
+/* أعلى اليمين */
+
+.poly1{
+top:-120px;
+right:-160px;
+width:520px;
+height:420px;
+clip-path:polygon(
+20% 0%,
+100% 0%,
+80% 80%,
+0% 55%
+);
+
+transform:rotate(18deg);
+}
+
+/* أعلى اليسار */
+
+.poly2{
+top:180px;
+left:-220px;
+width:500px;
+height:500px;
+clip-path:polygon(
+0% 15%,
+90% 0%,
+100% 70%,
+35% 100%
+);
+transform:rotate(-25deg);
+}
+
+/* أسفل اليسار */
+
+.poly3{
+bottom:-200px;
+left:-130px;
+width:650px;
+height:420px;
+clip-path:polygon(
+0% 35%,
+45% 0%,
+100% 45%,
+60% 100%,
+0% 100%
+);
+transform:rotate(12deg);
+}
+
+/* أسفل اليمين */
+
+.poly4{
+bottom:-150px;
+right:-180px;
+width:600px;
+height:500px;
+clip-path:polygon(
+30% 0%,
+100% 20%,
+100% 100%,
+0% 75%
+);
+transform:rotate(-18deg);
+}
+
+.dots-pattern{
+position:fixed;
+top:110px;
+left:30px;
+width:180px;
+height:120px;
+background-image:
+radial-gradient(circle, rgba(11,93,59,.18) 1px, transparent 1px);
+background-size:14px 14px;
+opacity:.7;
+pointer-events:none;
+z-index:-1;
+}
+
+
+
+body{
+background:#f8f9fb;
+}
+
+.content{
+padding:120px 5% 80px;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+right:0;
+width:100%;
+height:75px;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 12px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.menu-btn{
+display:flex;
+flex-direction:column;
+justify-content:center;
+gap:4px;
+cursor:pointer;
+}
+
+.menu-btn span{
+width:24px;
+height:1px;
+background:#124c7c;
+border-radius:10px;
+}
+
+.logo-section{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+}
+
+.logo-section img{
+width:clamp(80px,9vw,110px);
+height:auto;
+object-fit:contain;
+display:block;
+margin:0 auto;
+}
+
+.university{
+ 
+font-size:clamp(9px,1vw,11px);
+font-weight:700;
+color:#0B5D3B;
+margin-top:px;
+
+}
+
+.college{
+ 
+font-size:clamp(7px,0.8vw,9px);
+color:#3D7A5C;
+
+}
+
+.language-btn{
+font-size:clamp(12px,1.3vw,16px);
+font-weight:bold;
+cursor:pointer;
+color:#1f5f3a;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+position:fixed;
+top:0;
+right:-320px;
+width:320px;
+height:100%;
+background:white;
+box-shadow:-5px 0 15px rgba(0,0,0,.15);
+transition:.3s;
+padding-top:90px;
+z-index:2000;
+overflow-y:auto;
+}
+
+.sidebar.active{
+right:0;
+}
+
+.close-btn{
+position:absolute;
+top:20px;
+left:20px;
+font-size:28px;
+cursor:pointer;
+}
+
+.sidebar a{
+display:block;
+padding:15px 25px;
+text-decoration:none;
+ 
+color:#124c7c;
+font-size:14px;
+border-bottom:1px solid #eee;
+}
+
+.sidebar a:hover{
+background:#f3f3f3;
+}
+
+.sidebar-bottom-links{
+display:grid;
+grid-template-columns:1fr 1px 1fr;
+width:105%;
+margin-top:0;
+position:relative;
+right:0;
+}
+
+/* DROPDOWN */
+
+.dropdown-btn{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:4px 25px;
+border-bottom:1px solid #eee;
+transition:.2s;
+}
+
+.dropdown-btn:hover{
+background:#f3f3f3;
+}
+
+.dropdown-btn a{
+display:block;
+flex:1;
+text-decoration:none;
+ 
+font-size:14px;
+color:#124c7c;
+}
+.dropdown-btn i{
+font-size:10px;
+color:#124c7c;
+cursor:pointer;
+padding:8px;
+}
+
+.dropdown-content{
+display:none;
+background:#fafafa;
+}
+
+.dropdown-content a{
+display:block;
+padding:12px 35px;
+font-size:12px;
+line-height:1.5;
+border-bottom:1px solid #f0f0f0;
+}
+
+.dropdown-content a:hover{
+background:#f3f3f3;
+}
+
+.sidebar-divider{
+width:1px;
+height:18px;
+background:#d6d6d6;
+position:relative;
+top:12px;
+left:4px;
+}
+
+.sidebar-bottom-links a{
+display:flex;
+justify-content:center;
+align-items:center;
+height:40px;
+width:95%;
+margin:0;
+padding:0;
+font-size:14px;
+ 
+color:#124c7c;
+text-decoration:none;
+transition:.2s;
+}
+
+.sidebar-bottom-links a:hover{
+background:#f3f3f3;
+}
+
+/* LINKS MODAL */
+
+.links-modal{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.55);
+display:none;
+justify-content:center;
+align-items:center;
+padding:20px;
+z-index:5000;
+}
+
+.links-card{
+width:min(500px,95%);
+background:white;
+border-radius:30px;
+padding:35px 30px;
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+position:relative;
+text-align:center;
+}
+
+.links-card h2{
+color:#0B5D3B;
+margin-bottom:30px;
+font-size:30px;
+}
+
+.close-links{
+position:absolute;
+top:20px;
+left:20px;
+font-size:26px;
+cursor:pointer;
+color:#124c7c;
+}
+
+.link-box{
+display:block;
+padding:18px;
+margin-bottom:15px;
+background:#edf8ee;
+border-radius:18px;
+text-decoration:none;
+color:#0B5D3B;
+font-size:18px;
+font-weight:700;
+transition:.3s;
+}
+
+.link-box:hover{
+background:#dff0e2;
+transform:translateY(-3px);
+}
+
+.hero-box{
+
+background:linear-gradient(
+135deg,
+rgba(11,93,59,.10),
+rgba(255,255,255,.85)
+
+);
+
+border-radius:40px;
+
+padding:70px 30px;
+
+text-align:center;
+
+margin-bottom:70px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+}
+
+.hero-icon{
+
+font-size:55px;
+
+color:#0B5D3B;
+
+margin-bottom:25px;
+
+}
+
+.hero-box h1{
+
+font-size:55px;
+
+color:#0B5D3B;
+
+margin-bottom:15px;
+
+}
+
+.hero-box h2{
+
+font-size:28px;
+
+color:#3D7A5C;
+
+margin-bottom:25px;
+
+}
+
+.hero-box p{
+
+font-size:24px;
+
+line-height:2;
+
+color:#555;
+
+}
+
+
+
+.section-title{
+
+text-align:center;
+
+font-size:42px;
+
+color:#0B5D3B;
+
+margin:70px 0 15px;
+
+}
+
+.rock-line{
+
+width:300px;
+height:14px;
+
+margin:10px auto 20px;
+
+background:
+
+linear-gradient(
+90deg,
+#0B5D3B 0%,
+#2f7a57 25%,
+#7fa37c 50%,
+#2f7a57 75%,
+#0B5D3B 100%
+);
+
+clip-path:polygon(
+0 50%,
+10% 20%,
+20% 70%,
+35% 35%,
+50% 80%,
+65% 30%,
+80% 60%,
+100% 40%
+);
+
+border-radius:999px;
+}
+
+.steps-grid{
+
+display:grid;
+
+grid-template-columns:repeat(
+auto-fit,
+minmax(350px,1fr)
+);
+
+gap:30px;
+
+}
+
+
+
+.step-card{
+
+background:white;
+
+padding:35px;
+
+border-radius:30px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+position:relative;
+
+transition:.3s;
+
+}
+
+.step-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.step-number{
+
+position:absolute;
+
+top:20px;
+
+left:20px;
+
+width:62px;
+
+height:62px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:24px;
+
+font-weight:700;
+
+color:#ffffff;
+
+background:
+
+linear-gradient(
+
+145deg,
+
+#1a7a52,
+
+#0B5D3B,
+
+#063925
+
+);
+
+clip-path:polygon(
+
+50% 0%,
+
+90% 20%,
+
+100% 60%,
+
+70% 100%,
+
+30% 100%,
+
+0% 60%,
+
+10% 20%
+
+);
+
+box-shadow:
+
+0 8px 18px rgba(11,93,59,.28),
+
+inset 0 2px 6px rgba(255,255,255,.25);
+
+}
+
+.step-number::before{
+
+content:"";
+
+position:absolute;
+
+top:10px;
+
+left:12px;
+
+width:16px;
+
+height:16px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.35);
+
+filter:blur(4px);
+
+}
+.step-card::after{
+
+content:"";
+
+position:absolute;
+
+top:25px;
+right:25px;
+
+width:50px;
+height:2px;
+
+background:#0B5D3B;
+
+opacity:.08;
+
+transform:rotate(-35deg);
+
+}
+.step-icon{
+
+width:90px;
+
+height:90px;
+
+border-radius:50%;
+
+background:#edf7ef;
+
+color:#0B5D3B;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:38px;
+
+margin:auto;
+
+margin-bottom:20px;
+
+}
+
+.step-card h3{
+
+text-align:center;
+
+font-size:32px;
+
+color:#0B5D3B;
+
+margin-bottom:20px;
+
+}
+
+.step-card ul{
+
+padding-right:20px;
+
+line-height:2;
+
+font-size:22px;
+
+color:#555;
+
+}
+
+.step-tip{
+
+margin-top:25px;
+
+padding-top:18px;
+
+border-top:1px solid rgba(11,93,59,.12);
+
+font-size:17px;
+
+line-height:1.8;
+
+color:#6d7c72;
+
+font-style:italic;
+
+}
+
+.note-box{
+
+margin-top:20px;
+
+padding:18px;
+
+background:#edf7ef;
+
+border-radius:18px;
+
+color:#0B5D3B;
+
+font-size:20px;
+
+}
+
+
+
+.apps-grid{
+
+display:grid;
+
+grid-template-columns:repeat(
+auto-fit,
+minmax(260px,1fr)
+);
+
+gap:25px;
+
+}
+
+
+
+.app-card{
+
+background:white;
+
+padding:35px;
+
+border-radius:30px;
+
+text-align:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+}
+
+
+
+.app-icon{
+
+font-size:55px;
+
+color:#0B5D3B;
+
+margin-bottom:20px;
+
+}
+
+
+
+.app-card h3{
+
+font-size:34px;
+
+color:#0B5D3B;
+
+margin-bottom:20px;
+
+}
+
+
+
+.app-card ul{
+
+list-style:none;
+
+line-height:2;
+
+font-size:22px;
+
+color:#555;
+
+}
+
+.app-card ul li{
+
+display:flex;
+
+justify-content:flex-start;
+
+align-items:center;
+
+gap:8px;
+
+margin-bottom:12px;
+
+width:180px;
+
+margin-right:auto;
+
+margin-left:auto;
+
+}
+.app-card ul li::before{
+
+content:"✓";
+
+width:22px;
+
+height:22px;
+
+background:#0B5D3B;
+
+color:white;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:12px;
+
+}
+.welcome-mountain{
+
+width: 330px;
+display:block;
+
+margin:0 auto 20px;
+
+opacity:.95;
+
+filter:drop-shadow(
+0 10px 20px rgba(11,93,59,.15)
+);
+
+transition:.3s;
+
+}
+
+.welcome-mountain:hover{
+
+transform:translateY(-4px);
+
+}
+
+.welcome-end{
+
+margin-top:70px;
+
+padding:40px;
+
+border-radius:30px;
+
+background:linear-gradient(
+135deg,
+rgba(11,93,59,.10),
+rgba(255,255,255,.85)
+);
+
+text-align:center;
+
+}
+
+
+
+.welcome-end i{
+
+font-size:50px;
+
+color:#0B5D3B;
+
+margin-bottom:20px;
+
+}
+
+
+
+.welcome-end p{
+
+font-size:26px;
+
+line-height:2;
+
+color:#444;
+
+}
+
+
+/* FOOTER */
+
+footer{
+width:100%;
+background:rgba(11,93,59,0.88);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:28px 20px;
+margin-top:80px;
+text-align:center;
+direction:ltr;
+}
+
+footer *{
+direction:ltr;
+}
+
+footer{
+position:relative;
+overflow:hidden;
+}
+
+/* المثلث الكبير يسار */
+footer::before{
+content:"";
+position:absolute;
+left:-120px;
+bottom:-100px;
+width:350px;
+height:350px;
+background:rgba(255,255,255,.05);
+clip-path:polygon(50% 0%,0% 100%,100% 100%);
+transform:rotate(-15deg);
+}
+
+
+/* المثلث النحيف أعلى اليمين */
+footer::after{
+content:"";
+position:absolute;
+top:-80px;
+right:18%;
+width:120px;
+height:240px;
+background:rgba(255,255,255,.06);
+clip-path:polygon(50% 0%,0% 100%,100% 100%);
+transform:rotate(18deg);
+}
+
+.footer-shape{
+position:absolute;
+pointer-events:none;
+}
+
+
+/* مثلث يمين كبير */
+.shape1{
+right:-60px;
+bottom:-70px;
+width:220px;
+height:220px;
+background:rgba(255,255,255,.05);
+clip-path:polygon(50% 0%,0% 100%,100% 100%);
+transform:rotate(25deg);
+}
+
+/* مثلث يمين صغير */
+.shape2{
+right:100px;
+bottom:40px;
+width:100px;
+height:100px;
+background:rgba(255,255,255,.08);
+clip-path:polygon(50% 0%,0% 100%,100% 100%);
+transform:rotate(-12deg);
+}
+
+/* مثلث صغير قريب من الوسط */
+.shape3{
+left:38%;
+top:25px;
+width:60px;
+height:60px;
+background:rgba(255,255,255,.06);
+clip-path:polygon(50% 0%,0% 100%,100% 100%);
+transform:rotate(15deg);
+}
+
+
+/* مثلث صغير آخر */
+.shape4{
+left:55%;
+bottom:35px;
+width:45px;
+height:45px;
+background:rgba(255,255,255,.08);
+clip-path:polygon(50% 0%,0% 100%,100% 100%);
+transform:rotate(-20deg);
+}
+
+
+/* مثلث متوسط */
+.shape5{
+left:48%;
+top:90px;
+width:80px;
+height:80px;
+background:rgba(255,255,255,.04);
+clip-path:polygon(50% 0%,0% 100%,100% 100%);
+transform:rotate(35deg);
+}
+
+
+footer p{
+ 
+margin:0;
+}
+
+.footer-title{
+font-size:13px;
+color:rgba(255,255,255,0.85);
+margin-bottom:22px;
+}
+
+.footer-credit{
+font-size:11px;
+line-height:1.8;
+color:rgba(255,255,255,0.55);
+letter-spacing:.5px;
+margin-bottom:22px;
+}
+
+.footer-copyright{
+font-size:11px;
+font-weight:700;
+color:rgba(255,255,255,0.65);
+margin-bottom:22px;
+}
+
+.footer-disclaimer{
+max-width:750px;
+font-size:11px;
+line-height:1.8;
+color:rgba(255,255,255,0.55);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="background-design">
+
+<div class="polygon p1"></div>
+<div class="polygon p2"></div>
+<div class="polygon p3"></div>
+<div class="polygon p4"></div>
+
+<div class="lines l1"></div>
+<div class="lines l2"></div>
+</div>
+<div class="bg-layer2">
+<div class="poly poly1"></div>
+<div class="poly poly2"></div>
+<div class="poly poly3"></div>
+<div class="poly poly4"></div>
+
+</div>
+<div class="dots-pattern"></div>
+<header>
+
+<div class="menu-btn" onclick="openMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="logo-section">
+
+<img src="../MOUNT.png" alt="logo">
+
+<div class="university">
+جــامــعــة المـــلك عــبدالـــعزيـــز
+</div>
+
+<div class="college">
+كــلــيــة الــتـــعديــــن
+</div>
+
+</div>
+
+<div class="language-btn">
+ع/A
+</div>
+
+</header>
+
+<div class="sidebar" id="sidebar">
+<div class="close-btn" onclick="closeMenu()">
+✕
+</div>
+
+<a href="../index.html">الرئــيــســة</a>
+<a href="../ABT/ABT.html">عـن الكــليــة</a>
+<div class="dropdown">
+
+<div class="dropdown-btn">
+
+ <a href="../SPC/SPC.html">التــخصــصــات الاكــاديــميــة</a>
+
+<i class="fa-solid fa-chevron-down"
+onclick="toggleDepartments()"></i>
+
+</div>
+
+<div class="dropdown-content" id="departmentsMenu">
+<a href="../MINE/MINE.html">هندسة التعدين</a>
+<a href="../DEP/GEO.html"> جيولوجيا </a>
+<a href="../DEP/GEPHY.html"> جيوفيزياء</a>
+</div>
+</div>
+
+<a href="../FLD/FLD.html">الــرحلات الحــقــليــة</a>
+<a href="../EMPLY/EMPLY.html">مجـلات و إحصائيات الــتوظــيـف</a>
+<a href="../FRSTYR/FRSTYR.html">الــسنة التــحضيــريــية</a>
+<a href="../CURS/CURS.html">مــقررات الــكليــة</a>
+<a href="../ADMSN/ADMSN.html">القــبـــول</a>
+<a href="../TRNSFR/TRNSFR.html">التـحويـل (مغلق)</a>
+<a href="../STUDY/STUDY.html">الــدراســة والخــطــة الــدراســية</a>
+<a href="../QSN/QSN.html">الأسئلة الأكثر شيوعًا</a>
+
+
+
+<div class="sidebar-bottom-links">
+
+<a href="#">معرض الصور</a>
+
+<div class="sidebar-divider"></div>
+
+<a href="javascript:void(0)"
+onclick="closeMenu(); openLinksModal()">
+روابط مهمة
+</a>
+
+</div></div>
+<div class="links-modal" id="linksModal">
+
+<div class="links-card">
+
+<div class="close-links"
+onclick="closeLinksModal()">
+✕
+</div>
+
+<h2>روابط مهمة</h2>
+
+<a href="https://www.kau.edu.sa/ar"
+target="_blank"
+class="link-box">
+الموقع الرسمي للجامعة
+</a>
+
+<a href="https://www.kau.edu.sa/faculty/ar/earth-sciences"
+target="_blank"
+class="link-box">
+الموقع الرسمي للكلية
+</a>
+
+<a href="https://x.com/EarKau?lang=ar"
+target="_blank"
+class="link-box">
+الحساب الرسمي للكلية 
+</a>
+
+<a href="https://ers.kau.edu.sa/Default.aspx"
+target="_blank"
+class="link-box">
+نظام المعاملات الالكترونية ers
+</a>
+
+</div>
+
+</div>
+
+<div class="content">
+
+<section class="hero-box">
+
+<div class="hero-icon">
+<i class="fa-solid fa-graduation-cap"></i>
+</div>
+
+<h1>أهلًا بك في رحلتك الجامعية</h1>
+
+<h2>مبارك قبولك في كليــة الــتــعديــن بـجامعة الملك عبدالعزيز</h2>
+
+<p>
+نبارك لك هذه الخطوة المهمة في مسيرتك العلمية،
+<br>
+ونتمنى لك التوفيق والنجاح .
+</p>
+
+</section>
+
+
+<h2 class="section-title">
+خطوات ما بعد القبول
+</h2>
+
+<div class="rock-line"></div>
+<div class="steps-grid">
+
+<div class="step-card">
+
+<div class="step-number">1</div>
+
+<div class="step-icon">
+<i class="fa-regular fa-square-check"></i>
+</div>
+
+<h3>تأكيد القبول</h3>
+
+<ul>
+
+<li>تأكيد القبول عبر منصة القبول خلال الفترة المحددة.</li>
+
+<li>يضمن تأكيد القبول الاحتفاظ بالمقعد الجامعي.</li>
+
+<li>يستمر الطالب في الفرز الإضافي على الرغبات الأعلى.</li>
+
+<li>عدم تأكيد القبول يؤدي إلى إلغاء الطلب وفقدان المقعد.</li>
+
+</ul>
+<p class="step-tip">
+
+ابدأ رحلتك الجامعية بخطوة تأكيد القبول.
+
+</p>
+</div>
+
+
+<div class="step-card">
+
+<div class="step-number">2</div>
+
+<div class="step-icon">
+<i class="fa-solid fa-message"></i>
+</div>
+
+<h3>استلام الرقم الجامعي وبيانات الدخول</h3>
+
+<ul>
+
+<li>بعد انتهاء فترة القبول، تُرسل الجامعة رسالة نصية إلى رقم الجوال المسجل.</li>
+
+<li>تحتوي الرسالة على الرقم الجامعي وبيانات الدخول الخاصة بالطالب.</li>
+
+<li>باستخدام بيانات الدخول، يمكن الوصول إلى الأنظمة والخدمات الإلكترونية للجامعة..</li>
+
+</ul>
+<div class="note-box">
+
+<i class="fa-solid fa-circle-exclamation"></i>
+
+تستمر الترقيات على الرغبات الأعلى حتى ٢ أغسطس، كما انه قد يستغرق وصول الرسالة بعض الوقت.
+</div>
+<p class="step-tip">
+
+ترقّب وصول رقمك الجامعي لبدء استخدام الخدمات.
+</p>
+
+</div>
+
+
+<div class="step-card">
+
+<div class="step-number">3</div>
+
+<div class="step-icon">
+<i class="fa-regular fa-envelope"></i>
+</div>
+
+<h3>تفعيل البريد الجامعي</h3>
+
+<ul>
+
+<li>بعد استلام الرقم الجامعي، ادخل إلى بوابة الخدمات الإلكترونية.</li>
+
+<li>من قائمة الخدمات اختر «تفعيل البريد الإلكتروني».</li>
+
+<li>اتبع الخطوات المطلوبة لإتمام عملية التفعيل.</li>
+
+<li>يمكن إضافة البريد الجامعي إلى تطبيقات البريد الإلكتروني مثل Gmail وOutlook.</li>
+</ul>
+
+<p class="step-tip">
+
+فعّل بريدك الجامعي لتبقى على اطلاع بكل جديد، يُستخدم البريد الجامعي لاستقبال الإعلانات والرسائل الأكاديمية المهمة.
+</p>
+</div>
+
+
+<div class="step-card">
+
+<div class="step-number">4</div>
+
+<div class="step-icon">
+<i class="fa-solid fa-building-columns"></i>
+</div>
+
+<h3>إضافة الحساب البنكي</h3>
+
+<ul>
+<li>الدخول إلى بوابة الخدمات الإلكترونية.</li>
+<li>الانتقال إلى نظام Odus Plus.</li>
+<li>اختيار «حسابات الطالب والإعفاءات».</li>
+<li>الدخول إلى «معلومات الحساب البنكي».</li>
+<li>إدخال رقم الآيبان وحفظ البيانات.</li>
+<li>اانتظار اعتماد الحساب البنكي.</li>
+</ul>
+
+<div class="note-box">
+
+<i class="fa-solid fa-circle-exclamation"></i>
+
+يجب أن يكون الحساب في البنك الأهلي و باسم الطالب.
+
+</div>
+<p class="step-tip">
+
+أكمل بياناتك البنكية للاستفادة من المكافآت الجامعية.</p>
+</div>
+
+</div>
+
+
+<h2 class="section-title">
+التطبيقات والمنصات المهمة
+</h2>
+<div class="rock-line"></div>
+
+<div class="apps-grid">
+
+<div class="app-card">
+
+<div class="app-icon">
+<i class="fa-solid fa-mobile-screen"></i>
+</div>
+
+<h3>MyKAU</h3>
+
+<ul>
+
+<ul>
+<li>الخدمات الجامعية.</li>
+<li>الإشعارات.</li>
+<li>الجدول الدراسي.</li>
+</ul>
+
+</div>
+
+
+<div class="app-card">
+
+<div class="app-icon">
+<i class="fa-solid fa-chalkboard"></i>
+</div>
+
+<h3>Blackboard</h3>
+
+<ul>
+<li>المحاضرات.</li>
+<li>الواجبات.</li>
+<li>الاختبارات.</li>
+<li>المقررات.</li>
+</ul>
+
+</div>
+
+
+<div class="app-card">
+
+<div class="app-icon">
+<i class="fa-solid fa-book-open"></i>
+</div>
+
+<h3>Odus Plus</h3>
+
+<ul>
+<li>تسجيل المقررات.</li>
+<li>الحذف والإضافة.</li>
+<li>الجدول الدراسي.</li>
+<li>السجل الأكاديمي.</li>
+<li>الخدمات الطلابية.</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="welcome-end">
+
+<img src="../MOUNT.png" class="welcome-mountain">
+<p>
+
+نتطلع إلى رؤيتك بين طلابنا وطالباتنا قريبًا.
+
+<br>
+
+فمرحبًا بك في كــلــية الــتعـــديـــن.
+
+</p>
+
+</div>
+</div>
+
+<footer>
+
+<div class="footer-shape shape1"></div>
+<div class="footer-shape shape2"></div>
+<div class="footer-shape shape3"></div>
+<div class="footer-shape shape4"></div>
+<div class="footer-shape shape5"></div>
+
+
+<p class="footer-title">
+Faculty Website Project
+</p>
+
+<p class="footer-credit">
+Designed & Developed by  <br>
+Retal Abdulmannan & Mohammed Khubrani
+</p>
+
+<p class="footer-copyright">
+© 2026 All Rights Reserved.
+</p>
+
+<p class="footer-disclaimer">
+This website was independently designed and developed by students, <br>
+It is not an official website of the Faculty nor  the University.
+</p>
+
+</footer>
+
+
+<script>
+
+function openMenu(){
+document.getElementById("sidebar").classList.add("active");
+}
+
+function closeMenu(){
+document.getElementById("sidebar").classList.remove("active");
+}
+
+function toggleDepartments(){
+let menu=document.getElementById("departmentsMenu");
+
+if(menu.style.display==="block"){
+menu.style.display="none";
+}
+else{
+menu.style.display="block";
+}
+}
+
+
+</script>
+
+</body>
+</html>

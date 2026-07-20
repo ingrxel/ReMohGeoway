@@ -484,6 +484,232 @@ transition:.2s;
 background:#f3f3f3;
 }
 
+.welcome-popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    z-index:99999;
+}
+
+.welcome-card{
+    width:min(650px,92%);
+    padding:55px 40px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    border-radius:40px;
+    border:2px solid transparent;
+    background:
+    linear-gradient(#ffffff,#f7fbf7) padding-box,
+    linear-gradient(135deg,#0B5D3B,#8cc79a,#0B5D3B) border-box;
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+}
+
+.welcome-card::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:260px;
+    left:50%;
+    bottom:-130px;
+    transform:translateX(-50%);
+    border-radius:50%;
+    background:radial-gradient(
+        ellipse,
+        rgba(11,93,59,.15),
+        transparent 70%
+    );
+}
+
+
+.popup-close{
+    position:absolute;
+    top:18px;
+    left:22px;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:rgba(0,0,0,.12);
+    color:#1f1f1f;
+    font-size:22px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:.3s;
+    z-index:10;
+}
+
+.popup-close:hover{
+    background:rgba(0,0,0,.22);
+}
+
+.popup-mountain{
+    width:240px;
+    display:block;
+    margin:0 auto 20px;
+    position:relative;
+    z-index:2;
+}
+
+.popup-mountain{
+    width:240px;
+    position:relative;
+    z-index:2;
+    filter:drop-shadow(0 0 35px rgba(90,150,110,.25));
+}
+
+.welcome-card h2{
+    color:#0B5D3B;
+    font-size:42px;
+    margin-bottom:20px;
+    position:relative;
+    z-index:2;
+}
+
+.welcome-card p{
+    color:#56635d;
+    font-size:21px;
+    line-height:2;
+    margin-bottom:35px;
+    position:relative;
+    z-index:2;
+}
+
+.welcome-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#0B5D3B;
+    color:white;
+    padding:16px 36px;
+    border-radius:999px;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+    position:relative;
+    z-index:2;
+}
+
+.welcome-btn:hover{
+    background:#157347;
+    transform:translateY(-4px);
+}
+
+@media(max-width:600px){
+    .popup-mountain{
+        width:180px;
+    }
+
+    .welcome-card{
+        padding:40px 25px;
+    }
+
+    .welcome-card h2{
+        font-size:30px;
+    }
+
+    .welcome-card p{
+        font-size:17px;
+    }
+}
+.bg-mountain{
+    position:absolute;
+    bottom:-40px;
+    left:50%;
+    transform:translateX(-50%);
+    width:120%;
+    opacity:.08;
+    z-index:0;
+    filter:contrast(140%) saturate(70%);
+}
+.popup-stars{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+}
+
+.popup-stars span{
+    position:absolute;
+    opacity:.8;
+}
+
+.popup-stars span:nth-child(1){
+    top:80px;
+    right:12%;
+    color:#d4a437;
+    font-size:22px;
+}
+
+.popup-stars span:nth-child(2){
+    top:180px;
+    right:8%;
+    color:#0B5D3B;
+    font-size:18px;
+}
+
+.popup-stars span:nth-child(3){
+    top:100px;
+    left:12%;
+    color:#88a387;
+    font-size:12px;
+}
+
+.popup-stars span:nth-child(4){
+    top:230px;
+    left:6%;
+    color:#d1c7bf;
+    font-size:28px;
+}
+
+.popup-stars span:nth-child(5){
+    top:120px;
+    left:24%;
+    color:#d4a437;
+    font-size:10px;
+}
+
+.popup-stars span:nth-child(6){
+    top:260px;
+    right:18%;
+    color:#7b9f84;
+    font-size:20px;
+}
+
+.popup-stars span:nth-child(7){
+    top:320px;
+    left:14%;
+    color:#6b9a7a;
+    font-size:18px;
+}
+
+.popup-stars span:nth-child(8){
+    top:330px;
+    right:10%;
+    color:#d4a437;
+    font-size:9px;
+}
+
+.popup-stars span:nth-child(9){
+    top:70px;
+    left:22%;
+    color:#d4a437;
+    font-size:8px;
+}
+
+.popup-stars span:nth-child(10){
+    top:60px;
+    right:24%;
+    color:#88a387;
+    font-size:8px;
+}
 /* MAIN CONTENT */
 
 .content{
@@ -1265,6 +1491,33 @@ onclick="closeMenu(); openLinksModal();">
 </div>
 </div>
 
+<div class="welcome-popup" id="welcomePopup">
+<div class="welcome-card">
+<span class="popup-close" onclick="closeWelcome()">✕</span>
+<img src="MNT.PNG" class="bg-mountain">
+<img src="MOUNT.png" class="popup-mountain" alt="Mountain">
+<h2>ألف مبروك للمقبولين</h2>
+<p>
+أهلًا بكم في كلية التعدين، ومرحبًا بكم يا روّاد المعادن.
+<br>
+نتمنى لكم رحلة جامعية مليئة بالشغف والنجاح والإنجازات. 
+</p>
+<a href="AFTR/AFTR.html" class="welcome-btn">
+ماذا بعد القبول؟
+</a>
+
+<div class="popup-stars">
+    <span>✦</span>
+    <span>✦</span>
+    <span>✦</span>
+    <span>✦</span>
+    <span>✦</span>
+    <span>✦</span>
+    <span>•</span>
+    <span>•</span>
+</div>
+</div>
+</div>
 
 <!-- MAIN CONTENT -->
 
@@ -1828,6 +2081,9 @@ modal.style.display="none";
 }
 
 });
+
+
+
 function openLinksModal(){
 
 document.getElementById("linksModal")
@@ -1842,6 +2098,20 @@ document.getElementById("linksModal")
 
 }
 </script>
+<script>
+function closeWelcome(){
+    document.getElementById("welcomePopup").style.display="none";
+}
+
+setTimeout(function(){
+    const popup=document.getElementById("welcomePopup");
+    if(popup){
+        popup.style.display="none";
+    }
+},7000);
+</script>
+
+
 
 </body>
 </html>
