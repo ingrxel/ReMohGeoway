@@ -484,89 +484,56 @@ transform:translateY(-3px);
 }
 
 .hero-box{
-
 background:linear-gradient(
 135deg,
 rgba(11,93,59,.10),
 rgba(255,255,255,.85)
-
 );
-
 border-radius:40px;
-
 padding:70px 30px;
-
 text-align:center;
-
 margin-bottom:70px;
-
 box-shadow:0 10px 30px rgba(0,0,0,.06);
-
 }
 
 .hero-icon{
-
 font-size:55px;
-
 color:#0B5D3B;
-
 margin-bottom:25px;
-
 }
 
 .hero-box h1{
-
 font-size:55px;
-
 color:#0B5D3B;
-
 margin-bottom:15px;
-
 }
 
 .hero-box h2{
-
 font-size:28px;
-
 color:#3D7A5C;
-
 margin-bottom:25px;
-
 }
 
 .hero-box p{
-
 font-size:24px;
-
 line-height:2;
-
 color:#555;
-
 }
 
 
 
 .section-title{
-
 text-align:center;
-
 font-size:42px;
-
 color:#0B5D3B;
-
 margin:70px 0 15px;
-
 }
 
 .rock-line{
-
 width:300px;
 height:14px;
-
 margin:10px auto 20px;
-
 background:
-
 linear-gradient(
 90deg,
 #0B5D3B 0%,
@@ -586,409 +553,233 @@ clip-path:polygon(
 80% 60%,
 100% 40%
 );
-
 border-radius:999px;
 }
 
 .steps-grid{
-
 display:grid;
-
 grid-template-columns:repeat(
 auto-fit,
 minmax(350px,1fr)
 );
-
 gap:30px;
-
 }
 
-
-
 .step-card{
-
 background:white;
-
 padding:35px;
-
 border-radius:30px;
-
 box-shadow:0 10px 25px rgba(0,0,0,.06);
-
 position:relative;
-
 transition:.3s;
-
 }
 
 .step-card:hover{
-
 transform:translateY(-8px);
-
 }
 
 .step-number{
-
 position:absolute;
-
 top:20px;
-
 left:20px;
-
 width:62px;
-
 height:62px;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 font-size:24px;
-
 font-weight:700;
-
 color:#ffffff;
-
 background:
-
 linear-gradient(
-
 145deg,
-
 #1a7a52,
-
 #0B5D3B,
-
 #063925
-
 );
 
 clip-path:polygon(
-
 50% 0%,
-
 90% 20%,
-
 100% 60%,
-
 70% 100%,
-
 30% 100%,
-
 0% 60%,
-
 10% 20%
-
 );
-
 box-shadow:
-
 0 8px 18px rgba(11,93,59,.28),
-
 inset 0 2px 6px rgba(255,255,255,.25);
-
 }
 
 .step-number::before{
-
 content:"";
-
 position:absolute;
-
 top:10px;
-
 left:12px;
-
 width:16px;
-
 height:16px;
-
 border-radius:50%;
-
 background:rgba(255,255,255,.35);
-
 filter:blur(4px);
-
 }
+
 .step-card::after{
-
 content:"";
-
 position:absolute;
-
 top:25px;
 right:25px;
-
 width:50px;
 height:2px;
-
 background:#0B5D3B;
-
 opacity:.08;
-
 transform:rotate(-35deg);
-
 }
+
 .step-icon{
-
 width:90px;
-
 height:90px;
-
 border-radius:50%;
-
 background:#edf7ef;
-
 color:#0B5D3B;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 font-size:38px;
-
 margin:auto;
-
 margin-bottom:20px;
-
 }
 
 .step-card h3{
-
 text-align:center;
-
 font-size:32px;
-
 color:#0B5D3B;
-
 margin-bottom:20px;
-
 }
 
 .step-card ul{
-
 padding-right:20px;
-
 line-height:2;
-
 font-size:22px;
-
 color:#555;
-
 }
 
 .step-tip{
-
 margin-top:25px;
-
 padding-top:18px;
-
 border-top:1px solid rgba(11,93,59,.12);
-
 font-size:17px;
-
 line-height:1.8;
-
 color:#6d7c72;
-
 font-style:italic;
-
 }
 
 .note-box{
-
 margin-top:20px;
-
 padding:18px;
-
 background:#edf7ef;
-
 border-radius:18px;
-
 color:#0B5D3B;
-
 font-size:20px;
-
 }
 
-
-
 .apps-grid{
-
 display:grid;
-
 grid-template-columns:repeat(
 auto-fit,
 minmax(260px,1fr)
 );
-
 gap:25px;
-
 }
-
-
 
 .app-card{
-
 background:white;
-
 padding:35px;
-
 border-radius:30px;
-
 text-align:center;
-
 box-shadow:0 10px 25px rgba(0,0,0,.06);
-
 }
-
-
 
 .app-icon{
-
 font-size:55px;
-
 color:#0B5D3B;
-
 margin-bottom:20px;
-
 }
-
-
 
 .app-card h3{
-
 font-size:34px;
-
 color:#0B5D3B;
-
 margin-bottom:20px;
-
 }
 
-
-
 .app-card ul{
-
 list-style:none;
-
 line-height:2;
-
 font-size:22px;
-
 color:#555;
-
 }
 
 .app-card ul li{
-
 display:flex;
-
 justify-content:flex-start;
-
 align-items:center;
-
 gap:8px;
-
 margin-bottom:12px;
-
 width:180px;
-
 margin-right:auto;
-
 margin-left:auto;
-
 }
+
 .app-card ul li::before{
-
 content:"✓";
-
 width:22px;
-
 height:22px;
-
 background:#0B5D3B;
-
 color:white;
-
 border-radius:50%;
-
 display:flex;
-
 align-items:center;
-
 justify-content:center;
-
 font-size:12px;
-
 }
-.welcome-mountain{
 
+.welcome-mountain{
 width: 330px;
 display:block;
-
 margin:0 auto 20px;
-
 opacity:.95;
-
 filter:drop-shadow(
 0 10px 20px rgba(11,93,59,.15)
 );
-
 transition:.3s;
-
 }
 
 .welcome-mountain:hover{
-
 transform:translateY(-4px);
-
 }
 
 .welcome-end{
-
 margin-top:70px;
-
 padding:40px;
-
 border-radius:30px;
-
 background:linear-gradient(
 135deg,
 rgba(11,93,59,.10),
 rgba(255,255,255,.85)
 );
-
 text-align:center;
-
 }
-
-
 
 .welcome-end i{
-
 font-size:50px;
-
 color:#0B5D3B;
-
 margin-bottom:20px;
-
 }
 
-
-
 .welcome-end p{
-
 font-size:26px;
-
 line-height:2;
-
 color:#444;
-
 }
 
 
@@ -1275,7 +1066,6 @@ class="link-box">
 </a>
 
 </div>
-
 </div>
 
 <div class="content">
@@ -1317,20 +1107,13 @@ class="link-box">
 <h3>تأكيد القبول</h3>
 
 <ul>
-
 <li>تأكيد القبول عبر منصة القبول خلال الفترة المحددة.</li>
-
 <li>يضمن تأكيد القبول الاحتفاظ بالمقعد الجامعي.</li>
-
 <li>يستمر الطالب في الفرز الإضافي على الرغبات الأعلى.</li>
-
 <li>عدم تأكيد القبول يؤدي إلى إلغاء الطلب وفقدان المقعد.</li>
-
 </ul>
 <p class="step-tip">
-
 ابدأ رحلتك الجامعية بخطوة تأكيد القبول.
-
 </p>
 </div>
 
@@ -1346,22 +1129,17 @@ class="link-box">
 <h3>استلام الرقم الجامعي وبيانات الدخول</h3>
 
 <ul>
-
 <li>بعد انتهاء فترة القبول، تُرسل الجامعة رسالة نصية إلى رقم الجوال المسجل.</li>
-
 <li>تحتوي الرسالة على الرقم الجامعي وبيانات الدخول الخاصة بالطالب.</li>
-
 <li>باستخدام بيانات الدخول، يمكن الوصول إلى الأنظمة والخدمات الإلكترونية للجامعة..</li>
-
 </ul>
 <div class="note-box">
 
 <i class="fa-solid fa-circle-exclamation"></i>
-
 تستمر الترقيات على الرغبات الأعلى حتى ٢ أغسطس، كما انه قد يستغرق وصول الرسالة بعض الوقت.
 </div>
-<p class="step-tip">
 
+<p class="step-tip">
 ترقّب وصول رقمك الجامعي لبدء استخدام الخدمات.
 </p>
 
@@ -1379,18 +1157,13 @@ class="link-box">
 <h3>تفعيل البريد الجامعي</h3>
 
 <ul>
-
 <li>بعد استلام الرقم الجامعي، ادخل إلى بوابة الخدمات الإلكترونية.</li>
-
 <li>من قائمة الخدمات اختر «تفعيل البريد الإلكتروني».</li>
-
 <li>اتبع الخطوات المطلوبة لإتمام عملية التفعيل.</li>
-
 <li>يمكن إضافة البريد الجامعي إلى تطبيقات البريد الإلكتروني مثل Gmail وOutlook.</li>
 </ul>
 
 <p class="step-tip">
-
 فعّل بريدك الجامعي لتبقى على اطلاع بكل جديد، يُستخدم البريد الجامعي لاستقبال الإعلانات والرسائل الأكاديمية المهمة.
 </p>
 </div>
@@ -1418,12 +1191,11 @@ class="link-box">
 <div class="note-box">
 
 <i class="fa-solid fa-circle-exclamation"></i>
-
 يجب أن يكون الحساب في البنك الأهلي و باسم الطالب.
 
 </div>
-<p class="step-tip">
 
+<p class="step-tip">
 أكمل بياناتك البنكية للاستفادة من المكافآت الجامعية.</p>
 </div>
 
@@ -1444,8 +1216,6 @@ class="link-box">
 </div>
 
 <h3>MyKAU</h3>
-
-<ul>
 
 <ul>
 <li>الخدمات الجامعية.</li>
@@ -1491,17 +1261,13 @@ class="link-box">
 </ul>
 
 </div>
-
 </div>
 
 
 <div class="welcome-end">
-
 <img src="../MOUNT.png" class="welcome-mountain">
 <p>
-
 نتطلع إلى رؤيتك بين طلابنا وطالباتنا قريبًا.
-
 <br>
 
 فمرحبًا بك في كــلــية الــتعـــديـــن.
